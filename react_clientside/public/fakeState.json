@@ -1,0 +1,755 @@
+[
+    {
+        "formatted_address": "285 Spadina Rd, Toronto, ON M5R 2V5, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6789935,
+                "lng": -79.4081472
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.68031798029149,
+                    "lng": -79.4071007697085
+                },
+                "southwest": {
+                    "lat": 43.67762001970849,
+                    "lng": -79.40979873029151
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+        "id": "01d154f7c899db1cd58264ab845974bfa723d7bb",
+        "name": "Spadina Museum - City of Toronto Historic Sites",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 828,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/117143645587975679767/photos\">Spadina Museum - City of Toronto Historic Sites</a>"
+                ],
+                "photo_reference": "CmRaAAAAfMxdE1kAw9vGnrGisyhLynrYl_OZjha5RAZwUQuu4mF9M8KUBkyU_GCfRBe5JbDTOVrt8SLRTvQoUKpQym4lk3tBCft3ia5LoERL_kqeJSc_gAMrJPVlVWyt4uqeYPEXEhAnsJVuPe-J7ZN-23IOZq0vGhREj5BFkFVf9mwyrlt3B52X4DTVQQ",
+                "width": 828
+            }
+        ],
+        "place_id": "ChIJkQDc4500K4gReLP2DQUA_Tk",
+        "rating": 4.7,
+        "reference": "CmRRAAAA-eki6xJ_hlFKIEabs230lfYqf6GXCA2xeYc82KDoowcpKatvwne5XNR5nqqjqvwWY3VB1JFmTdjzXBP8J0JLTlKAYkHfJt4Gin7rOEFL3R5OlgSTdmKTZ7Py4kpEbZHBEhDvge8UGvxkDNrDtaMTaxjQGhRix4Uo7TeRZjSQaj30w8c-vhtetA",
+        "types": [
+            "museum",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "207 Queens Quay W, Toronto, ON M5J 1A7, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6388036,
+                "lng": -79.3805872
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6406927302915,
+                    "lng": -79.37940876970849
+                },
+                "southwest": {
+                    "lat": 43.6379947697085,
+                    "lng": -79.38210673029151
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "0bdfbe0622834e121efb1afa8f3cd29b58f37624",
+        "name": "Tourism Toronto",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 3648,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/103252318570330742650/photos\">Danny Sadeh</a>"
+                ],
+                "photo_reference": "CmRaAAAAAlnqvega1Gl-q0u8vINoqdqfygD567sMf3tFwBWl7Z-iyODnuRcuQeri0S6ZtD6sokg9VCNMHVcjIkaqR3LRFYAFw0m6RNZhm724ek7ZpneG7mxd0PJu8OQdsNSZd6UmEhBhRF9pctL7dyo3Ga0xQV5WGhQnkCyNDhLLxW-dfzRrU8w328sA_A",
+                "width": 4864
+            }
+        ],
+        "place_id": "ChIJaX1BV9U0K4gR3Hm4xi9qDT8",
+        "rating": 4.1,
+        "reference": "CmRRAAAAeZw1vhdYGimzaVIaqhb0lirU85qKXRtDuZVxnCPSXb96XOyszcmDjYPlfErSU35FkT4IpE30ZLnAuY0NBrgbXG_QPzs6BH4CaS5RpJyKPE7o5MMaUefi0HwwYCTpVyrtEhCwuxz__-YCILTTn6_78NozGhQTpn6H_DldxlQ18Yc9uhbtnkQGEw",
+        "types": [
+            "travel_agency",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "220 Yonge St, Toronto, ON M5B 2H1, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6544382,
+                "lng": -79.3806994
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65788325,
+                    "lng": -79.37839929999998
+                },
+                "southwest": {
+                    "lat": 43.65038705,
+                    "lng": -79.3839397
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+        "id": "66578c7d4fd29f7375451f6316f02860b0147a55",
+        "name": "CF Toronto Eaton Centre",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 638,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/107280343555960506788/photos\">CF Toronto Eaton Centre</a>"
+                ],
+                "photo_reference": "CmRaAAAAoedi-BgXj8d8s-ZLBuDXGSH96SAKkukvcVKe_34-IVmTUSfo5_v7tfA55DpKPoOU2j3dwjJ3duZixobOGKC0gvtC2JOcnMRZ4B-1vOMHjdfqBtUo219N68bqNqpyFilAEhAgdXG0UPh0bJGeVvbmL4UtGhT8loaIJj4a9LVboiPHmAjEGNZ4Qg",
+                "width": 960
+            }
+        ],
+        "place_id": "ChIJvUYHUcs0K4gRN8i7jHsUiYs",
+        "rating": 4.3,
+        "reference": "CmRSAAAAfdehKMrwDpWCnyWWGJ6Nkd53cHxdQK9VLDdStoyTC0ONVvXwmgysamtt2fkX0r-q3jqA1wCpN3-qZ4S8ndaLV87vM6t_5beApYSM43M-dc0d8z_10c-tXW_ULr3fGfw4EhDStLbxGUoUmnClJ0of5MuuGhS-tQZzrDtpdtlARpbB5lwv-6rAqQ",
+        "types": [
+            "shopping_mall",
+            "movie_theater",
+            "shoe_store",
+            "restaurant",
+            "food",
+            "clothing_store",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "19 Trinity Square, Toronto, ON M5G 1B1, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.654718,
+                "lng": -79.381732
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6561388802915,
+                    "lng": -79.38047996970849
+                },
+                "southwest": {
+                    "lat": 43.6534409197085,
+                    "lng": -79.3831779302915
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
+        "id": "d9048c071a349ad07b921054d305b4fe3561e015",
+        "name": "Church of the Holy Trinity, Anglican",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 2916,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/116434591653906538710/photos\">Pagan Eka Cheung</a>"
+                ],
+                "photo_reference": "CmRaAAAAa-Hi7vbwLivNllpWAOm-4Cj6a8l_RkaIktRrjLyy5WHpCDL-gas6_BpUOOTUo1ORzg0Bvnu2QWO_mPxEo1Isy84ZDpQcXs_wVpp8P83UP-X_aj9MPZ31b1_fjbadDDh-EhC1bA2Q7Xr7dl3cmefzcU_NGhTiXcjPQ2fbkDMU8Xvlb94dY8opfw",
+                "width": 5184
+            }
+        ],
+        "place_id": "ChIJ_43dZ8s0K4gR2P_gAp4LiQw",
+        "rating": 4.5,
+        "reference": "CmRRAAAA9tMHqGEP9r3SXHoSY1olNOuqERBgOC9_KxvIm0zmoo9lAkaP113KNoERlSZH7_CDyzm0RVGB4OdTT_z3caJk3QxpxN_dK8cb9OWIXlX38eMSDQXhW3r9uNib1O1TiqD-EhDnUktD_FinQ6JCwSHITQ7uGhQvcof6CwF94UeCHKdceawWwS7brw",
+        "types": [
+            "church",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "40 Bay St, Toronto, ON M5J 2X2, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6434661,
+                "lng": -79.3790989
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64502503029149,
+                    "lng": -79.37757655
+                },
+                "southwest": {
+                    "lat": 43.64232706970849,
+                    "lng": -79.38101555
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "af23fc9b8411a4b19ee74de0d47a7f428b1060e6",
+        "name": "Air Canada Centre",
+        "photos": [
+            {
+                "height": 5616,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/106723532819450287234/photos\">Jim Ding</a>"
+                ],
+                "photo_reference": "CmRaAAAAsE1OrMuYYWboVI3O8SE54nGpA03PPSHOjwKgKrGV0xg9oaeoHamKvbyJJLu44sVxhPatiJBH523lAR7gRAMyrX2bopEItEg7NPvPYHGcr4KxWUyjNPnl8bUMU4V1bnvZEhAA2WhGBdXyrq05lhmbES1YGhTnll6tvkl258kq9K2mCkgkNR1MxQ",
+                "width": 3744
+            }
+        ],
+        "place_id": "ChIJCb81WSvL1IkREJRm1efQQlg",
+        "rating": 4.4,
+        "reference": "CmRRAAAAVgMjLP-A1wOrW-zBMr-qyyPZZJAAtuJ0zSkmhZm63q40S1W26yZECEaiMu3HNuhfOm60SA5adQUQSJmeZn6x0sFN42O1SCBfXjwxrtYFODDEvWhoIOisZazkWmUnLunTEhDeW0WtZEvKtPea0Ki3Qj-tGhRc-BClcmvfIc4XOxO7kAuqEOoOuA",
+        "types": [
+            "stadium",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "301 Front St W, Toronto, ON M5V 2T6, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6425662,
+                "lng": -79.3870568
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64504389999998,
+                    "lng": -79.38554840000002
+                },
+                "southwest": {
+                    "lat": 43.6405563,
+                    "lng": -79.3899692
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "9220d35aecda78cd4c380da77fe3dbea0008af71",
+        "name": "CN Tower",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1824,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/108805085506085200483/photos\">Nithin Thomas</a>"
+                ],
+                "photo_reference": "CmRaAAAAzDa568K8p7yFUkUeQQ1N9giXMWf31c3OhqXV3HcaF4W8BZfmgmkb3FWR_MCYsp-UTVd8nlKNH2gZzT2H3dwmyAHevEvQeuQ8iuAxWZ4HkAVCxhWgX1LRXu5hfmcNwVlPEhCqGV-0trOy7r-NfZN_FCBvGhRQQ8YOHPQ2eNhnLUyLjrXwrPYz8Q",
+                "width": 3200
+            }
+        ],
+        "place_id": "ChIJmzrzi9Y0K4gRgXUc3sTY7RU",
+        "rating": 4.5,
+        "reference": "CmRRAAAAXxJdnV7NDawkQ9QUkLP3qhE5YA8rCWloBGxV203dTZHXG4fndLhHoArKwSodS1adAAKDxwh2r4ftzIO9D5eweGu3KFKk0tKFF-2rtV4ScJ85uZkMV4185JGfEMSvbXC0EhAHaQV3dM8haTqyLV0JgvCJGhQc8rOFZLiK-S90xiudJ5azLBKDbw",
+        "types": [
+            "premise",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "93 Front St E, Toronto, ON M5E 1C3, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.64905159999999,
+                "lng": -79.3717741
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6501229302915,
+                    "lng": -79.3701243197085
+                },
+                "southwest": {
+                    "lat": 43.6474249697085,
+                    "lng": -79.3728222802915
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+        "id": "c8795570b28435ab892f40ac5e02fb3aa2752399",
+        "name": "St. Lawrence Market",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1520,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/107093178103608187784/photos\">Celeste Li</a>"
+                ],
+                "photo_reference": "CmRZAAAAZBOskOdugRnaVA8-rhUGZjaz26fpFHQXwJVI7jOcIbEx8nQs_q7CK4LD0mh3NTqZPoChlEvHt6Se0clI8g-UR1jfI-0XVNeHPOuzw-l911Py_qAPLomh15oDCyLU8IDMEhDQZGM8iYgDaO51Lcz0IsYVGhR98DDDUxvay2oW_K4QWHrJa0sW8g",
+                "width": 2688
+            }
+        ],
+        "place_id": "ChIJWyfdtDHL1IkR_bal8ay1Cso",
+        "price_level": 2,
+        "rating": 4.6,
+        "reference": "CmRSAAAAqZd_QLFq7hWNDqPd4gKGUQXs5_kd0cOX6sfk8VINNG86OxexlXe7ZkbWsxdz9GepxZ9pWBJivSHjBKZ8rsoKfQTyBWBiF324Qd3WedLDcwGATxackSBJl1v-lytUGD_6EhA1-ZkQf0LavqvsqEDMsECkGhQZyXHE2_eabCpZ6PAClHpP11LeNQ",
+        "types": [
+            "art_gallery",
+            "food",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "300 King St W, Toronto, ON M5V 1J2, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6468156,
+                "lng": -79.38915399999999
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6481050302915,
+                    "lng": -79.38784056970849
+                },
+                "southwest": {
+                    "lat": 43.6454070697085,
+                    "lng": -79.39053853029151
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "6ed3fcf743d2a6b04242f03aba38cb90c67a7e6f",
+        "name": "Princess of Wales Theatre",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 529,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/109923079110544858366/photos\">Daniel Lauzon</a>"
+                ],
+                "photo_reference": "CmRaAAAAmTCjNy526pi759YeXlF89oPgR2YQXwJH481liRVRPuiMW1Vv6QMNi5MHEtQViNt_eGSODUF5PQVzTy6VRVSC9hZRnRXv9c9kL2e9Z0dFgjXkM1bBbHN8XJ18_IsAtu3GEhBC8EMsV7T4rvGZmBt6DwdKGhTnyHCzymC1yPlCf49T71Qk87WJLw",
+                "width": 950
+            }
+        ],
+        "place_id": "ChIJc4-p5NA0K4gRcLWKQiJY2PQ",
+        "rating": 4.5,
+        "reference": "CmRSAAAAwxqYYLg2FkzXbdW7V2lsv0lF6A-QkcXdKymBZcGu8icWmPy2g9vNoltnS5KW9DMF-nl0ulbKorCY3uB_KZskPlc6UPruV9CWOZfBKvddjeeR80d2ot5VNu5HOuOmESP-EhAPCJemMmA8I94nneWEEmuuGhR6WszRcw6oYOFuu_lxvxOyspk42g",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "1873 Bloor St W, Toronto, ON M6R 2Z3, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.64654789999999,
+                "lng": -79.4636903
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6625568,
+                    "lng": -79.44661255
+                },
+                "southwest": {
+                    "lat": 43.62978640000001,
+                    "lng": -79.47907115000001
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+        "id": "45971de561b51a8390f4e66082993fc3acc01243",
+        "name": "High Park",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1152,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/112942586853670715121/photos\">Glenn Dickler</a>"
+                ],
+                "photo_reference": "CmRaAAAArPs6RfpIfJunY2FNwsZXhRNhpB8cDXV8rVLvF5_FnDVlozzT5kpL8UG4fJ97dYlRNn0vvYwzSNdI3e4f46vqrCp167-bghbrAqXmoQ7ix_vA9uSp7eCUCVSUZMjkgALEEhC_1B-9MFy1f2-gxAcMRs1KGhSa1saJjDy4m03HB3wbopRK2iUurQ",
+                "width": 2048
+            }
+        ],
+        "place_id": "ChIJBfc2I9M1K4gRZ-4AoyXIvAE",
+        "rating": 4.4,
+        "reference": "CmRRAAAAOIu7HkTIcQTUw1jOC43W8XUM8bJt8LtWYs-vG9fCl8w9ooU8I3oitGBoQSodoIWshbXr7VQWNJjRRih9PabRxylZPIRtlK5rvrvNBNHm9Vz8w9Y2zE-cJ-kMlgk0L0dvEhBl64BnJU6PTlvr9rMlc_p5GhRUqKeC6KDAtV7KJVpYT-xDtoOrMw",
+        "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "100 Queen St W, Toronto, ON M5H 2N2, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6534399,
+                "lng": -79.3840901
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65500569999999,
+                    "lng": -79.38202805
+                },
+                "southwest": {
+                    "lat": 43.6522421,
+                    "lng": -79.38601265
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/civic_building-71.png",
+        "id": "d522e34c82933e643e6c210890e3859e87004c0e",
+        "name": "Toronto City Hall",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 3006,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/107521438776388550452/photos\">Justin Gonsalves</a>"
+                ],
+                "photo_reference": "CmRaAAAAYOAXHKwlvYYF4r_XUpwn5lmB3uo_YTKEnxJFPz3NY8BFbH5IDCmbGWtuZnSUxyYc5avbb_Sql3n9e8-BDArJvMghwKoLhGDK7xoLGPXxy-hvHuVKqZw957dk-Ej1yG4HEhAhSmYdf9FBcgku1UA483tpGhQ0Cmf1Y4L-Mc5KCvFjXtZ2_hG0zA",
+                "width": 5344
+            }
+        ],
+        "place_id": "ChIJ81rnZsw0K4gR4CIzkYYawjE",
+        "rating": 4,
+        "reference": "CmRRAAAApjZXFEnklelbz0p-tSwqWKpgl5Y0t9y1VUpIWcBmW2aH-gP1460onu5Deq-PffMTBv9FbMXAVzb3RaCSiCkYUE5Ip5Wt4sqlRt4V8gTMAco2AMDvrYKPz7EWqaUXU90oEhDOoGxhlZtum7KcUpl7rCjYGhR-nBtcD4imzo2o4IYI-BK1duPIaw",
+        "types": [
+            "city_hall",
+            "local_government_office",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "288 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.64245369999999,
+                "lng": -79.3861234
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64343513029149,
+                    "lng": -79.3850435197085
+                },
+                "southwest": {
+                    "lat": 43.64073716970849,
+                    "lng": -79.38774148029151
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "162842444f43351eb676a74721d981b627bebbda",
+        "name": "Ripley's Aquarium of Canada",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1728,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/113095750908301214785/photos\">Ripley&#39;s Aquarium of Canada</a>"
+                ],
+                "photo_reference": "CmRaAAAA-9olUTdJwN4U2tpODqsFZEGtOs0V00c-RQN_WOuQ80k_7UkGJ0W_DcnmgnAsc9bPjpKgssYMD_ypbRSCH5JNLAA99vq_lDyhlQijyGMeldiAYYvGm-jYaj07pk-BiqJvEhB_7fGq44nQ3aCVQvOhbeeZGhTRsP_BXQHfetvpMfzxxeTTmOUkcA",
+                "width": 1728
+            }
+        ],
+        "place_id": "ChIJWwS21dU0K4gRPSGMKRkar40",
+        "rating": 4.5,
+        "reference": "CmRSAAAA4eGIOtZcPLPClusPgUDGf0oYtVhWCJ24X71d3rrHJfk8z8wFdtdisEtXLkukR0qfQ2HiFjZlH9oGy0tStB8aK9qZIWTiCgYyW3y-5Lp909gmd5vrSGOcFT8Q4wBK1KGaEhA00awrB0AEBnwykVkCKcq_GhQH6rRPT8tAbrqhDYU8RrhMOCfBcg",
+        "types": [
+            "aquarium",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "317 Dundas St W, Toronto, ON M5T 1G4, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6536066,
+                "lng": -79.39251229999999
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6551626802915,
+                    "lng": -79.39132091970848
+                },
+                "southwest": {
+                    "lat": 43.6524647197085,
+                    "lng": -79.3940188802915
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+        "id": "944a008cbd3b5f29c86ecbc3bf06c560a31564fb",
+        "name": "Art Gallery of Ontario",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 2358,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/116730365329794972758/photos\">james karrel</a>"
+                ],
+                "photo_reference": "CmRaAAAAMJTsCcxs1D0j_6m9vF22YbnlgZeUqv0I0NOBp800kSYsLYEM3jJaJbr1G5MJ__5BWsQV8xR9sTrMr_QLFshQ6ypzy2PmnlrFXaEH5Aej9UtWQR1oI75GmQUChSZJ0lWyEhCbWj9XvMSLzUjp9A83BOpUGhQjlGfmrwGFTtZBGGsYhi4pC-y72w",
+                "width": 4191
+            }
+        ],
+        "place_id": "ChIJvRlT7cU0K4gRr0bg7VV3J9o",
+        "rating": 4.5,
+        "reference": "CmRSAAAAovTCkf67lRQzK6Qn6MSm_YYQj20qH9yqB0KWus-CLCEnblBjekOXEHvlvgMe7wSKZmSblBkomk9Tkosf-sHTB-BsqtK3UDb4B5N9amFsUl0saG9lIlyhW_3LG47CGQnGEhDgSHBDNUzilTIxk0yJZj7hGhT6T6AuUXJTbHjXe_KksHeyMugqrQ",
+        "types": [
+            "museum",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "255 Bremner Blvd, Toronto, ON M5V 3M9, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.640854,
+                "lng": -79.385277
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6430224,
+                    "lng": -79.38153639999999
+                },
+                "southwest": {
+                    "lat": 43.6401312,
+                    "lng": -79.3891576
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "2aaf97937099304752af2155846fd0262034ae24",
+        "name": "Steam Whistle Brewing",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 2304,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/113431891213420379122/photos\">Matus Demko</a>"
+                ],
+                "photo_reference": "CmRaAAAA7Y6K-0e2aGphn_IrrBOfUup1UxZ-v09np3j51fdX7pRrEFgfwWDtiKoKQbKcshaSfp6k-GplZaFIagmvtTetpExW58aAFyKcc2WtpaN8vdKpxHjcZweAPhXQv9tOfJEuEhAzC4uihBFXjrna6z_NMNgSGhTybJB6_uGG0wOxSWb7oJ2PZyPpcQ",
+                "width": 4096
+            }
+        ],
+        "place_id": "ChIJCzRc6NU0K4gRrfoByhXGw3Q",
+        "rating": 4.6,
+        "reference": "CmRRAAAA6lp3rTeJ8s1b99C9fCT5zO3zWHAVdvyMYxuVaRoqC7AGskW_3GG50rc4jF4BJEbidhTFVeX66QbQTP6gM1-Z8bI8-KM2c1oO8z9WSZs7iPwjq4TqivqlFwyDCOyYoG_QEhA73YRCaIce4IrTG4vZbQ17GhRjhcfjqyD_jcLIXA6tTsaQSWhkew",
+        "types": [
+            "bar",
+            "liquor_store",
+            "restaurant",
+            "food",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "100 Queens Park, Toronto, ON M5S 2C6, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6677097,
+                "lng": -79.3947771
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.6692169802915,
+                    "lng": -79.39264404999999
+                },
+                "southwest": {
+                    "lat": 43.6665190197085,
+                    "lng": -79.39687265
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+        "id": "89e933a75cbe887a8ed66cc1c235e6d602f9d8b7",
+        "name": "Royal Ontario Museum",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 2322,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/102111226541046124895/photos\">Maria Jose Fonseca</a>"
+                ],
+                "photo_reference": "CmRaAAAA4PNDV9cBQyYb1kryzPaUqHkp34dmLRKHqyMCtxN7OHHetLHoVyMHIjHRY10uDjPBPKkdWBdr8GEoJwXbB8WghInoKT9nF1vyN9Sel2H7Vs7pJUItGX-x2arALT4M0jljEhAKYH_DEbvZ1YyqwbZM4cCmGhQ7fDNVP0ZMhQAJFtQE-r2EycH7tg",
+                "width": 4128
+            }
+        ],
+        "place_id": "ChIJE-Xa87o0K4gRkvXFHuE0hMk",
+        "rating": 4.5,
+        "reference": "CmRSAAAAfJH0_x7mOrj6cYgJTat1ua9fLX3nkRLiBBPzKmAdAOyMYYhRaiHlH7lt-lA2F1xvR1arNns93K7cBGf0jNvQpDbubw6CynUfnU0sfKPOO21Ot947VlON4qUAM5J0uU3gEhCvaetcrccmSVJy8WBwfSM9GhSUtRcT0th59tckhTh_AX0bT7zk4Q",
+        "types": [
+            "museum",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "770 Don Mills Rd, Toronto, ON M3C 1T3, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.7164069,
+                "lng": -79.3391838
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.7179647802915,
+                    "lng": -79.33648725
+                },
+                "southwest": {
+                    "lat": 43.7152668197085,
+                    "lng": -79.34008265
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+        "id": "d2f08091fbd02b42b8a7afe51b709fdc8ae1df8e",
+        "name": "Ontario Science Centre",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1333,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/117049390723046398270/photos\">Mark M</a>"
+                ],
+                "photo_reference": "CmRaAAAAbkx_3LV3tnw9Xm-iDrIS2yYue6FvOSJt9fab7T4OAdbC3nbYmLlv5MXc2DMrEb47eF0FxwlmLQC7kzSVbzYeXEIE6_K3XS3l-X2n8LLjLUZuNs4qYR4MqU13XR67VhKhEhBNQfx6ItMnOQDErRffx4GnGhTefmEh3Rbeve-F5lUuSufHsR1Dkg",
+                "width": 2000
+            }
+        ],
+        "place_id": "ChIJAYejzQbN1IkR4Z-qXO_edBk",
+        "rating": 4.4,
+        "reference": "CmRRAAAAtDw0fWNU1LKvFbz45t61KynTDd0AMAaV0t9ScDoP1v3w9VkfpSoNAtuAN54TbZzO_MMKPAq-6op2o3FUDbzs3v1a8Rv2oImIr1eIKqeQn7CQqkDLQeT7ZU-8y6H66iMsEhA4Jk866ladXkmJlroUBfjWGhTFzt1LT4FNyVaGbxlbZpDvwLZ1mw",
+        "types": [
+            "museum",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "2000 Meadowvale Rd, Toronto, ON M1B 5K7, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.817699,
+                "lng": -79.18589039999999
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.8193324302915,
+                    "lng": -79.1709852
+                },
+                "southwest": {
+                    "lat": 43.8166344697085,
+                    "lng": -79.1908588
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "f7c8d7b1a07212b767d67b071aa9a68b4cb94019",
+        "name": "Toronto Zoo",
+        "opening_hours": {
+            "open_now": true,
+            "weekday_text": []
+        },
+        "photos": [
+            {
+                "height": 1628,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/112282057106490393961/photos\">Toronto Zoo</a>"
+                ],
+                "photo_reference": "CmRaAAAAi73LPgEGryAd4GkZA_zLY1sbv_2tmbwUtP0nsD4gao6cooYPP9xhri0efjIEVS9kKz1wq-0XNjLBrMc6HxcqFMme17QRFGyZYqMGVFqUH3GxMj6Mr1pyTVtNfKuJFhbdEhBO_E1NG22Nrvg9zkN_a01vGhRCJWS0lycON-Yv8uGs6wb8drV4Gw",
+                "width": 1629
+            }
+        ],
+        "place_id": "ChIJzdqWrfHZ1IkR2LWLAmB6GZ4",
+        "rating": 4,
+        "reference": "CmRSAAAAiUg47gx7Mb_8ObwPHJcEjKf8haWhD0nqVvIklp8DzK_JFt0LDQ39Di2mpqr6TU76IKBov1Z40Jn1V6heAOal0fuXLksWeCSXS45Lcej0CSTP3-swVwFNUQ19tny_CD5gEhDFOouNdflgYGkKtU1FQcJkGhQ7bZt0cFFJYimyitiWk5Hn4VF31g",
+        "types": [
+            "zoo",
+            "point_of_interest",
+            "establishment"
+        ]
+    },
+    {
+        "formatted_address": "1 Blue Jays Way, Toronto, ON M5V 1J1, Canada",
+        "geometry": {
+            "location": {
+                "lat": 43.6414378,
+                "lng": -79.3893532
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64273939999999,
+                    "lng": -79.38611175
+                },
+                "southwest": {
+                    "lat": 43.63974380000001,
+                    "lng": -79.39256234999999
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "48220ce6304eea2dcc8cca5014d2247fc80d0da0",
+        "name": "Rogers Centre",
+        "photos": [
+            {
+                "height": 1944,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/106074343815829479312/photos\">Lars Richter</a>"
+                ],
+                "photo_reference": "CmRaAAAAmo0iXpgJIca76E1g0DVQeemDB_GgoQufLCYIIOrp39YyGLSYomF3O1Rne3n0MhnQgIRvpuhGeC7cdoWQJ_-iIb-uf3_Nh6c-Z5hktthJBZ-O2epk8riOrMetWamxmuYXEhD-tUzbl2xLhlxH4BZDvOzhGhRdXroIElJLV6IjMXGTthiZTgrvAQ",
+                "width": 2896
+            }
+        ],
+        "place_id": "ChIJUUpqttc0K4gRBRQL_vayEOI",
+        "rating": 4.2,
+        "reference": "CmRSAAAA5tA7gV_jOx--xB3SQS9qw-2nnm69Vv2HKCu2fjf3pbqn-irUzfxj1fpKDC1RtsvYnQy9lHuyWdOLMxRA3q0hhpSRtkIsO8Dn2JiQTz-dcdUayIANmlpjnXQ8BnHZkxk4EhB1CwTQNbv5Lc575AZ65I1oGhR1LKoc31fdUFJZQLYh0Am2SUxZtg",
+        "types": [
+            "stadium",
+            "point_of_interest",
+            "establishment"
+        ]
+    }
+]
