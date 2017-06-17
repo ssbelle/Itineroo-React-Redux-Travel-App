@@ -10,7 +10,7 @@ const Home = () => {
 
       <nav id='navbar' className='nav-bar teal'>
         <span><Link to='/signup'>SIGNUP</Link></span>
-        <span><Link to='/login'>LOGIN</Link></span>
+        <span><Link to='/login'>LOGIN TEST</Link></span>
       </nav>
       <section className='info-bar'>
         <div className='direction-bar'></div>
