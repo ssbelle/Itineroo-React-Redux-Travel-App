@@ -7,10 +7,11 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 
-import Home from './components/home';
-import Layout from './components/layout';
-import Signup from './components/signup';
-import Login from './components/login';
+import Home from './components/Home';
+import Layout from './components/Layout';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import Nav from './components/Nav';
 // import Customize from './components/customize';
 
 const store = createStore(
@@ -20,17 +21,19 @@ const store = createStore(
                 )
               );
 
-class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <AppContainer>
         <Provider store={store} >
           <Router>
             <div>
+            <Nav />
               <Route exact path='/' component={Home}>
               </Route>
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
+              {/* Need to change layout */}
               <Route path='/create-trip' component={Layout}>
               </Route>
             </div>
@@ -41,5 +44,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

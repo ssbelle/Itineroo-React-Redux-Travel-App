@@ -19,7 +19,6 @@ class Layout extends Component {
   }
 
   render() {
-    console.log('layout props', this.props);
     return (
     <main>
     {this.props.showResults ?
@@ -30,9 +29,6 @@ class Layout extends Component {
       </Dashboard> :
 
       <section className='creating-trip'>
-        <nav id='navbar' className='nav-bar teal'>
-          <span><Link to='/'>HOME</Link></span>
-        </nav>
         <section className='info-bar'>
           <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
         </section>
