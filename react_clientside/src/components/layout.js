@@ -30,16 +30,12 @@ class Layout extends Component {
       </Dashboard> :
 
       <section className='creating-trip'>
-        <nav id='navbar' className='nav-bar teal'>
-          <span><Link to='/'>HOME</Link></span>
-        </nav>
         <section className='info-bar'>
           <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
         </section>
         <img className='home-img' src='images/travel-planning.jpg' mode='fit' />
 
-        <section className={`trip-section ${this.state.processStep}`}
-        >
+        <section className={`trip-section ${this.state.processStep}`}>
           <section className='choose-path-container'>
             <div className='path-container create'>
               <span>CREATE A TRIP</span>
@@ -88,11 +84,6 @@ class Layout extends Component {
               </section>}
           </section>
         </section>
-
-
-
-
-
       </section>
     }
     </main>
