@@ -19,6 +19,7 @@ class Layout extends Component {
   }
 
   render() {
+    console.log('layout props', this.props);
     return (
     <main>
     {this.props.showResults ?
@@ -34,8 +35,7 @@ class Layout extends Component {
         </section>
         <img className='home-img' src='images/travel-planning.jpg' mode='fit' />
 
-        <section className={`trip-section ${this.state.processStep}`}
-        >
+        <section className={`trip-section ${this.state.processStep}`}>
           <section className='choose-path-container'>
             <div className='path-container create'>
               <span>CREATE A TRIP</span>
@@ -84,11 +84,6 @@ class Layout extends Component {
               </section>}
           </section>
         </section>
-
-
-
-
-
       </section>
     }
     </main>
