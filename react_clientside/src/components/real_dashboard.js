@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 
 const RealDashboard = (props) => {
+  console.log('RealDonaldTrump',props)
   return (
     <div>
     <nav id='navbar' className='nav-bar teal'>
@@ -12,7 +13,7 @@ const RealDashboard = (props) => {
     <section className='info-bar'>
       <div className='direction-bar'>
 
-        <span>You are going to love {props.searchTerm}!</span>
+        <span>You are going to love {props.cities.join('')}!</span>
         <span className='direction-additional-info'>Drag & Drop to perfect your trip!</span>
         <span className='direction-additional-info'>View your plans per day!
         </span>
@@ -21,8 +22,27 @@ const RealDashboard = (props) => {
 
     <section className='map-section'>google map
     </section>
-    <section>
-
+    <section className='dash-section'>
+      <ul className=''>
+        {props.cities.map(city =>
+          <li key={city}>
+            <h2>{city}</h2>
+            <ul className='selectedPlaces'>
+            {Object.values(props.places[city])
+                  .map(location =>
+                    <li key={location.id}>
+                      <div className='dash-item-img'></div>
+                      <div className='dash-item-text'>
+                        <span>
+                          {location.name}
+                        </span>
+                        <span>who is going icons</span>
+                        </div>
+                      </li>
+                    )}
+            </ul>
+          </li>)}
+      </ul>
     </section>
     </div>
 
@@ -31,7 +51,10 @@ const RealDashboard = (props) => {
 
 const mapStateToProps = state => {
   console.log("real",state);
-  return state;
+  return {
+    cities: Object.keys(state.selectedPlaces),
+    places: state.selectedPlaces
+  }
 }
 
 export default connect(

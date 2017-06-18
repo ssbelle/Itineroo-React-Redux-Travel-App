@@ -4,9 +4,10 @@ export default function(state = {}, action) {
 
     return {
       ...state,
-      [action.city]:{
+      [action.city]: {
         ...state[action.city],
-        [action.payload.id] : action.payload
+        //city: action.city,
+        [action.payload.id]: action.payload
       }
     };
   case 'PLACE_DELETED':
