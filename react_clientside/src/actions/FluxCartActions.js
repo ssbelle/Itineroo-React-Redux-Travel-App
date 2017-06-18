@@ -1,10 +1,50 @@
-var keyMirror = require('react/lib/keyMirror');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
+var FluxCartConstants = require('../constants/FluxCartConstants');
 
-// Define action constants
-module.exports = keyMirror({
-  CART_ADD: null,       // Adds item to cart
-  CART_REMOVE: null,    // Remove item from cart
-  CART_VISIBLE: null,   // Shows or hides the cart
-  SET_SELECTED: null,   // Selects a product option
-  RECEIVE_DATA: null    // Loads our mock data
-});
+// Define actions object
+var FluxCartActions = {
+
+  // Receive inital product data
+  receiveProduct: function(data) {
+    AppDispatcher.handleAction({
+      actionType: FluxCartConstants.RECEIVE_DATA,
+      data: data
+    })
+  },
+
+  // Set currently selected product variation
+  selectProduct: function(index) {
+    AppDispatcher.handleAction({
+      actionType: FluxCartConstants.SELECT_PRODUCT,
+      data: index
+    })
+  },
+
+  // Add item to cart
+  addToCart: function(sku, update) {
+    AppDispatcher.handleAction({
+      actionType: FluxCartConstants.CART_ADD,
+      sku: sku,
+      update: update
+    })
+  },
+
+  // Remove item from cart
+  removeFromCart: function(sku) {
+    AppDispatcher.handleAction({
+      actionType: FluxCartConstants.CART_REMOVE,
+      sku: sku
+    })
+  },
+
+  // Update cart visibility status
+  updateCartVisible: function(cartVisible) {
+    AppDispatcher.handleAction({
+      actionType: FluxCartConstants.CART_VISIBLE,
+      cartVisible: cartVisible
+    })
+  }
+
+};
+
+module.exports = FluxCartActions;
