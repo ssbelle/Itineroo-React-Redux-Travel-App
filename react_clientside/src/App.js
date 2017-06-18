@@ -11,6 +11,7 @@ import Home from './components/home';
 import Layout from './components/layout';
 import Signup from './components/signup';
 import Login from './components/login';
+import RealDashboard from './components/real_dashboard';
 // import Customize from './components/customize';
 
 const store = createStore(
@@ -27,12 +28,11 @@ class App extends Component {
         <Provider store={store} >
           <Router>
             <div>
-              <Route exact path='/' component={Home}>
-              </Route>
+              <Route exact path='/' component={Home} />
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
-              <Route path='/create-trip' component={Layout}>
-              </Route>
+              <Route path='/create-trip' component={Layout} />
+              <Route path='/real-dashboard' component={RealDashboard} />
             </div>
           </Router>
         </Provider>

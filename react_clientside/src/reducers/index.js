@@ -4,7 +4,8 @@ import selectedPlacesReducer from './reducer_selectedPlaces';
 
 const rootReducer = combineReducers({
   searchResults: searchResultsReducer,
-  selectedPlaces: selectedPlacesReducer
+  selectedPlaces: selectedPlacesReducer,
+  
 });
 
 export default rootReducer;

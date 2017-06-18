@@ -4,13 +4,13 @@ import PlacesList from './places_list';
 import {Link} from 'react-router-dom';
 
 const Dashboard = (props) => {
-  console.log('dashboard props', props)
+  console.log('dashboard props', props);
   return (
     <section>
       <nav id='navbar' className='nav-bar teal'>
         <span><Link to='/'>HOME</Link></span>
         <span><Link to='/dashboard'></Link></span>
-        <div> blah</div>
+        <button><Link to='/real-dashboard'>dash </Link></button>
       </nav>
       <section className='info-bar'>
         <div className='direction-bar'>
@@ -22,7 +22,9 @@ const Dashboard = (props) => {
       <PlacesList
         results={props.results}
         selectPlace={props.selectPlace}
+        city={props.searchTerm}
       />
+
     </section>
 
 

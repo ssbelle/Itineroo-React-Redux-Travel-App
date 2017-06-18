@@ -7,7 +7,7 @@ export const PlacesListItem = (props) => {
   <div className='list-item-container' id='list-item-container'>
     <div className='place-img-div'>imgs!
       {//console.log('placesListItem props', props)
-         props.data.photos && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.data.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0`} />
+         //props.data.photos && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.data.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0`} />
     }
 
 
@@ -18,7 +18,7 @@ export const PlacesListItem = (props) => {
       <span>Rating: {JSON.stringify(props.data.rating)}</span>
 
       <span>
-      <a onClick={()=> props.selectPlace(props.data)}href='#'>Interested </a>
+      <a onClick={()=> props.selectPlace(props.data, props.city)}href='#'>Interested </a>
       <a href='#'>Discard</a>
 
       </span>

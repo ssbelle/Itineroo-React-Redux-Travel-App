@@ -11,6 +11,7 @@ export const PlacesList = (props) => {
         data={place}
         key={place.id}
         selectPlace={props.selectPlace}
+        city={props.city}
       />
     )}
     </ul>

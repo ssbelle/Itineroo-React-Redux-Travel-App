@@ -100,7 +100,7 @@ class Layout extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   console.log('layout mapState', state);
   return ({
     showResults: state.searchResults.showResults,
@@ -108,16 +108,16 @@ const mapStateToProps = (state) => {
   });
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   // selectPlace //this.props.selectPlace()
   return {
-    selectPlace: place =>
-      dispatch(selectPlace(place)),
+    selectPlace: (place, city) =>
+      dispatch(selectPlace(place, city)),
     goFetchLocations(query) {
       goFetchLocations(query, dispatch);
     }
   };
-}
+};
 
 export default connect(
   mapStateToProps, //grabbing pieces of information from global state
