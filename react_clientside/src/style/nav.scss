@@ -175,3 +175,22 @@
   height:300px;
   background-color:#eee;
 }
+.dash-section {
+  display:flex;
+  justify-content: center;
+}
+.selectedPlaces li {
+  display:flex;
+  margin-top:20px;
+}
+
+.dash-item-img {
+  height:50px;
+  width:50px;
+  background-color:#eee;
+}
+
+.dash-item-text {
+  display:flex;
+  flex-direction:column;
+}

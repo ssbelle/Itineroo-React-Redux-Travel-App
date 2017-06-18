@@ -19,7 +19,6 @@ module.exports = {
       query: {
         presets: [['es2015', {'modules': false}], 'react', 'stage-0'],
         plugins: [
-          //'transform-object-rest-spread',
           'lodash']
       }
     },  {
@@ -34,7 +33,7 @@ module.exports = {
         },
         {
           loader: 'sass-loader' // compiles Sass to CSS
-        }, 
+        },
       ]
     }],
   },
