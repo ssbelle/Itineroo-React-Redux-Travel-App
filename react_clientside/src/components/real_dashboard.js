@@ -7,9 +7,7 @@ const RealDashboard = (props) => {
   console.log('RealDonaldTrump',props)
   return (
     <div>
-    <nav id='navbar' className='nav-bar teal'>
-      <span><Link to='/'>HOME</Link></span>
-    </nav>
+
     <section className='info-bar'>
       <div className='direction-bar'>
 

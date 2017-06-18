@@ -7,16 +7,16 @@ const Dashboard = (props) => {
   console.log('dashboard props', props);
   return (
     <section>
-      <nav id='navbar' className='nav-bar teal'>
-        <span><Link to='/'>HOME</Link></span>
-        <span><Link to='/dashboard'></Link></span>
-        <button><Link to='/real-dashboard'>dash </Link></button>
-      </nav>
       <section className='info-bar'>
         <div className='direction-bar'>
           <span>You are going to love {props.searchTerm}!</span>
           <span className='direction-additional-info'>Add & Remove & Drag & Drop to perfect your trip!</span>
         </div>
+      </section>
+      <section className='dash-btn'>
+        <button>
+          <Link to='/real-dashboard'>done selections-take me to dashbaord</Link>
+        </button>
       </section>
 
       <PlacesList
