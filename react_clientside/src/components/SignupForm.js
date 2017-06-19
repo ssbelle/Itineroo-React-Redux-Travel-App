@@ -43,7 +43,7 @@ export default class SignupForm extends React.Component {
             () => {
               this.props.addFlashMessage({
                 type: 'success',
-                text: 'You signed up sucessfully. Welcome!'
+                text: 'Signup sucessful. Welcome!'
               });
             // Directs user to create-trip page upon signing up
             this.context.router.history.push('/create-trip');
@@ -69,9 +69,7 @@ export default class SignupForm extends React.Component {
         <TextFieldGroup error={errors.passwordConfirmation} label="Password Confirmation" onChange={this.onChange} value={this.state.passwordConfirmation} field="passwordConfirmation" type="password"/>
 
         <div className="form-group">
-          <button className="btn btn-primary btn-lg">
-            Sign up
-          </button>
+          <button className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">done</i></button>
         </div>
       </form>
     );

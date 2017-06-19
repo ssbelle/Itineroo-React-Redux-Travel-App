@@ -15,6 +15,7 @@ import Login from './components/Login';
 import Nav from './components/Nav';
 import RealDashboard from './components/real_dashboard';
 import FluxCartApp from './components/FluxCartApp.react.js';
+import FlashMessagesList from './components/flash/FlashMessagesList';
 
 // import Customize from './components/customize';
 
@@ -33,6 +34,7 @@ export default class App extends React.Component {
         <Provider store={store} >
           <Router>
             <div>
+            <FlashMessagesList />
             <Nav />
               <Route exact path='/' component={Home}>
                 {/* <IndexRoute component={Home} /> */}
