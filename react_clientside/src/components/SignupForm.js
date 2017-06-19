@@ -20,7 +20,7 @@ export default class SignupForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
+    console.log('User data', this.state);
     this.props.userSignupRequest(this.state);
   }
 
