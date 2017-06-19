@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import searchResultsReducer from './reducer_searchResults';
 import selectedPlacesReducer from './reducer_selectedPlaces';
+import flashMessages from './flashMessages'
 
-const rootReducer = combineReducers({
+export default combineReducers({
   searchResults: searchResultsReducer,
   selectedPlaces: selectedPlacesReducer,
-  
-});
-
-export default rootReducer;
+  flashMessages
+})

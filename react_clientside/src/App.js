@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {AppContainer} from 'react-hot-loader';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import rootReducer from './reducers/index';
+import rootReducer from './reducers/rootReducer';
 import { IndexRoute} from 'react-router';
 
 import Home from './components/Home';
@@ -19,8 +19,11 @@ import FluxCartApp from './components/FluxCartApp.react.js';
 // import Customize from './components/customize';
 
 const store = createStore(
-  (state = {}) => state,
-  applyMiddleware(thunk)
+  rootReducer,
+  compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 );
 
 export default class App extends React.Component {

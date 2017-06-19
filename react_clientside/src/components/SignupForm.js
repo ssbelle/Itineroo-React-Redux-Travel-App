@@ -34,19 +34,24 @@ export default class SignupForm extends React.Component {
   }
 
   onSubmit(e) {
-    this.setState({errors: {}});
     e.preventDefault();
 
     if (this.isValid()) {
-      console.log('User data', this.state);
-      this.props.userSignupRequest(this.state).then(() => {
-        // Directs user to create-trip page upon signing up
-        this.context.router.history.push('/create-trip');
-      }, ({response}) => {
-        this.setState({errors: response.data})
-      });
-    }
-  }
+      this.setState({errors: {}});
+          console.log('User data', this.state);
+          this.props.userSignupRequest(this.state).then(
+            () => {
+              this.props.addFlashMessage({
+                type: 'success',
+                text: 'You signed up sucessfully. Welcome!'
+              });
+            // Directs user to create-trip page upon signing up
+            this.context.router.history.push('/create-trip');
+          }, ({response}) => {
+            this.setState({errors: response.data})
+          });
+        }
+      }
 
   render() {
     const {errors} = this.state;
@@ -72,6 +77,11 @@ export default class SignupForm extends React.Component {
     );
   }
 }
+
+SignupForm.propTypes = {
+  userSignupRequest: React.PropTypes.func.isRequired,
+  addFlashMessage: React.PropTypes.func.isRequired
+ }
 
 SignupForm.contextTypes = {
   router: React.PropTypes.object.isRequired
