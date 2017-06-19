@@ -39,7 +39,10 @@ export default class SignupForm extends React.Component {
 
     if (this.isValid()) {
       console.log('User data', this.state);
-      this.props.userSignupRequest(this.state).then(() => {}, ({response}) => {
+      this.props.userSignupRequest(this.state).then(() => {
+        // Directs user to create-trip page upon signing up
+        this.context.router.history.push('/create-trip');
+      }, ({response}) => {
         this.setState({errors: response.data})
       });
     }
@@ -68,4 +71,8 @@ export default class SignupForm extends React.Component {
       </form>
     );
   }
+}
+
+SignupForm.contextTypes = {
+  router: React.PropTypes.object.isRequired
 }
