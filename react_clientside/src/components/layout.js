@@ -33,7 +33,7 @@ class Layout extends Component {
         <section className='info-bar'>
           <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
         </section>
-        <img className='home-img' src='images/travel-planning.jpg' mode='fit' />
+        <img className='home-img' src='/static/images/travel-planning.jpg' mode='fit' />
 
         <section className={`trip-section ${this.state.processStep}`}>
           <section className='choose-path-container'>
@@ -94,8 +94,8 @@ class Layout extends Component {
 const mapStateToProps = state => {
   console.log('layout mapState', state);
   return ({
-    showResults: state.searchResults.showResults,
-    locationsData: state.searchResults.locationsData
+    // showResults: state.searchResults.showResults,
+    // locationsData: state.searchResults.locationsData
   });
 };
 

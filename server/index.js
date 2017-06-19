@@ -18,8 +18,15 @@ app.use(bodyParser.json());
 app.use('/api/users', users);
 // app.use('/api/auth', auth);
 // app.use('/api/events', events);
+var staticRoute = __dirname + '/../react_clientside/public';
+
+app.use('/static', express.static(staticRoute));
+console.log('dirname', __dirname);
+console.log('staticRoute', staticRoute)
 
 const compiler = webpack(webpackConfig);
+
+
 
 app.use(webpackMiddleware(compiler, {
   hot: true,

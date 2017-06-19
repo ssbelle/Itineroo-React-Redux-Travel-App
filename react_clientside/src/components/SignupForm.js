@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import classnames from 'classnames';
 
 export default class SignupForm extends React.Component {
   constructor(props) {
@@ -9,53 +10,88 @@ export default class SignupForm extends React.Component {
       email: '',
       password: '',
       passwordConfirmation: '',
+      errors: {}
     }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   onSubmit(e) {
+    this.setState({ errors: {}});
     e.preventDefault();
     console.log('User data', this.state);
-    this.props.userSignupRequest(this.state);
+    this.props.userSignupRequest(this.state).then(() => {}, ({response}) => {
+      this.setState({errors: response.data})
+    });
   }
 
   render() {
-    const { userSignupRequest } = this.props;
+    const { errors } = this.state;
+    const {userSignupRequest} = this.props;
     return (
-        <section className='reg-login-popup-section'>
-          <img className='home-img' src='images/travel-planning.jpg' mode='fit'/>
+      <form onSubmit={this.onSubmit}>
+      <h1>Join our community!</h1>
 
-          <form onSubmit={this.onSubmit}>
-          <section className='reg-log-popup-form'>
-            <div className='input-field'>
-              <label className="control-label">Username</label>
-              <input id="destination_input" type="text" className="form-control" name="username" value={this.state.username} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Email</label>
-              <input id="destination_input" type="text" className="form-control" name="email" value={this.state.email} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Password</label>
-              <input id="destination_input" type="text" className="form-control" name="password" value={this.state.password} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Password Confirmation</label>
-              <input id="destination_input" type="text" className="form-control" name="passwordConfirmation" value={this.state.passwordConfirmation} onChange={this.onChange}/>
-            </div>
-            <button className="btn-floating btn-large waves-effect waves-light red">
-              {/* <Link to='/create-trip'> */}
-                <i className="material-icons">done</i>
-              {/* </Link> */}
-            </button>
-          </section>
-        </form>
-        </section>
+             <div className={classnames("form-group", { 'has-error': errors.username })}>
+               <label className="control-label">Username</label>
+               <input
+                 value={this.state.username}
+                 onChange={this.onChange}
+                 type="text"
+                 name="username"
+                 className="form-control"
+               />
+               {errors.username && <span className="help-block">{errors.username}</span>}
+             </div>
+
+             <div className={classnames("form-group", { 'has-error': errors.email })}>
+               <label className="control-label">Email</label>
+               <input
+                 onChange={this.onChange}
+                 value={this.state.email}
+                 type="text"
+                 name="email"
+                 className="form-control"
+               />
+               {errors.email && <span className="help-block">{errors.email}</span>}
+             </div>
+
+             <div className={classnames("form-group", { 'has-error': errors.password })}>
+               <label className="control-label">Password</label>
+               <input
+                 onChange={this.onChange}
+                 value={this.state.password}
+                 type="password"
+                 name="password"
+                 className="form-control"
+               />
+               {errors.password && <span className="help-block">{errors.password}</span>}
+             </div>
+
+             <div className={classnames("form-group", { 'has-error': errors.passwordConfirmation })}>
+               <label className="control-label">Password Confirmation</label>
+               <input
+                 onChange={this.onChange}
+                 value={this.state.passwordConfirmation}
+                 type="password"
+                 name="passwordConfirmation"
+                 className="form-control"
+               />
+               {errors.passwordConfirmation && <span className="help-block">{errors.passwordConfirmation}</span>}
+             </div>
+
+             <div className="form-group">
+               <button disabled={this.state.isLoading} className="btn btn-primary btn-lg">
+                 Sign up
+               </button>
+             </div>
+           </form>
     );
   }
 }
