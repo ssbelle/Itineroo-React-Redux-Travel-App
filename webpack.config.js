@@ -3,6 +3,7 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
   entry: [
+    'webpack-hot-middleware/client?reload=true',
     'react-hot-loader/patch',
     './react_clientside/src/index.js'
   ],
@@ -40,7 +41,11 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './server/',
-    hot: true
+    hot: true,
+//     proxy: [{
+//     path: /\/(?!__webpack_hmr).+/, // I get the same error if I change this to 'path: /\/.+/'
+//     target: 'http://my-backend.localhost'
+// }]
   },
   plugins: [
     new LodashModuleReplacementPlugin,
