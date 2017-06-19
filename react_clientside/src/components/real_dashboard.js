@@ -1,15 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import GoogleMap from './google_map';
 
 const RealDashboard = (props) => {
   console.log('RealDonaldTrump',props)
   return (
     <div>
-    <nav id='navbar' className='nav-bar teal'>
-      <span><Link to='/'>HOME</Link></span>
-    </nav>
+
     <section className='info-bar'>
       <div className='direction-bar'>
 
@@ -20,27 +17,28 @@ const RealDashboard = (props) => {
       </div>
     </section>
 
-    <section className='map-section'>google map
-    </section>
-    <section>
+    <section className='dash-section'>
       <ul className=''>
         {props.cities.map(city =>
           <li key={city}>
-            <h2>{city}</h2>
-            <ul className='selectedPlaces'>
-            {Object.values(props.places[city])
-                  .map(location =>
-                    <li key={location.id}>
-                      <div className='dash-item-img'></div>
-                      <div className='dash-item-text'>
-                        <span>
-                          {location.name}
-                        </span>
-                        <span>who is going icons</span>
-                        </div>
-                      </li>
-                    )}
-            </ul>
+            <GoogleMap places={props.places[city]} />
+            <div className='city-wrapper'>
+              <h2>{city}</h2>
+              <ul className='selectedPlaces'>
+              {Object.values(props.places[city])
+                    .map(location =>
+                      <li key={location.id}>
+                        <div className='dash-item-img'></div>
+                        <div className='dash-item-text'>
+                          <span>
+                            {location.name}
+                          </span>
+                          <span>who is going icons</span>
+                          </div>
+                        </li>
+                      )}
+              </ul>
+            </div>
           </li>)}
       </ul>
     </section>
@@ -54,10 +52,10 @@ const mapStateToProps = state => {
   return {
     cities: Object.keys(state.selectedPlaces),
     places: state.selectedPlaces
-  }
-}
+  };
+};
 
 export default connect(
-  mapStateToProps, //grabbing pieces of information from global state
+  mapStateToProps //grabbing pieces of information from global state
 //  mapDispatchToProps
 )(RealDashboard);

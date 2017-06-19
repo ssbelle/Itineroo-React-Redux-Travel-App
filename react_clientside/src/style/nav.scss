@@ -74,7 +74,7 @@
 
  .home-img {
    width:100vw;
-   height:100vh;
+
    position: absolute;
 
 }
@@ -171,7 +171,43 @@
 }
 
 .map-section {
-  width:100%;
+  width:100vw;
   height:300px;
+  background-color:#000;
+}
+
+.map-gic {
+  height: 300px;
+  width: 90vw;
+}
+
+.dash-section {
+  display:flex;
+  justify-content: center;
+}
+ul.selectedPlaces {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+}
+.selectedPlaces li {
+  display:flex;
+  margin-top:20px;
+}
+
+.dash-item-img {
+  height:50px;
+  width:50px;
   background-color:#eee;
+}
+
+.dash-item-text {
+  display:flex;
+  flex-direction:column;
+  margin-left:20px;
+}
+.dash-btn {
+  display: flex;
+  justify-content: center;
 }

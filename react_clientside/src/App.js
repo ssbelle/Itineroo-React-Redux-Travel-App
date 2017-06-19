@@ -31,14 +31,12 @@ export default class App extends React.Component {
           <Router>
             <div>
             <Nav />
-              <Route exact path='/' component={Home}>
-              </Route>
+              <Route exact path='/' component={Home}/>
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
               {/* Need to change layout */}
-              <Route path='/create-trip' component={Layout}>
+              <Route path='/create-trip' component={Layout}/>
               <Route path='/real-dashboard' component={RealDashboard} />
-              </Route>
             </div>
           </Router>
         </Provider>
