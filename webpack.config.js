@@ -39,7 +39,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './react_clientside/public/',
+    contentBase: './server/',
     hot: true
   },
   plugins: [

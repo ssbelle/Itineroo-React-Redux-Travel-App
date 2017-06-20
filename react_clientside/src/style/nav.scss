@@ -33,8 +33,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 50%;
+  position: relative;
+  width: 360px;
   background-color: #2E2C2C;
   opacity: 0.86;
   margin-top: 70px;
@@ -54,10 +54,15 @@
 input#destination_input{
   color:#fff;
   margin-bottom: 0;
+  border-bottom: 1px solid #9e9e9e;
+  :focus {
+    border-bottom: 3px solid teal;
+  }
 }
 input#dates_input {
   color:#fff;
   margin-bottom: 0;
+  border-bottom: 1px solid #9e9e9e;
 }
 
 label {
@@ -78,7 +83,7 @@ label {
   margin-left: 30px;
 }
 
-.place-img-div img{
+.place-img-div img {
   height: 75px;
   width: 75px;
   background-color: #eee;
@@ -100,6 +105,9 @@ label {
 .reg-login-popup-section{
   display:flex;
   justify-content: center;
+  .btn-floating{
+    margin-top: 15px;
+  }
 }
 
 
@@ -110,7 +118,7 @@ label {
   align-items: center;
   color: #fff;
   font-size: 1.7em;
-  width: 35%;
+  width: 320px;
   padding: 20px 40px;
   margin: 0 auto;
   margin-top: 75px;
@@ -222,10 +230,12 @@ ul.selectedPlaces {
   flex-direction:column;
   margin-left:20px;
 }
+
 .dash-btn {
   display: flex;
   justify-content: center;
 }
-.dash-city-name {
+
+npm .dash-city-name {
   text-align:center;
 }
