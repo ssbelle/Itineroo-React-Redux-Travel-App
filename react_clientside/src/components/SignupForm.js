@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import classnames from 'classnames';
-import validateInput from '../../../server/shared/validations/signup.js'
-import TextFieldGroup from './common/TextFieldGroup'
+import validateInput from '../../../server/shared/validations/signup.js';
+import TextFieldGroup from './common/TextFieldGroup';
 
 export default class SignupForm extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ export default class SignupForm extends React.Component {
         let errors = this.state.errors;
         let invalid;
         if (res.data.user) {
-          errors[field] = 'There is already registered user with' + field;
+          errors[field] = 'There is already a registered user with that ' + field;
           invalid = true;
         } else {
           errors[field] = '';
@@ -55,25 +55,21 @@ export default class SignupForm extends React.Component {
     }
   }
 
-  onSubmit(e) {
-    e.preventDefault();
+onSubmit(e) {
+  e.preventDefault();
 
-    if (this.isValid()) {
-      this.setState({ errors: {}, isLoading: true });
-          console.log('User data', this.state);
-          this.props.userSignupRequest(this.state).then(
-            () => {
-              this.props.addFlashMessage({
-                type: 'success',
-                text: 'Signup sucessful. Welcome!'
-              });
-            // Directs user to create-trip page upon signing up
-            this.context.router.history.push('/create-trip');
-          }, ({response}) => {
-            this.setState({ errors: response.data, isLoading: false})
-          });
-        }
-      }
+  if (this.isValid()) {
+    console.log('User data', this.state);
+    this.setState({errors: {}, isLoading: true});
+    this.props.userSignupRequest(this.state).then(() => {
+      this.props.addFlashMessage({type: 'success', text: 'Signup sucessful. Welcome!'});
+      // Directs user to create-trip page upon signing up
+      this.context.router.history.push('/create-trip');
+    }, ({response}) => {
+      this.setState({errors: response.data, isLoading: false})
+    });
+  }
+}
 
   render() {
     const {errors} = this.state;

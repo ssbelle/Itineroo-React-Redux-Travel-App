@@ -10,8 +10,8 @@ import { IndexRoute} from 'react-router';
 
 import Home from './components/Home';
 import Layout from './components/Layout';
-import Signup from './components/SignupPage';
-import Login from './components/Login';
+import SignupPage from './components/SignupPage';
+import LoginPage from './components/LoginPage';
 import Nav from './components/Nav';
 import RealDashboard from './components/real_dashboard';
 import FluxCartApp from './components/FluxCartApp.react.js';
@@ -39,8 +39,8 @@ export default class App extends React.Component {
               <Route exact path='/' component={Home}>
                 {/* <IndexRoute component={Home} /> */}
               </Route>
-              <Route path='/signup' component={Signup} />
-              <Route path='/login' component={Login} />
+              <Route path='/signup' component={SignupPage} />
+              <Route path='/login' component={LoginPage} />
               {/* Need to change layout */}
               <Route path='/create-trip' component={Layout}/>
               <Route path='/real-dashboard' component={RealDashboard} />

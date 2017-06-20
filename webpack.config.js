@@ -3,13 +3,13 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client?reload=true',
+    // 'webpack-hot-middleware/client?reload=true',
     'react-hot-loader/patch',
     './react_clientside/src/index.js'
   ],
   output: {
     path: __dirname,
-    publicPath: '/',
+    publicPath: 'http://localhost:5000/',
     filename: 'bundle.js'
   },
   module: {
@@ -41,11 +41,11 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './server/',
+    host: '0.0.0.0',
     hot: true,
-//     proxy: [{
-//     path: /\/(?!__webpack_hmr).+/, // I get the same error if I change this to 'path: /\/.+/'
-//     target: 'http://my-backend.localhost'
-// }]
+    port: 5000,
+    inline: true,
+    headers: { 'Access-Control-Allow-Origin': '*' }
   },
   plugins: [
     new LodashModuleReplacementPlugin,
