@@ -2,10 +2,10 @@ import React from 'react';
 // import PlacesList from './places_list';
 
 export const PlacesListItem = (props) => {
-  //console.log('placesListItem', props)
+  console.log('placesListItem', props)
   return (
   <div className='list-item-container' id='list-item-container'>
-    <div className='place-img-div'>imgs!
+    <div className='place-img-div'>
       {//console.log('placesListItem props', props)
          //props.data.photos && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.data.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0`} />
     }
