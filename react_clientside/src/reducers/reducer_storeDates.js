@@ -1,12 +1,14 @@
 const initialState = {
-  showResults: false,
-  locationsData: []
+  dates: [],
 };
 
 export default function(state = initialState, action) {
   switch(action.type) {
-  case 'LOCATIONS_FETCHED':
-    return action.payload;
+  case 'DATES_SELECTED':
+    return {
+      ...state,
+      datesLength: action.payload.dates
+    };
   }
   return state;
 }

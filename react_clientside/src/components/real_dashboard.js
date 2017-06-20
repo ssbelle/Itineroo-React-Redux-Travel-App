@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import GoogleMap from './google_map';
+import SelectedPlacesList from './selected_places_list';
 
 const RealDashboard = (props) => {
   console.log('RealDonaldTrump',props)
@@ -23,21 +24,8 @@ const RealDashboard = (props) => {
           <li key={city}>
             <GoogleMap places={props.places[city]} />
             <div className='city-wrapper'>
-              <h2>{city}</h2>
-              <ul className='selectedPlaces'>
-              {Object.values(props.places[city])
-                    .map(location =>
-                      <li key={location.id}>
-                        <div className='dash-item-img'></div>
-                        <div className='dash-item-text'>
-                          <span>
-                            {location.name}
-                          </span>
-                          <span>who is going icons</span>
-                          </div>
-                        </li>
-                      )}
-              </ul>
+              <h2 className='dash-city-name'>{city}</h2>
+              <SelectedPlacesList places={props.places[city]}/>
             </div>
           </li>)}
       </ul>
@@ -51,7 +39,8 @@ const mapStateToProps = state => {
   console.log("real",state);
   return {
     cities: Object.keys(state.selectedPlaces),
-    places: state.selectedPlaces
+    places: state.selectedPlaces,
+    storeDates: state.storeDates
   };
 };
 

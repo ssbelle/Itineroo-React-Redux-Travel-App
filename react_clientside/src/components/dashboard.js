@@ -23,6 +23,7 @@ const Dashboard = (props) => {
         results={props.results}
         selectPlace={props.selectPlace}
         city={props.searchTerm}
+        dates={props.storeDates}
       />
 
     </section>

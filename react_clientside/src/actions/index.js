@@ -7,6 +7,13 @@ export function selectPlace(place, city) {
   };
 }
 
+export function storeDates(datesLength){
+  return {
+    type: 'DATES_SELECTED',
+    payload: datesLength
+  };
+}
+
 export function goFetchLocations(query, dispatch) {
     //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYg
   fetch('./fakeState.json')

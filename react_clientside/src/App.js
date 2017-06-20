@@ -19,9 +19,11 @@ import FluxCartApp from './components/FluxCartApp.react.js';
 // import Customize from './components/customize';
 
 const store = createStore(
-  (state = {}) => state,
-  applyMiddleware(thunk)
-);
+                rootReducer,
+                composeWithDevTools(
+                  applyMiddleware(thunk)
+                )
+              );
 
 export default class App extends React.Component {
   render() {
@@ -31,9 +33,7 @@ export default class App extends React.Component {
           <Router>
             <div>
             <Nav />
-              <Route exact path='/' component={Home}>
-                {/* <IndexRoute component={Home} /> */}
-              </Route>
+              <Route exact path='/' component={Home} />
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
               {/* Need to change layout */}
