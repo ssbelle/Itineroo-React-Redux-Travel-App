@@ -12,7 +12,7 @@ export const PlacesList = (props) => {
         key={place.id}
         selectPlace={props.selectPlace}
         city={props.city}
-        
+
         dates={props.storeDates}
       />
     )}

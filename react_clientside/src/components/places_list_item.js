@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import PlacesList from './places_list';
 
 export const PlacesListItem = (props) => {
@@ -18,8 +19,12 @@ export const PlacesListItem = (props) => {
       <span>Rating: {JSON.stringify(props.data.rating)}</span>
 
       <span>
-      <a onClick={()=> props.selectPlace(props.data, props.city)}href='#'>Interested </a>
-      <a href='#'>Discard</a>
+      <div onClick={()=> {
+
+        props.selectPlace(props.data, props.city);
+      }}
+        href='#'>Interested </div>
+
 
       </span>
 

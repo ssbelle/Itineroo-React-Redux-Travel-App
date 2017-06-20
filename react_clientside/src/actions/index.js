@@ -1,5 +1,6 @@
 export function selectPlace(place, city) {
   //needs to return an action an object with type props
+  console.log('action',place, city);
   return {
     type: 'PLACE_SELECTED',
     payload: place,
