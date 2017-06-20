@@ -10,12 +10,13 @@ import { IndexRoute} from 'react-router';
 import setAuthorizationToken from '../utils/setAuthorizationToken';
 import jwtDecode from 'jwt-decode';
 import { setCurrentUser } from './actions/authActions';
+import requireAuth from '../utils/requireAuth';
 
 import Home from './components/Home';
+import Nav from './components/Nav';
 import Layout from './components/Layout';
 import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
-import Nav from './components/Nav';
 import RealDashboard from './components/real_dashboard';
 import FluxCartApp from './components/FluxCartApp.react.js';
 import FlashMessagesList from './components/flash/FlashMessagesList';
@@ -51,8 +52,8 @@ export default class App extends React.Component {
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
               {/* Need to change layout */}
-              <Route path='/create-trip' component={Layout}/>
-              <Route path='/real-dashboard' component={RealDashboard} />
+              <Route path='/create-trip' component={requireAuth(Layout)}/>
+              <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
               <Route path='/cart' component={FluxCartApp} />
             </div>
           </Router>
