@@ -3,15 +3,21 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 // import PlacesList from './places_list';
 import { connect } from 'react-redux';
+import { logout } from '../actions/authActions';
 
 class Nav extends React.Component {
+  logout (e) {
+    e.preventDefault();
+    this.props.logout();
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth
 
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
         <li>
-          <a href="#">Logout</a>
+          <a href="#" onClick={this.logout.bind(this)}>Logout</a>
         </li>
       </ul>
 
@@ -45,9 +51,9 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = {
-  auth: React.PropTypes.object.isRequired
-}
-
+  auth: React.PropTypes.object.isRequired,
+  logout: React.PropTypes.func.isRequired
+  }
 
 function mapStateToProps(state) {
   return {
@@ -55,4 +61,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Nav);
+export default connect(mapStateToProps, {logout})(Nav);
