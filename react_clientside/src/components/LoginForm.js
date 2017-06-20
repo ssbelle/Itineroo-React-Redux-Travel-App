@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import validateInput from '../../../server/shared/validations/login.js';
 import TextFieldGroup from './common/TextFieldGroup';
 import { connect } from 'react-redux';
-import { login } from './../actions/loginActions';
+import { login } from './../actions/authActions';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -34,22 +34,12 @@ class LoginForm extends React.Component {
     if (this.isValid()) {
       console.log('User data', this.state);
       this.setState({errors: {}, isLoading: true});
-      this.props.login(this.state).then(() => {
-        // Directs user to create-trip page upon signing up
-        this.context.router.history.push('/create-trip');
-      }, ({response}) => {
-        this.setState({errors: response.data, isLoading: false})
-      });
+      this.props.login(this.state).then(
+        (res) => this.context.router.history.push('/create-trip'),
+        (err) => this.setState({ errors: err.response.data.errors, isLoading: false })
+      );
     }
   }
-      // this.setState({errors: {}, isLoading: true});
-      // this.props.login(this.state).then((res) => this.context.router.history.push('/create-trip'),
-      // (err) => this.setState
-      //
-      // }
-
-    // }
-  // }
 
   onChange(e) {
     this.setState({
@@ -62,6 +52,8 @@ class LoginForm extends React.Component {
     return (
       <form onSubmit={this.onSubmit}>
         <h1>Login!</h1>
+
+        { errors.form && <div className="alert alert-danger">{errors.form}</div> }
 
         <TextFieldGroup field="identifier" label="Username / Email" value={identifier} error={errors.identifier} onChange={this.onChange}/>
 

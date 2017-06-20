@@ -7,6 +7,9 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
 import { IndexRoute} from 'react-router';
+import setAuthorizationToken from '../utils/setAuthorizationToken';
+import jwtDecode from 'jwt-decode';
+import { setCurrentUser } from './actions/authActions';
 
 import Home from './components/Home';
 import Layout from './components/Layout';
@@ -26,6 +29,12 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+
+if (localStorage.jwtToken) {
+   setAuthorizationToken(localStorage.jwtToken);
+   store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
+}
+
 
 export default class App extends React.Component {
   render() {
