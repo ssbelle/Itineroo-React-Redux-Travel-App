@@ -5,20 +5,28 @@ export function selectPlace(place, city) {
     payload: place,
     city: city
   };
+}2
+
+export function storeDates(datesLength){
+  return {
+    type: 'DATES_SELECTED',
+    payload: datesLength
+  };
 }
 
 export function goFetchLocations(query, dispatch) {
-    //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYgw
-  fetch('./fakeState.json')
-  // fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?query='+query+ ' top places to see'+'&radius=5000&sensor=false&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0&libraries=places', {headers:{'Access-Control-Allow-Origin': '*'}})
+  let url = '/api/data?query=' + query;
+  fetch(url)
   .then(response => {
     return response.json();
-  }).then(locationsData => {
+  })
+  .then(locationsData => {
+    console.log('shutest', locationsData);
     dispatch({
       type: 'LOCATIONS_FETCHED',
       payload: {
         showResults: true,
-        locationsData: locationsData//.results
+        locationsData: locationsData.results
       }
     });
   });

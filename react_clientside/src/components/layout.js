@@ -5,7 +5,7 @@ import Dashboard from './dashboard';
 import Calendar from './calendar';
 
 import { connect } from 'react-redux';
-import { selectPlace, goFetchLocations } from '../actions/index';
+import { selectPlace, storeDates, goFetchLocations } from '../actions/index';
 
 class Layout extends Component {
   constructor(props) {
@@ -14,7 +14,8 @@ class Layout extends Component {
     this.state = {
       searchTerm: '',
       processStep: 'step-1',
-      processPath: false
+      processPath: false,
+      datesTerm:''
     };
   }
 
@@ -26,6 +27,7 @@ class Layout extends Component {
       <Dashboard
         selectPlace={this.props.selectPlace}
         searchTerm={this.state.searchTerm}
+        storeDates={this.state.datesTerm}
         results={this.props.locationsData}>
       </Dashboard> :
 
@@ -71,8 +73,24 @@ class Layout extends Component {
               <div className='input-field'>
                 <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
                 <label>Where are you going?</label>
-              </div>
-              <button className='go-fetch-btn' onClick={() => this.props.goFetchLocations(this.state.searchTerm)}>click me</button>
+            </div>
+            <div className='input-field'>
+              <input id="dates_input" type="text" className="dates" value={this.state.datesTerm} onChange={event=>this.setState({datesTerm: event.target.value})} />
+              <label>How many days are you travelling?</label>
+            </div>
+
+            {console.log('dates', this.state.datesTerm)}
+
+
+
+
+
+
+              <button className='go-fetch-btn' onClick={() => {
+                this.props.storeDates(this.state.datesTerm);
+                this.props.goFetchLocations(this.state.searchTerm);
+              }}
+              >click me</button>
               </section> :
 
               <section className='path-forms'>
@@ -80,7 +98,9 @@ class Layout extends Component {
                 <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
                 <label>"Who" are you uhuuhuuuhuuhh?</label>
               </div>
-              <button className='go-fetch-btn' onClick={() => this.props.goFetchLocations(this.state.searchTerm)}>click me</button>
+              <button className='go-fetch-btn' onClick={() => {
+                this.props.goFetchLocations(this.state.searchTerm);
+              }}>click me</button>
               </section>}
           </section>
         </section>
@@ -91,24 +111,31 @@ class Layout extends Component {
   }
 }
 
+
+
 const mapStateToProps = state => {
   console.log('layout mapState', state);
   return ({
-    // showResults: state.searchResults.showResults,
-    // locationsData: state.searchResults.locationsData
+    showResults: state.searchResults.showResults,
+    locationsData: state.searchResults.locationsData,
+    storeDates: state.datesTerm
   });
 };
 
+
 const mapDispatchToProps = dispatch => {
-  // selectPlace //this.props.selectPlace()
+  console.log('layout dispatch', dispatch);
   return {
     selectPlace: (place, city) =>
       dispatch(selectPlace(place, city)),
+    storeDates: (datesLength) =>
+      dispatch(storeDates(datesLength)),
     goFetchLocations(query) {
       goFetchLocations(query, dispatch);
     }
   };
 };
+
 
 export default connect(
   mapStateToProps, //grabbing pieces of information from global state

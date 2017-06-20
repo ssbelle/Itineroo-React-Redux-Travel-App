@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
+import fetch from 'node-fetch';
 
 // import webpack from 'webpack';
 // import webpackMiddleware from 'webpack-dev-middleware';
@@ -17,6 +18,19 @@ app.use(bodyParser.json());
 
 app.use('/api/users', users);
 app.use('/api/auth', auth);
+app.use('/api/data', (req, res) => {
+  let url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBjzANaHMSwi5Rss6Kgr2dB2H4eJLLrfbg&query=${req.query.query}%20top%20places%20to%20see&radius=5000&sensor=false&0&libraries=places`
+    //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYgw
+  // fetch('./fakeState.json')
+  fetch(url)
+  .then(response => {
+    return response.json();
+  })
+  .then(locationsData => {
+    res.json(locationsData);
+  });
+});
+
 // app.use('/api/events', events);
 var staticRoute = __dirname + '/../react_clientside/public';
 
