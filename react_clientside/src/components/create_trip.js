@@ -2,44 +2,42 @@ import React, { Component } from 'react';
 import PlacesList from './places_list';
 import {Link} from 'react-router-dom';
 import Dashboard from './dashboard';
+import CustomizeTrip from './customize_trip';
+import Dashbaord from './dashboard';
 import Calendar from './calendar';
 
 import { connect } from 'react-redux';
 import { selectPlace, storeDates, goFetchLocations } from '../actions/index';
 
-
-
-
-
-class Layout extends Component {
+class CreateTrip extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      searchTerm: '',
       processStep: 'step-1',
       processPath: false,
-      datesTerm:''
+      searchTerm: props.searchTerm
     };
   }
 
+  // getInitialState
+
   render() {
-    console.log('layout props', this.props);
     return (
     <main>
     {this.props.showResults ?
-      <Dashboard
-        selectPlace={this.props.selectPlace}
+      <CustomizeTrip path='/customize-trip'
         searchTerm={this.state.searchTerm}
         storeDates={this.state.datesTerm}
-        results={this.props.locationsData}>
-      </Dashboard> :
+        results={this.props.locationsData}
+        selectPlace={this.props.selectPlace}
+      /> :
 
       <section className='creating-trip'>
         <section className='info-bar'>
           <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
         </section>
-        <img className='home-img' src='images/travel-planning.jpg' mode='fit' />
+        <img className='home-img' src='/static/images/travel-planning.jpg' mode='fit' />
 
         <section className={`trip-section ${this.state.processStep}`}>
           <section className='choose-path-container'>
@@ -82,28 +80,24 @@ class Layout extends Component {
               <input id="dates_input" type="text" className="dates" value={this.state.datesTerm} onChange={event=>this.setState({datesTerm: event.target.value})} />
               <label>How many days are you travelling?</label>
             </div>
-
             {console.log('dates', this.state.datesTerm)}
+            <button className='go-fetch-btn' onClick={() => {
+              this.props.storeDates(this.state.datesTerm || '');
+              this.props.goFetchLocations(this.state.searchTerm);
+            }}
+            >click me</button>
+          </section> :
 
 
-
-
-
-
-              <button className='go-fetch-btn' onClick={() => {
-                this.props.storeDates(this.state.datesTerm);
-                this.props.goFetchLocations(this.state.searchTerm);
-              }}
-              >click me</button>
-              </section> :
-
-              <section className='path-forms'>
-              <div className='input-field'>
-                <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
-                <label>"Who" are you uhuuhuuuhuuhh?</label>
-              </div>
-              <button className='go-fetch-btn' onClick={() => this.props.goFetchLocations(this.state.searchTerm)}>click me</button>
-              </section>}
+          <section className='path-forms'>
+          <div className='input-field'>
+            <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
+            <label>"Who" are you uhuuhuuuhuuhh?</label>
+          </div>
+          <button className='go-fetch-btn' onClick={() => {
+            this.props.goFetchLocations(this.state.searchTerm);
+          }}>click me</button>
+          </section>}
           </section>
         </section>
       </section>
@@ -115,18 +109,19 @@ class Layout extends Component {
 
 
 
-const mapStateToProps = state => {
-  console.log('layout mapState', state);
+const mapStateToProps = (state, ownProps) => {
+  console.log('layout mapState', state, ownProps);
   return ({
     showResults: state.searchResults.showResults,
     locationsData: state.searchResults.locationsData,
-    storeDates: state.datesTerm
+    storeDates: state.datesTerm,
+    searchTerm: state.searchResults.searchTerm
   });
 };
 
 
 const mapDispatchToProps = dispatch => {
-  console.log('layout dispatch', dispatch);
+  //console.log('layout dispatch', dispatch);
   return {
     selectPlace: (place, city) =>
       dispatch(selectPlace(place, city)),
@@ -142,4 +137,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps, //grabbing pieces of information from global state
   mapDispatchToProps
-)(Layout);
+)(CreateTrip);

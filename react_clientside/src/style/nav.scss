@@ -2,14 +2,41 @@ h2 {
   text-align:center;
   padding-left:30px;
 }
+#signup-form {
+  width: 400px;
+  margin: 0 auto;
+}
 
-.nav-bar.teal {
+nav#nav-bar.teal {
+  min-height:80px;
   height:80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom:0;
+  border-radius: none;
+}
+#login-form {
+  width: 400px;
+  margin: 0 auto;
+}
+nav.navbar {
+  border-radius: 0 !important;
+  margin-bottom:0;
+  height: 80px;
+}
+@media (min-width: 768px){
+  .navbar {
+      border-radius: 0 !important;
+    }
+}
+
+
+.form-group-btn {
+  display:flex;;
+  justify-content: center;
 }
 
 .direction-bar {

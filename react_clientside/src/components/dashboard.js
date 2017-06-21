@@ -1,35 +1,62 @@
 import React from 'react';
-import PlacesList from './places_list';
-// import Layout from './layout';
+import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
+import GoogleMap from './google_map';
+import SelectedPlacesList from './selected_places_list';
 
 const Dashboard = (props) => {
-  console.log('dashboard props', props);
+  console.log('RealDonaldTrump',props)
   return (
-    <section>
-      <section className='info-bar'>
-        <div className='direction-bar'>
-          <span>You are going to love {props.searchTerm}!</span>
-          <span className='direction-additional-info'>Add & Remove & Drag & Drop to perfect your trip!</span>
-        </div>
-      </section>
-      <section className='dash-btn'>
-        <button>
-          <Link to='/real-dashboard'>done selections-take me to dashbaord</Link>
-        </button>
-      </section>
+    <div>
 
-      <PlacesList
-        results={props.results}
-        selectPlace={props.selectPlace}
-        city={props.searchTerm}
-        dates={props.storeDates}
-      />
+    <section className='info-bar'>
+      <div className='direction-bar'>
 
+        <span>You are going to love {props.cities.join('')}!</span>
+        <span className='direction-additional-info'>Reorganise the places of interest to perfect your trip!</span>
+        <span className='direction-additional-info'>View your plans per day!
+        </span>
+      </div>
     </section>
 
-
+    <section className='dash-section'>
+      <ul className=''>
+        {props.cities.map(city =>
+          <li key={city}>
+            <GoogleMap places={props.selectedPlaces[city]} />
+            <div className='city-wrapper'>
+              <h2 className='dash-city-name'>{city}</h2>
+              <Link to={{
+                pathname: '/create-trip',
+                state: {
+                  randomStateElement: true,
+                  searchTerm: {city}
+                }
+              }}
+            >Change my selections</Link>
+              <SelectedPlacesList places={props.selectedPlaces[city]}/>
+            </div>
+          </li>)}
+      </ul>
+    </section>
+    </div>
   );
 };
 
-export default Dashboard;
+// selectPlace={this.props.selectPlace}
+// searchTerm={this.state.searchTerm}
+// storeDates={this.state.datesTerm}
+// results={this.props.locationsData}
+
+const mapStateToProps = state => {
+  return {
+    cities: Object.keys(state.selectedPlaces),
+    selectedPlaces: state.selectedPlaces,
+    storeDates: state.storeDates
+  };
+};
+
+export default connect(
+  mapStateToProps //grabbing pieces of information from global state
+//  mapDispatchToProps
+)(Dashboard);

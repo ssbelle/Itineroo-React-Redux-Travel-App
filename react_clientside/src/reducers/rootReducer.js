@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
 import searchResultsReducer from './reducer_searchResults';
 import selectedPlacesReducer from './reducer_selectedPlaces';
-import storeDatesReducer from
-'./reducer_storeDates';
+import flashMessages from './flashMessages';
+import auth from './auth';
+import storeDatesReducer from './reducer_storeDates';
 
-const rootReducer = combineReducers({
+export default combineReducers({
   searchResults: searchResultsReducer,
   selectedPlaces: selectedPlacesReducer,
-  storeDates: storeDatesReducer
-
-});
-
-export default rootReducer;
+  storeDates: storeDatesReducer,
+  flashMessages,
+  auth
+})

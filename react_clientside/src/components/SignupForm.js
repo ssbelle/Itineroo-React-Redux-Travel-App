@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import classnames from 'classnames';
+import validateInput from '../../../server/shared/validations/signup.js';
+import TextFieldGroup from './common/TextFieldGroup';
 
 export default class SignupForm extends React.Component {
   constructor(props) {
@@ -9,53 +12,94 @@ export default class SignupForm extends React.Component {
       email: '',
       password: '',
       passwordConfirmation: '',
+      errors: {},
+      isLoading: false,
+      invalid: false
     }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.checkUserExists = this.checkUserExists.bind(this);
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
-  onSubmit(e) {
-    e.preventDefault();
-    console.log('User data', this.state);
-    this.props.userSignupRequest(this.state);
+  isValid() {
+    const {errors, isValid} = validateInput(this.state);
+
+    if (!isValid) {
+      this.setState({ errors });
+    }
+    return isValid;
   }
+
+  checkUserExists(e) {
+    const field = e.target.name;
+    const val = e.target.value;
+    if (val !== '') {
+      this.props.isUserExists(val).then(res => {
+        let errors = this.state.errors;
+        let invalid;
+        if (res.data.user) {
+          errors[field] = 'There is already a registered user with that ' + field;
+          invalid = true;
+        } else {
+          errors[field] = '';
+          invalid = false;
+        }
+        this.setState({ errors, invalid });
+      });
+    }
+  }
+
+onSubmit(e) {
+  e.preventDefault();
+
+  if (this.isValid()) {
+    console.log('User data', this.state);
+    this.setState({errors: {}, isLoading: true});
+    this.props.userSignupRequest(this.state).then(() => {
+      this.props.addFlashMessage({type: 'success', text: 'Signup sucessful. Welcome!'});
+      // Directs user to create-trip page upon signing up
+      this.context.router.history.push('/create-trip');
+    }, ({response}) => {
+      this.setState({errors: response.data, isLoading: false})
+    });
+  }
+}
 
   render() {
-    const { userSignupRequest } = this.props;
+    const {errors} = this.state;
+    const {userSignupRequest} = this.props;
     return (
-        <section className='reg-login-popup-section'>
-          <img className='home-img' src='images/travel-planning.jpg' mode='fit'/>
+      <form id='signup-form'  onSubmit={this.onSubmit}>
+        <h1>Welcome!</h1>
 
-          <form onSubmit={this.onSubmit}>
-          <section className='reg-log-popup-form'>
-            <div className='input-field'>
-              <label className="control-label">Username</label>
-              <input id="destination_input" type="text" className="form-control" name="username" value={this.state.username} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Email</label>
-              <input id="destination_input" type="text" className="form-control" name="email" value={this.state.email} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Password</label>
-              <input id="destination_input" type="text" className="form-control" name="password" value={this.state.password} onChange={this.onChange}/>
-            </div>
-            <div className='input-field'>
-              <label className="control-label">Password Confirmation</label>
-              <input id="destination_input" type="text" className="form-control" name="passwordConfirmation" value={this.state.passwordConfirmation} onChange={this.onChange}/>
-            </div>
-            <button className="btn-floating btn-large waves-effect waves-light red">
-              {/* <Link to='/create-trip'> */}
-                <i className="material-icons">done</i>
-              {/* </Link> */}
-            </button>
-          </section>
-        </form>
-        </section>
+        <TextFieldGroup error={errors.username} label="Username" onChange={this.onChange} checkUserExists={this.checkUserExists} value={this.state.username} field="username"/>
+
+        <TextFieldGroup error={errors.email} label="Email" onChange={this.onChange} checkUserExists={this.checkUserExists} value={this.state.email} field="email"/>
+
+        <TextFieldGroup error={errors.password} label="Password" onChange={this.onChange} value={this.state.password} field="password" type="password"/>
+
+        <TextFieldGroup error={errors.passwordConfirmation} label="Password Confirmation" onChange={this.onChange} value={this.state.passwordConfirmation} field="passwordConfirmation" type="password"/>
+
+        <div className="form-group-btn">
+          <button disabled = {this.state.isLoading || this.state.invalid} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">done</i></button>
+        </div>
+      </form>
     );
   }
+}
+
+SignupForm.propTypes = {
+  userSignupRequest: React.PropTypes.func.isRequired,
+  addFlashMessage: React.PropTypes.func.isRequired,
+  isUserExists: React.PropTypes.func.isRequired
+ }
+
+SignupForm.contextTypes = {
+  router: React.PropTypes.object.isRequired
 }
