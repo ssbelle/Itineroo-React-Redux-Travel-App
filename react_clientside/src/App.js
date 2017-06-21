@@ -20,6 +20,7 @@ import LoginPage from './components/LoginPage';
 import RealDashboard from './components/real_dashboard';
 import FluxCartApp from './components/FluxCartApp.react.js';
 import FlashMessagesList from './components/flash/FlashMessagesList';
+import ShoppingCart from './components/ShoppingCart';
 
 // import Customize from './components/customize';
 
@@ -55,6 +56,7 @@ export default class App extends React.Component {
               <Route path='/create-trip' component={requireAuth(Layout)}/>
               <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
               <Route path='/cart' component={FluxCartApp} />
+              <Route path='/shoppingcart' component={ShoppingCart} />
             </div>
           </Router>
         </Provider>
