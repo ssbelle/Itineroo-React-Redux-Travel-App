@@ -1,10 +1,19 @@
-export function selectPlace(place, city) {
+export function selectPlace(place, city, currentUser, tripID) {
   //needs to return an action an object with type props
-  console.log('action',place, city);
+  {console.log('tripppppppppppppppp', tripID);}
   return {
     type: 'PLACE_SELECTED',
     payload: place,
-    city: city
+    city: city,
+    currentUser: currentUser,
+    tripID:tripID
+  };
+}
+
+export function getTripID(tripID) {
+  return {
+    type: 'TRIPID_CREATED',
+    tripID: tripID
   };
 }
 
@@ -22,7 +31,6 @@ export function goFetchLocations(query, dispatch) {
     return response.json();
   })
   .then(locationsData => {
-    console.log('shutest', locationsData);
     dispatch({
       type: 'LOCATIONS_FETCHED',
       payload: {

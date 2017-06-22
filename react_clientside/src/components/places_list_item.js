@@ -21,7 +21,7 @@ export const PlacesListItem = (props) => {
       <span>
       <div onClick={()=> {
 
-        props.selectPlace(props.data, props.city);
+        props.selectPlace(props.data, props.city, props.currentUser);
       }}
         href='#'>Interested </div>
 

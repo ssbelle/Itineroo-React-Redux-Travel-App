@@ -23,6 +23,7 @@ const CustomizeTrip = (props) => {
         selectPlace={props.selectPlace}
         city={props.searchTerm}
         dates={props.storeDates}
+        currentUser={props.currentUser}
       />
     </section>
   );

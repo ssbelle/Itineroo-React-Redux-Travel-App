@@ -2,6 +2,11 @@ h2 {
   text-align:center;
   padding-left:30px;
 }
+
+h3 {
+  font-size:14px;
+  margin: 0 0 10px 0;
+}
 #signup-form {
   width: 400px;
   margin: 0 auto;
@@ -33,7 +38,9 @@ nav.navbar {
     }
 }
 
-
+.chip {
+  background-color: teal;
+}
 .form-group-btn {
   display:flex;;
   justify-content: center;
@@ -274,4 +281,9 @@ ul.selectedPlaces {
 
 npm .dash-city-name {
   text-align:center;
+}
+
+.change-customizations-btn {
+  display:flex;
+  justify-content: center;
 }

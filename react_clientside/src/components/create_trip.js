@@ -9,6 +9,16 @@ import Calendar from './calendar';
 import { connect } from 'react-redux';
 import { selectPlace, storeDates, goFetchLocations } from '../actions/index';
 
+
+function generateRandomString(length, chars) {
+  let r = '';
+  for (let i = length; i > 0; --i) r += chars[Math.round(Math.random() * (chars.length - 1))];
+  return r;
+}
+
+//this function is not aclled anywhere
+//we talked about you using this in your customize trip //getTripID(generateRandomString(10,'0123456789abcdefghijklmnOPQRSTUVWXYZ'));
+
 class CreateTrip extends Component {
   constructor(props) {
     super(props);
@@ -16,13 +26,15 @@ class CreateTrip extends Component {
     this.state = {
       processStep: 'step-1',
       processPath: false,
-      searchTerm: props.searchTerm
+      searchTerm: props.searchTerm,
+      getTripID: ''
     };
   }
 
   // getInitialState
 
   render() {
+
     return (
     <main>
     {this.props.showResults ?
@@ -31,6 +43,7 @@ class CreateTrip extends Component {
         storeDates={this.state.datesTerm}
         results={this.props.locationsData}
         selectPlace={this.props.selectPlace}
+        currentUser={this.props.currentUser}
       /> :
 
       <section className='creating-trip'>
@@ -44,9 +57,12 @@ class CreateTrip extends Component {
             <div className='path-container create'>
               <span>CREATE A TRIP</span>
               <button
-                onClick={()=>
-                 this.setState({processStep: 'step-2', processPath: 'create'})
+                onClick={()=> {
+                  this.setState({processStep: 'step-2', processPath: 'create'});
+
                 }
+                }
+
                 className="btn-floating btn-large waves-effect waves-light red">
                   <i className="material-icons">add</i>
               </button>
@@ -115,7 +131,9 @@ const mapStateToProps = (state, ownProps) => {
     showResults: state.searchResults.showResults,
     locationsData: state.searchResults.locationsData,
     storeDates: state.datesTerm,
-    searchTerm: state.searchResults.searchTerm
+    searchTerm: state.searchResults.searchTerm,
+    getTripID: state.tripID,
+    currentUser: state.auth.user
   });
 };
 
@@ -123,10 +141,12 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   //console.log('layout dispatch', dispatch);
   return {
-    selectPlace: (place, city) =>
-      dispatch(selectPlace(place, city)),
+    selectPlace: (place, city, user, tripID) =>
+      dispatch(selectPlace(place, city, user, tripID)),
     storeDates: (datesLength) =>
       dispatch(storeDates(datesLength)),
+    getTripID: (tripID) =>
+      dispatch(getTripID(tripID)),
     goFetchLocations(query) {
       goFetchLocations(query, dispatch);
     }

@@ -26,7 +26,7 @@ const Dashboard = (props) => {
             <GoogleMap places={props.selectedPlaces[city]} />
             <div className='city-wrapper'>
               <h2 className='dash-city-name'>{city}</h2>
-              <Link to={{
+              <Link className='change-customizations-btn' to={{
                 pathname: '/create-trip',
                 state: {
                   randomStateElement: true,

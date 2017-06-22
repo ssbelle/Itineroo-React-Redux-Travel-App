@@ -19,8 +19,10 @@ app.use(bodyParser.json());
 app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/data', (req, res) => {
-  let url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBjzANaHMSwi5Rss6Kgr2dB2H4eJLLrfbg&query=${req.query.query}%20top%20places%20to%20see&radius=5000&sensor=false&0&libraries=places`
-    //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYgw
+  let url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyA9efXqLIJ9cH186C2AxuMjXpRRRXVpePY&query=${req.query.query}%20top%20places%20to%20see&radius=5000&sensor=false&0&libraries=places`
+    //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYgw old expired
+    //AIzaSyA9efXqLIJ9cH186C2AxuMjXpRRRXVpePY newest
+    //dongs AIzaSyBjzANaHMSwi5Rss6Kgr2dB2H4eJLLrfbg
   // fetch('./fakeState.json')
   fetch(url)
   .then(response => {
