@@ -21,7 +21,6 @@ export function goFetchLocations(query, dispatch) {
     return response.json();
   })
   .then(locationsData => {
-    console.log('shutest', locationsData);
     dispatch({
       type: 'LOCATIONS_FETCHED',
       payload: {

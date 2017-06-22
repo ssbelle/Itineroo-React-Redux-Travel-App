@@ -3,7 +3,7 @@ import PlacesList from './places_list';
 // import Layout from './layout';
 import {Link} from 'react-router-dom';
 import SelectedPlacesList from './selected_places_list';
-import MiniCartDashboard from './createTripDash/MiniCartDashboard'
+import MiniCartDashboard from './cartdashboard/MiniCartDashboard'
 
 const CartDashboard = (props) => {
   console.log('dashboard props', props);

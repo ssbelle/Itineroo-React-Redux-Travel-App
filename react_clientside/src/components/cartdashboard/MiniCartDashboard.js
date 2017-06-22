@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ListOfSelections from './ListOfSelections';
 
 const MiniCartDashboard = (props) => {
-  console.log('props',props)
+  // console.log('props',props)
   return (
     <div>
     <section className='dash-section'>
