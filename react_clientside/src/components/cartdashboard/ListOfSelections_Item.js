@@ -1,5 +1,4 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
 
 const ListOfSelectionsItem = (props) => {
   console.log('SELECTION', props);
@@ -10,10 +9,11 @@ const ListOfSelectionsItem = (props) => {
         <span>
           {props.location.name}
         </span>
-          <button className="btn-floating waves-effect waves-light red"><i className="material-icons">clear</i></button>
+          <button className="btn-floating waves-effect waves-light red" onClick={ (e) => { props.onDelete(props.index) } }><i className="material-icons">clear</i></button>
       </div>
     </li>
   );
 };
+
 
 export default ListOfSelectionsItem;

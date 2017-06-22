@@ -7,6 +7,14 @@ export function selectPlace(place, city) {
   };
 }
 
+//  Delete functions
+export function deletePlace(index) {
+  return {
+    type: 'PLACE_DELETED',
+    index
+  };
+}
+
 export function storeDates(datesLength){
   return {
     type: 'DATES_SELECTED',

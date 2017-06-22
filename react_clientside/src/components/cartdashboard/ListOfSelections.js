@@ -12,6 +12,7 @@ class ListOfSelections extends React.Component {
             key={location.id}
             index={i}
             id={location.id}
+            onDelete={this.props.onItemDelete}
           />
         )
       }

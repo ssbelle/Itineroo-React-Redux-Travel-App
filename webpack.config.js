@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
+  devtool: 'cheap-eval-source-map',
   entry: [
     // 'webpack-hot-middleware/client?reload=true',
     'react-hot-loader/patch',
