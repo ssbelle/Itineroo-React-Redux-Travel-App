@@ -1,18 +1,22 @@
-export default function(state = {}, action) {
+const initialState = {
+  places: []
+}
+export default function(state = initialState, action) {
   switch(action.type){
   case 'PLACE_SELECTED':
 
-    return {
-      ...state,
-      [action.city]: {
-        ...state[action.city],
-        //city: action.city,
-        [action.payload.id]: action.payload
-      }
-    };
-  case 'PLACE_DELETED':
-
-  }
-
-  return state;
+    return {...state, places: [...state.places, action.payload]};
+    //   ...state,
+    //   [action.city]: {
+    //     ...state[action.city],
+    //     //city: action.city,
+    //     [action.payload.id]: action.payload
+    //   }
+    // };
+  //case 'PLACE_DELETED':
+//
+  //}
+  default:
+    return state;
+}
 }

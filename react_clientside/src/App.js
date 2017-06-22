@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import {createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import logger from 'redux-logger'
 import rootReducer from './reducers/rootReducer';
 import { IndexRoute} from 'react-router';
 import setAuthorizationToken from '../utils/setAuthorizationToken';
@@ -12,6 +13,7 @@ import jwtDecode from 'jwt-decode';
 import { setCurrentUser } from './actions/authActions';
 import requireAuth from '../utils/requireAuth';
 
+// Import Components
 import Home from './components/Home';
 import Nav from './components/Nav';
 import CreateTrip from './components/CreateTrip';
@@ -19,10 +21,11 @@ import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
 import RealDashboard from './components/real_dashboard';
 import FlashMessagesList from './components/flash/FlashMessagesList';
-import MiniCartDashboard from './components/MiniCartDashboard';
-import GooglePlacesSuggest from './components/GooglePlacesSuggest';
 
-import logger from 'redux-logger'
+// Import Comonent for Testing
+// import ReactShoppingCart from './components/ReactShoppingCart';
+
+
 
 // import Customize from './components/customize';
 
@@ -57,7 +60,7 @@ export default class App extends React.Component {
               <Route path='/login' component={LoginPage} />
               <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
               <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
-              <Route path='/minicart' component={MiniCartDashboard} />
+              {/* <Route path='/reactcart' component={ReactShoppingCart} /> */}
             </div>
           </Router>
         </Provider>

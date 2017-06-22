@@ -2,10 +2,10 @@ import React from 'react';
 import update from 'react/lib/update';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
-import SelectedPlacesListItem from './selected_places_list_item';
+import ListOfSelectionsItem from './ListOfSelections_Item';
 
 
-class SelectedPlacesList extends React.Component {
+class ListOfSelections extends React.Component {
   constructor(props) {
     super(props);
     this.moveItem = this.moveItem.bind(this);
@@ -32,7 +32,7 @@ class SelectedPlacesList extends React.Component {
     <ul className='selectedPlaces board'>
       {this.props.places
         .map((location, i) =>
-          <SelectedPlacesListItem
+          <ListOfSelectionsItem
             location={location}
             key={location.id}
             index={i}
@@ -45,4 +45,4 @@ class SelectedPlacesList extends React.Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(SelectedPlacesList);
+export default DragDropContext(HTML5Backend)(ListOfSelections);

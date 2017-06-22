@@ -5,7 +5,7 @@ export function selectPlace(place, city) {
     payload: place,
     city: city
   };
-}2
+}
 
 export function storeDates(datesLength){
   return {
