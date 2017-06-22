@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import PlacesList from './places_list';
 import {Link} from 'react-router-dom';
-import Dashboard from './dashboard';
+import CartDashboard from './CartDashboard';
 import Calendar from './calendar';
 import GooglePlacesSuggest from './GooglePlacesSuggest';
 
 import {connect} from 'react-redux';
 import {selectPlace, storeDates, goFetchLocations} from '../actions/index';
 
-class Layout extends Component {
+class CreateTrip extends Component {
   constructor(props) {
     super(props);
 
@@ -36,7 +36,7 @@ class Layout extends Component {
     return (
       <main>
         {this.props.showResults
-          ? <Dashboard selectPlace={this.props.selectPlace} searchTerm={this.state.searchTerm} storeDates={this.state.datesTerm} results={this.props.locationsData}></Dashboard>
+          ? <CartDashboard selectPlace={this.props.selectPlace} searchTerm={this.state.searchTerm} storeDates={this.state.datesTerm} results={this.props.locationsData}></CartDashboard>
           : <section className='creating-trip'>
             <section className='info-bar'>
               <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
@@ -115,4 +115,4 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, //grabbing pieces of information from global state
-    mapDispatchToProps)(Layout);
+    mapDispatchToProps)(CreateTrip);

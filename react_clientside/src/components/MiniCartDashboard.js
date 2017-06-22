@@ -1,30 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GoogleMap from './google_map';
 import SelectedPlacesList from './selected_places_list';
 
-const RealDashboard = (props) => {
-  console.log('RealDonaldTrump',props)
+const MiniCartDashboard = (props) => {
   return (
     <div>
-
-    <section className='info-bar'>
-      <div className='direction-bar'>
-
-        <span>You are going to love {props.cities.join('')}!</span>
-        <span className='direction-additional-info'>Drag & Drop to perfect your trip!</span>
-        <span className='direction-additional-info'>View your plans per day!
-        </span>
-      </div>
-    </section>
-
     <section className='dash-section'>
       <ul className=''>
         {props.cities.map(city =>
           <li key={city}>
-            <GoogleMap places={props.places[city]} />
             <div className='city-wrapper'>
-              <h2 className='dash-city-name'>{city}</h2>
               <SelectedPlacesList places={props.places[city]}/>
             </div>
           </li>)}
@@ -47,4 +32,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps //grabbing pieces of information from global state
 //  mapDispatchToProps
-)(RealDashboard);
+)(MiniCartDashboard);

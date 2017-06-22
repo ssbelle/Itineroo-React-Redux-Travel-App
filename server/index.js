@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/data', (req, res) => {
-  let url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBjzANaHMSwi5Rss6Kgr2dB2H4eJLLrfbg&query=${req.query.query}%20top%20places%20to%20see&radius=5000&sensor=false&0&libraries=places`
+  // KEEP SWITICHING API KEY IF IT DOESN'T WORK
+  let url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyAbZJl3p-2OwyrkAT_1GVS4zFcLBgo5qNk&query=${req.query.query}%20top%20places%20to%20see&radius=5000&sensor=false&0&libraries=places`
     //AIzaSyDTPU6hai6_STJicsn_FPXGfnCb71kPdYgw
   // fetch('./fakeState.json')
   fetch(url)

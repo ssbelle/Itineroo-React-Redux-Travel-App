@@ -59,6 +59,7 @@
     "react-router-dom": "^4.1.1",
     "react-shopping-cart": "^1.6.4",
     "redux": "^3.0.4",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "sass-loader": "6.0.0",
     "shortid": "^2.2.8",

@@ -2,8 +2,10 @@ import React from 'react';
 import PlacesList from './places_list';
 // import Layout from './layout';
 import {Link} from 'react-router-dom';
+import SelectedPlacesList from './selected_places_list';
+import MiniCartDashboard from './MiniCartDashboard'
 
-const Dashboard = (props) => {
+const CartDashboard = (props) => {
   console.log('dashboard props', props);
   return (
     <section>
@@ -15,7 +17,7 @@ const Dashboard = (props) => {
       </section>
       <section className='dash-btn'>
         <button>
-          <Link to='/real-dashboard'>done selections-take me to dashbaord</Link>
+          <Link to='/real-dashboard'>Done selections take me to the dashboard</Link>
         </button>
       </section>
 
@@ -26,10 +28,12 @@ const Dashboard = (props) => {
         dates={props.storeDates}
       />
 
+      <MiniCartDashboard />
+
     </section>
 
 
   );
 };
 
-export default Dashboard;
+export default CartDashboard;

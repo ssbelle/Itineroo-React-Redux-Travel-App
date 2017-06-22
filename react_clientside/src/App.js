@@ -14,14 +14,15 @@ import requireAuth from '../utils/requireAuth';
 
 import Home from './components/Home';
 import Nav from './components/Nav';
-import Layout from './components/Layout';
+import CreateTrip from './components/CreateTrip';
 import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
 import RealDashboard from './components/real_dashboard';
-import FluxCartApp from './components/FluxCartApp.react.js';
 import FlashMessagesList from './components/flash/FlashMessagesList';
-import ShoppingCart from './components/ShoppingCart';
+import MiniCartDashboard from './components/MiniCartDashboard';
 import GooglePlacesSuggest from './components/GooglePlacesSuggest';
+
+import logger from 'redux-logger'
 
 // import Customize from './components/customize';
 
@@ -29,6 +30,7 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunk),
+    applyMiddleware(logger),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
@@ -53,12 +55,9 @@ export default class App extends React.Component {
               </Route>
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
-              {/* Need to change layout */}
-              <Route path='/create-trip' component={requireAuth(Layout)}/>
+              <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
               <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
-              <Route path='/cart' component={FluxCartApp} />
-              {/* <Route path='/placessuggest' component={GooglePlacesSuggest} /> */}
-              <Route path='/shoppingcart' component={ShoppingCart} />
+              <Route path='/minicart' component={MiniCartDashboard} />
             </div>
           </Router>
         </Provider>

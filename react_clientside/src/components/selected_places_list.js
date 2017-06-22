@@ -9,7 +9,7 @@ class SelectedPlacesList extends React.Component {
     super(props);
     this.moveItem = this.moveItem.bind(this);
     this.state = {
-      locationsList: Object.values(props.places)
+      locationsList: props.places ? Object.values(props.places) : []
     };
   }
 
