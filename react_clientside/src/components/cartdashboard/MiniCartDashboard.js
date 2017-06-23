@@ -1,19 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ListOfSelections from './ListOfSelections';
-import { deletePlace } from '../../actions'
+import { deletePlace } from '../../actions';
+import { submitPlacesSelection } from '../../actions/databasePlacesActions';
 
-const MiniCartDashboard = (props) => {
-  // console.log('props',props)
-  return (
+
+
+class MiniCartDashboard extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+    }
+    this.onClickHandler = this.onClickHandler.bind(this);
+  }
+
+  onClickHandler(e) {
+    this.props.submitPlacesSelection(this.props.places)
+    .then(() => {
+      this.context.router.history.push('/real-dashboard');
+    })
+  }
+
+  render() {
+      console.log('ALL SELECTIONS',this.props)
+    return (
     <div>
     <section className='dash-section'>
-      <ListOfSelections places={props.places} onItemDelete={props.handleItemDelete}/>
+      <ListOfSelections places={this.props.places} onItemDelete={this.props.handleItemDelete}/>
+    </section>
+    <section className='dash-section'>
+      <button onClick={this.onClickHandler}
+      className="btn waves-effect waves-light">Submit</button>
     </section>
     </div>
-
-  );
-};
+  )
+}
+}
 
 const mapStateToProps = state => {
   console.log("MiniCartDashboard", state);
@@ -26,6 +48,9 @@ const mapDispatchToProps = dispatch => {
   return {
     handleItemDelete: (index) => {
       dispatch(deletePlace(index))
+    },
+    submitPlacesSelection: (places) => {
+      dispatch(submitPlacesSelection(places))
     }
   }
 }

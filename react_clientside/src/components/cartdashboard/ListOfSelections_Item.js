@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ListOfSelectionsItem = (props) => {
-  console.log('SELECTION', props);
   return (
     <li>
       <div className='dash-item-img'></div>

@@ -22,13 +22,6 @@ import LoginPage from './components/LoginPage';
 import RealDashboard from './components/real_dashboard';
 import FlashMessagesList from './components/flash/FlashMessagesList';
 
-// Import Comonent for Testing
-// import ReactShoppingCart from './components/ReactShoppingCart';
-
-
-
-// import Customize from './components/customize';
-
 const store = createStore(
   rootReducer,
   compose(
@@ -60,7 +53,6 @@ export default class App extends React.Component {
               <Route path='/login' component={LoginPage} />
               <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
               <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
-              {/* <Route path='/reactcart' component={ReactShoppingCart} /> */}
             </div>
           </Router>
         </Provider>
