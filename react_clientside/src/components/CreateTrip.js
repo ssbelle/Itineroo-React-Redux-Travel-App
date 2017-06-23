@@ -39,21 +39,18 @@ class CreateTrip extends Component {
           ? <CartDashboard selectPlace={this.props.selectPlace} searchTerm={this.state.searchTerm} storeDates={this.state.datesTerm} results={this.props.locationsData}></CartDashboard>
           : <section className='creating-trip'>
             <section className='info-bar'>
-              <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
+              <div className='direction-bar'></div>
             </section>
-            <img className='home-img' src='/static/images/travel-planning.jpg' mode='fit'/>
-
             <section className={`trip-section ${this.state.processStep}`}>
               <section className='choose-path-container'>
                 <div className='path-container create'>
-                  <span>CREATE A TRIP</span>
-                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'create'})} className="btn-floating btn-large waves-effect waves-light btn">
+                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'create'})} className="path-btn create-a-trip-btn waves-effect waves-light btn">
                     <img src='/static/images/create-a-trip-btn.png'/>
                   </button>
                 </div>
 
                 <div className='path-container join'>
-                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'join'})} className="btn-floating btn-large waves-effect waves-light red">
+                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'join'})} className="path-btn create-a-trip-btn waves-effect waves-light btn">
                     <img src='/static/images/join-a-trip-btn.png'/>
                   </button>
                 </div>
@@ -76,9 +73,9 @@ class CreateTrip extends Component {
                       {/* {console.log('dates', this.state.datesTerm)} */}
 
                       <button className='go-fetch-btn' onClick={() => {
-                        this.props.storeDates(this.state.datesTerm);
+                        this.props.storeDates(this.state.datesTerm || '');
                         this.props.goFetchLocations(this.state.searchTerm);
-                      }}>Submit</button>
+                      }}>Create!</button>
                     </section>
                   : <section className='path-forms'>
                     <h1>JOIN A TRIP</h1>
