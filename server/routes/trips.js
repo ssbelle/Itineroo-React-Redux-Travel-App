@@ -1,22 +1,16 @@
 import express from 'express';
+import authenticate from '../middlewares/authenticate';
 import Trip from '../models/trip';
 
 let router = express.Router();
 
-router.post('/', (req, res) => {
-  const { places_data } = req.body
-  const { authorization } = req.headers
-  console.log('POST')
+router.post('/', authenticate, (req, res) => {
+  const places_data = req.body
+  const user_id = req.currentUser.id
+  console.log('CURRENT USER SUBMISSION TO DATABASE', user_id)
 
-  // Parse authorization header
-  const token = authorization.split(' ')[1];
-  console.log('token', token);
-
-  // TODO: Decode token using JWT metho
-  console.log(req.body)
-
-  Trip.forge({places_data: JSON.stringify(req.body)}).save()
-  .then(trip => res.json({success:true}))
+  Trip.forge({places_data: JSON.stringify(places_data), user_id: user_id }).save()
+  .then(trip => res.json({ user: req.currentUser }))
   .catch(err => res.status(500).json({error: err}));
 });
 
