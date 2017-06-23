@@ -5,16 +5,14 @@ import GoogleMap from './google_map';
 import SelectedPlacesList from './selected_places_list';
 
 const Dashboard = (props) => {
-  console.log('RealDonaldTrump',props)
+
   return (
     <div>
 
     <section className='info-bar'>
       <div className='direction-bar'>
-
-        <span>You are going to love {props.cities.join('')}!</span>
         <span className='direction-additional-info'>Reorganise the places of interest to perfect your trip!</span>
-        <span className='direction-additional-info'>View your plans per day!
+        <span className='direction-additional-info'>
         </span>
       </div>
     </section>

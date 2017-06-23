@@ -82,36 +82,48 @@ class CreateTrip extends Component {
 
 
 
-          <i className="fa fa-arrow-left backBtn" aria-hidden="true" onClick={()=>this.setState({processStep:'step-1'})}>back</i>
+          <i className="fa fa-arrow-left backBtn" aria-hidden="true" onClick={()=>this.setState({processStep:'step-1'})}>Back</i>
             {this.state.processPath === 'create' ?
 
               <section className='path-forms'>
+              <h1>CREATE A TRIP</h1>
               <div className='input-field'>
                 <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
+
                 <label>Where are you going?</label>
             </div>
-            <div className='input-field'>
-              <input id="dates_input" type="text" className="dates" value={this.state.datesTerm} onChange={event=>this.setState({datesTerm: event.target.value})} />
-              <label>How many days are you travelling?</label>
+            {//sort by date feature to be completed
+              //<div className='input-field'>
+              //<input id="dates_input" type="text" className="dates" value={this.state.datesTerm} onChange={event=>this.setState({datesTerm: event.target.value})} />
+              //<label>How many days are you travelling?</label>
+            //</div>
+          }
+            <div>
             </div>
-            {console.log('dates', this.state.datesTerm)}
+
+
             <button className='go-fetch-btn' onClick={() => {
               this.props.storeDates(this.state.datesTerm || '');
               this.props.goFetchLocations(this.state.searchTerm);
             }}
-            >click me</button>
+            >Create!</button>
           </section> :
 
 
           <section className='path-forms'>
+          <h1>JOIN A TRIP</h1>
           <div className='input-field'>
-            <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event=>this.setState({searchTerm: event.target.value})} />
-            <label>"Who" are you uhuuhuuuhuuhh?</label>
+            <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={()=>{console.log('capture this term as trip id and check against db');}} />
+            <label>Enter your Trip ID here!</label>
           </div>
-          <button className='go-fetch-btn' onClick={() => {
-            this.props.goFetchLocations(this.state.searchTerm);
-          }}>click me</button>
-          </section>}
+          <button className='go-fetch-btn' onClick={() => {console.log('attach this btn to a function that selects the trip id from the db and shows those choices');
+          }}>Join!</button>
+          </section>
+
+
+
+        }
+
           </section>
         </section>
       </section>
