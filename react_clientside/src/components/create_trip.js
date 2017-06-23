@@ -48,34 +48,32 @@ class CreateTrip extends Component {
 
       <section className='creating-trip'>
         <section className='info-bar'>
-          <div className='direction-bar'>TELL US ABOUT YOUR TRIP</div>
+          <div className='direction-bar'></div>
         </section>
-        <img className='home-img' src='/static/images/travel-planning.jpg' mode='fit' />
+
 
         <section className={`trip-section ${this.state.processStep}`}>
           <section className='choose-path-container'>
             <div className='path-container create'>
-              <span>CREATE A TRIP</span>
               <button
                 onClick={()=> {
                   this.setState({processStep: 'step-2', processPath: 'create'});
-
                 }
                 }
-
-                className="btn-floating btn-large waves-effect waves-light red">
-                  <i className="material-icons">add</i>
+                className="path-btn create-a-trip-btn waves-effect waves-light btn">
+                <img src='/static/images/create-a-trip-btn.png' />
               </button>
             </div>
 
             <div className='path-container join'>
-              <span>JOIN A TRIP</span>
+
               <button
                 onClick={()=>
                   this.setState({processStep: 'step-2', processPath: 'join'})
                 }
-                className="btn-floating btn-large waves-effect waves-light red">
-                  <i className="material-icons">add</i>
+                className="path-btn create-a-trip-btn waves-effect waves-light btn">
+                <img src='/static/images/join-a-trip-btn.png' />
+
               </button>
             </div>
           </section>

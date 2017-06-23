@@ -10,8 +10,8 @@ export default class Home extends React.Component {
         <section className='info-bar'>
           <div className='direction-bar'></div>
         </section>
-        <section>
-          <img className='home-img' src='/static/images/travel-planning.jpg' mode='fit'/>
+        <section className='home-main'>
+
         </section>
         <footer>
           <div className='footer teal'/>

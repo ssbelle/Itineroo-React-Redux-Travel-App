@@ -1,3 +1,7 @@
+h1 {
+  margin:0;
+  font-size: 3.5rem;
+}
 h2 {
   text-align:center;
   padding-left:30px;
@@ -7,22 +11,42 @@ h3 {
   font-size:14px;
   margin: 0 0 10px 0;
 }
+
+.home-main {
+  background: url(/static/images/travel-planning.jpg);
+  height: calc(100vh - 150px);
+  background-position: center top;
+  background-size: 112%;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
+@media (max-width: 700px){
+  .home-main {
+  background-size: 250%;
+  }
+}
+
+
+.material-icons {
+  background-color:#cc2936;
+}
+
 #signup-form {
   width: 400px;
   margin: 0 auto;
+  position: relative;
+  background-color: #2E2C2C;
+  opacity: 0.86;
+  padding:5px 20px 10px 20px;
+  color:#fff;
+  input {
+  border-bottom: 3px solid teal;
+  color:#fff;
+  }
 }
 
-nav#nav-bar.teal {
-  min-height:80px;
-  height:80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom:0;
-  border-radius: none;
-}
+
 #login-form {
   width: 400px;
   margin: 0 auto;
@@ -31,11 +55,48 @@ nav.navbar {
   border-radius: 0 !important;
   margin-bottom:0;
   height: 80px;
+  display:flex;
+  justify-content: space-between;
 }
 @media (min-width: 768px){
   .navbar {
       border-radius: 0 !important;
     }
+}
+
+.container-fluid {
+  display:flex;
+  width:100%;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  left:0;
+  position:absolute;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.nav.navbar-nav.navbar-right {
+  height:80px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  right: 0;
+  position: absolute;
+  li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px !important;
+  }
+
+}
+#logout-btn {
+  padding: 15px 30px;
 }
 
 .chip {
@@ -57,6 +118,20 @@ nav.navbar {
   align-items: center;
   font-size:1.3em;
 }
+label {
+  color: teal;
+}
+
+.path-btn {
+  height:160px;
+  width:100%;
+  background-color:teal;
+  border-radius:12px;
+}
+
+.create-a-trip-btn {
+
+}
 
 // .create-trip-section{
 //   display:flex;
@@ -66,18 +141,7 @@ nav.navbar {
 //   margin-bottom:30px;
 // }
 
-.reg-log-popup-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 360px;
-  background-color: #2E2C2C;
-  opacity: 0.86;
-  margin-top: 70px;
-  padding: 20px 0px;
-}
+
 .input-field {
   width:50%;
   margin:0 auto;
@@ -125,14 +189,6 @@ label {
   height: 75px;
   width: 75px;
   background-color: #eee;
-
-}
-
- .home-img {
-   width:100vw;
-
-   position: absolute;
-
 }
 
 
@@ -156,11 +212,10 @@ label {
   align-items: center;
   color: #fff;
   font-size: 1.7em;
-  width: 320px;
-  padding: 20px 40px;
+  width: 340px;
   margin: 0 auto;
-  margin-top: 75px;
-  background-color: #2E2C2C;
+  margin-top: 50px;
+
   opacity: 0.8;
   span {
     width:200px;
