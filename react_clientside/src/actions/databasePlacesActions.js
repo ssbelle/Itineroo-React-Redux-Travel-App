@@ -2,15 +2,24 @@ import axios from 'axios'
 
 
 export function submitPlacesSelection(data) {
-  console.log('calling submitPlacesSelection')
   return dispatch => {
-    debugger
-    // console.log('databasePlacesActions', data)
-    // TODO: Add a header the request
-    // Authorization: Bearer: klsdkjadsajadfs;lad;sfla
-
-    // TODO: Get the token from local storage and pass in url query params
     return axios.post(`/api/trips`, data);
-    // return axios.post(`/api/trips?token=${}`, data);
   }
 }
+
+export function getPlacesSelection(identifier) {
+  return dispatch => {
+    axios.get(`/api/trips/${identifier}`)
+    .then((res) => (res.data.trip))
+    .then((json) => {
+      console.log(json);
+    })
+  }
+}
+
+// export function placesLoaded(data) {
+//   return {
+//     type: 'TRIPS_LOADED',
+//     data: data
+//   }
+// }

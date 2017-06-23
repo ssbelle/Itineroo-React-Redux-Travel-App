@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PlacesList from './places_list';
 import {Link} from 'react-router-dom';
 import CartDashboard from './CartDashboard';
-import Calendar from './calendar';
+// import Calendar from './calendar';
 import GooglePlacesSuggest from './GooglePlacesSuggest';
 
 import {connect} from 'react-redux';

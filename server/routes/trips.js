@@ -4,6 +4,16 @@ import Trip from '../models/trip';
 
 let router = express.Router();
 
+router.get('/:identifier', (req, res) => {
+  console.log('HIT ROUTE ENDPOINT FOR GETTING TRIPS');
+  Trip.query({
+    select: [ 'id', 'user_id', 'places_data' ],
+    where: { user_id: req.params.identifier },
+  }).fetch().then(trip => {
+    res.json({ trip });
+  });
+});
+
 router.post('/', authenticate, (req, res) => {
   const places_data = req.body
   const user_id = req.currentUser.id
