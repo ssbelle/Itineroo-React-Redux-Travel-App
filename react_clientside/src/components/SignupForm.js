@@ -75,7 +75,7 @@ onSubmit(e) {
     const {errors} = this.state;
     const {userSignupRequest} = this.props;
     return (
-      <form onSubmit={this.onSubmit}>
+      <form id='signup-form'  onSubmit={this.onSubmit}>
         <h1>Welcome!</h1>
 
         <TextFieldGroup error={errors.username} label="Username" onChange={this.onChange} checkUserExists={this.checkUserExists} value={this.state.username} field="username"/>
@@ -86,7 +86,7 @@ onSubmit(e) {
 
         <TextFieldGroup error={errors.passwordConfirmation} label="Password Confirmation" onChange={this.onChange} value={this.state.passwordConfirmation} field="passwordConfirmation" type="password"/>
 
-        <div className="form-group">
+        <div className="form-group-btn">
           <button disabled = {this.state.isLoading || this.state.invalid} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">done</i></button>
         </div>
       </form>

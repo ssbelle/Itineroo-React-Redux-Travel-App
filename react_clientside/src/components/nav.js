@@ -17,10 +17,10 @@ class Nav extends React.Component {
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
         <li>
-          <Link to="/create-trip">Create a Trip</Link>
+          <Link to="/create-trip">My Trip</Link>
         </li>
         <li>
-          <a href="#" onClick={this.logout.bind(this)}>Logout</a>
+          <a id='logout-btn' href="#" onClick={this.logout.bind(this)}>Logout</a>
         </li>
       </ul>
 
@@ -38,17 +38,20 @@ class Nav extends React.Component {
     );
 
     return (
+      <div>
       <nav id='navbar' className='navbar teal'>
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link to="/" className="navbar-brand">Something here!</Link>
+            <Link to="/" className="navbar-brand"><img src='/static/images/travelroo-logo.jpg' /></Link>
           </div>
 
-          <div className="collapse navbar-collapse">
+          <div className="">
             { isAuthenticated ? userLinks : guestLinks }
           </div>
         </div>
       </nav>
+
+      </div>
     );
   }
 }
@@ -56,7 +59,7 @@ class Nav extends React.Component {
 Nav.propTypes = {
   auth: React.PropTypes.object.isRequired,
   logout: React.PropTypes.func.isRequired
-  }
+};
 
 function mapStateToProps(state) {
   return {

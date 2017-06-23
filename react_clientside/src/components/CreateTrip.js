@@ -21,12 +21,12 @@ class CreateTrip extends Component {
     };
   }
 
-// Handle search change for where to?
+  // Handle search change for where to?
   handleSearchChange = (e) => {
     this.setState({searchTerm: e.target.value})
   }
 
-// Handle suggestions for where to?
+  // Handle suggestions for where to?
   handleSelectSuggest = (suggest, coordinate) => {
     this.setState({searchTerm: suggest.description, selectedCoordinate: coordinate})
   }
@@ -47,15 +47,14 @@ class CreateTrip extends Component {
               <section className='choose-path-container'>
                 <div className='path-container create'>
                   <span>CREATE A TRIP</span>
-                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'create'})} className="btn-floating btn-large waves-effect waves-light red">
-                    <i className="material-icons">add</i>
+                  <button onClick={() => this.setState({processStep: 'step-2', processPath: 'create'})} className="btn-floating btn-large waves-effect waves-light btn">
+                    <img src='/static/images/create-a-trip-btn.png'/>
                   </button>
                 </div>
 
                 <div className='path-container join'>
-                  <span>JOIN A TRIP</span>
                   <button onClick={() => this.setState({processStep: 'step-2', processPath: 'join'})} className="btn-floating btn-large waves-effect waves-light red">
-                    <i className="material-icons">add</i>
+                    <img src='/static/images/join-a-trip-btn.png'/>
                   </button>
                 </div>
               </section>
@@ -65,6 +64,7 @@ class CreateTrip extends Component {
                 <i className="fa fa-arrow-left backBtn" aria-hidden="true" onClick={() => this.setState({processStep: 'step-1'})}>Back</i>
                 {this.state.processPath === 'create'
                   ? <section className='path-forms'>
+                      <h1>CREATE A TRIP</h1>
                       <div className='input-field'>
                         <GooglePlacesSuggest onChange={this.handleSearchChange.bind(this)} onSelectSuggest={this.handleSelectSuggest.bind(this)} query={this.state.searchTerm}/>
                       </div>
@@ -81,14 +81,18 @@ class CreateTrip extends Component {
                       }}>Submit</button>
                     </section>
                   : <section className='path-forms'>
+                    <h1>JOIN A TRIP</h1>
                     <div className='input-field'>
-                      <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={event => this.setState({searchTerm: event.target.value})}/>
-                      <label>"Who" are you uhuuhuuuhuuhh?</label>
+                      <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={() => {
+                        console.log('capture this term as trip id and check against db');
+                      }}/>
+                      <label>Enter your Trip ID here!</label>
                     </div>
                     <button className='go-fetch-btn' onClick={() => {
-                      this.props.goFetchLocations(this.state.searchTerm);
-                    }}>click me</button>
-                  </section>}
+                      console.log('attach this btn to a function that selects the trip id from the db and shows those choices');
+                    }}>Join!</button>
+                  </section>
+}
               </section>
             </section>
           </section>

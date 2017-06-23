@@ -1,9 +1,12 @@
-export function selectPlace(place, city) {
+export function selectPlace(place, city, currentUser, tripID) {
   //needs to return an action an object with type props
+  {console.log('tripppppppppppppppp', tripID);}
   return {
     type: 'PLACE_SELECTED',
     payload: place,
-    city: city
+    city: city,
+    currentUser: currentUser,
+    tripID:tripID
   };
 }
 
@@ -33,7 +36,8 @@ export function goFetchLocations(query, dispatch) {
       type: 'LOCATIONS_FETCHED',
       payload: {
         showResults: true,
-        locationsData: locationsData.results
+        locationsData: locationsData.results,
+        searchTerm: query
       }
     });
   });

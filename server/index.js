@@ -12,7 +12,7 @@ import users from './routes/users';
 import auth from './routes/auth';
 import places from './routes/trips';
 
-let app = express();
+const app = express();
 
 app.use(bodyParser.json());
 

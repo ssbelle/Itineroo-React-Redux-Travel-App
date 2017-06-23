@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import PlacesList from './places_list';
 
 export const PlacesListItem = (props) => {

@@ -5,10 +5,14 @@ import LoginForm from './LoginForm'
 class LoginPage extends React.Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-md-4 col-md-offset-4">
+      <div className="">
+      <div className='direction-bar'></div>
+      <div className ='home-main' >
+        <div className="">
           <LoginForm/>
+
         </div>
+      </div>
       </div>
     );
   }
