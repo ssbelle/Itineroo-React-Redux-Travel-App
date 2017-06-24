@@ -11,6 +11,7 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     console.log(this.props)
     const mapOptions = {
         center: this.mapCenterLatLng(),

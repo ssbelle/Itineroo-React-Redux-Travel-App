@@ -12,7 +12,11 @@ export function getPlacesSelection(identifier) {
     axios.get(`/api/trips/${identifier}`)
     .then((res) => (res.data.trip))
     .then((json) => {
-      console.log(json);
+      // console.log('trips', json)
+      dispatch({
+        type: 'TRIP_LOADED',
+        data: json
+      })
     })
   }
 }

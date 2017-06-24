@@ -22,6 +22,7 @@ class MiniCartDashboard extends React.Component {
 
   render() {
     // console.log('ALL SELECTIONS',this.props)
+    // debugger;
     return (
       <div>
         <section className='dash-section'>

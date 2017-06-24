@@ -28,6 +28,7 @@ class SelectedPlacesList extends React.Component {
   }
 
   render() {
+    debugger;
     return (
     <ul className='selectedPlaces board'>
       {this.props.places

@@ -9,8 +9,9 @@ router.get('/:identifier', (req, res) => {
   Trip.query({
     select: [ 'id', 'user_id', 'places_data' ],
     where: { user_id: req.params.identifier },
-  }).fetch().then(trip => {
+  }).fetchAll().then(trip => {
     res.json({ trip });
+    console.log(trip);
   });
 });
 

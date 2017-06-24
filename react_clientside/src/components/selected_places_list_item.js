@@ -1,10 +1,8 @@
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { DragSource, DropTarget } from 'react-dnd';
-import { Chip } from 'react-materialize';
 
 const SelectedPlacesListItem = (props) => {
-  console.log('\n\nCHECK ME OUT!', props.location);
   const { isDragging, connectDragSource, connectDropTarget } = props;
   return connectDragSource(connectDropTarget(
     <li style={{opacity:isDragging ? 0.5 : 1}}>
@@ -16,16 +14,10 @@ const SelectedPlacesListItem = (props) => {
 
       </div>
       <div className='dash-item-text'>
-        <h3>
+        <span>
           {props.location.name}
-        </h3>
-        <p>
-        {Object.keys(props.location.users).map(id =>
-          <span>
-            <Chip>{props.location.users[id]}</Chip>
-          </span>
-        )}
-        </p>
+        </span>
+        <span>who is going icons</span>
       </div>
     </li>
   ));
