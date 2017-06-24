@@ -27,7 +27,7 @@ const CartDashboard = (props) => {
       </section>
       <section>
 
-      <MiniCartDashboard />
+      <MiniCartDashboard city={props.searchTerm}/>
       </section>
       </section>
     </section>
