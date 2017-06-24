@@ -4,7 +4,7 @@ import ListOfSelectionsItem from './ListOfSelections_Item';
 class ListOfSelections extends React.Component {
   render() {
     return (
-    <ul className='selectedPlaces board'>
+    <ul className='cartPlaces board'>
       {this.props.places
         .map((location, i) =>
           <ListOfSelectionsItem

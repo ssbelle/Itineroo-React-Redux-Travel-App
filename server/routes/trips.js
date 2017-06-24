@@ -16,11 +16,12 @@ router.get('/:identifier', (req, res) => {
 });
 
 router.post('/', authenticate, (req, res) => {
-  const places_data = req.body
+  const places_data = req.body.places
+  const city = req.body.city
   const user_id = req.currentUser.id
   console.log('CURRENT USER SUBMISSION TO DATABASE', user_id)
 
-  Trip.forge({places_data: JSON.stringify(places_data), user_id: user_id }).save()
+  Trip.forge({places_data: JSON.stringify(places_data), user_id: user_id, city: city }).save()
   .then(trip => res.json({ user: req.currentUser }))
   .catch(err => res.status(500).json({error: err}));
 });
