@@ -33,12 +33,12 @@ class RealDashboard extends React.Component {
         <section className='dash-section'>
           <ul className=''>
             {this.props.places.map(i => <li key={`trip-${i.id}`}>
-              <h2 className='dash-city-name'>Trip #{i.id}</h2>
-              {/* <GoogleMap places={this.props.places[i]}/> */}
+              <h2 className='dash-city-name'>Trip #{i.id} to {i.city}</h2>
+              <GoogleMap places={i.places_data}/>
               {/* <div className='city-wrapper'> */}
-              {/* <h2 className='dash-city-name'>{city}</h2> */}
-              {/* <SelectedPlacesList places={this.props.places[city]}/> */}
-              <SelectedPlacesList places={i.places_data}/> {/* </div> */}
+              {/* <h2 className='dash-city-name'>{i.city}</h2> */}
+              <SelectedPlacesList places={i.places_data}/>
+              {/* </div> */}
             </li>)}
           </ul>
         </section>

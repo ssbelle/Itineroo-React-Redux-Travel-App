@@ -7,7 +7,7 @@ let router = express.Router();
 router.get('/:identifier', (req, res) => {
   // console.log('HIT ROUTE ENDPOINT FOR GETTING TRIPS');
   Trip.query({
-    select: [ 'id', 'user_id', 'places_data' ],
+    select: [ 'id', 'user_id', 'city', 'places_data' ],
     where: { user_id: req.params.identifier },
   }).fetchAll().then(trip => {
     res.json({ trip });

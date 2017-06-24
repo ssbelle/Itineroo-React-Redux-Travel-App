@@ -11,8 +11,8 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
-    console.log(this.props)
+    // debugger;
+    // console.log('GOOGLE MAPS', this.props)
     const mapOptions = {
         center: this.mapCenterLatLng(),
         zoom: +this.props.zoom
