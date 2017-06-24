@@ -21,9 +21,9 @@ class MiniCartDashboard extends React.Component {
   }
 
   render() {
+    // console.log('ALL SELECTIONS',this.props)
     return (
       <div className='cart-selections-container'>
-        <h3>{this.props.city}</h3>
       <button onClick={this.onClickHandler} className="submit btn waves-effect waves-light">Submit your Selections</button>
         <section className='dash-section'>
           <ListOfSelections places={this.props.places} onItemDelete={this.props.handleItemDelete}/>
