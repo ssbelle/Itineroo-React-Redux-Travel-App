@@ -18,6 +18,7 @@ class CreateTrip extends Component {
       processPath: false,
       datesTerm: '',
       selectedCoordinate: null
+
     };
   }
 

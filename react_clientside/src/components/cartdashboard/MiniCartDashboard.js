@@ -20,14 +20,11 @@ class MiniCartDashboard extends React.Component {
 
   render() {
     // console.log('ALL SELECTIONS',this.props)
-    // debugger;
     return (
-      <div>
+      <div className='cart-selections-container'>
+      <button onClick={this.onClickHandler} className="submit btn waves-effect waves-light">Submit your Selections</button>
         <section className='dash-section'>
           <ListOfSelections places={this.props.places} onItemDelete={this.props.handleItemDelete}/>
-        </section>
-        <section className='dash-section'>
-          <button onClick={this.onClickHandler} className="btn waves-effect waves-light">Submit</button>
         </section>
       </div>
     )
