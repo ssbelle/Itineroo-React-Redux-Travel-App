@@ -1,12 +1,9 @@
-export function selectPlace(place, city, currentUser, tripID) {
+export function selectPlace(place, city) {
   //needs to return an action an object with type props
-  {console.log('tripppppppppppppppp', tripID);}
   return {
     type: 'PLACE_SELECTED',
     payload: place,
     city: city,
-    currentUser: currentUser,
-    tripID:tripID
   };
 }
 

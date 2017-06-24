@@ -13,9 +13,7 @@ class MiniCartDashboard extends React.Component {
   }
 
   onClickHandler(e) {
-    debugger;
     this.props.submitPlacesSelection(this.props.places).then(() => {
-      debugger;
       this.context.router.history.push('/real-dashboard');
     })
   }
