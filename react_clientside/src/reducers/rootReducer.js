@@ -6,6 +6,8 @@ import auth from './auth';
 import storeDatesReducer from './reducer_storeDates';
 import tripReducer from './reducer_selectedTrips';
 import {findIndex} from 'lodash';
+import posts from './posts';
+import comments from './comments';
 
 export default combineReducers({
   searchResults: searchResultsReducer,
@@ -13,7 +15,9 @@ export default combineReducers({
   storeDates: storeDatesReducer,
   flashMessages,
   auth,
-  trips: tripReducer
+  trips: tripReducer,
+  posts,
+  comments
 });
 
 export const selectedPlacesEnhancer = state =>

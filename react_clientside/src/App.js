@@ -24,6 +24,7 @@ import RealDashboard from './components/real_dashboard';
 import FlashMessagesList from './components/flash/FlashMessagesList';
 import Single from './components/Single';
 
+
 const store = createStore(
   rootReducer,
   compose(

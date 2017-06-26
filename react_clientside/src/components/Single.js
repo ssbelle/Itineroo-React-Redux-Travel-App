@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {connect} from 'react-redux';
 import GoogleMap from './google_map';
@@ -8,13 +7,13 @@ import PhotoGrid from './PhotoGrid';
 import {getPlacesSelection} from '../actions/databasePlacesActions';
 import Photo from './Photo';
 // import { Link } from 'react-router-dom';
-// import Comments from './Comments';
+import Comments from './trip_comments';
 
 class Single extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
-  }
+}
 
   componentWillMount() {
     this.props.getPlacesSelection(this.props.user_id);
@@ -27,11 +26,12 @@ class Single extends React.Component {
 
   render() {
     console.log('PARAMS', this.props);
-    let postId = this.props.match.params.postId;
-    console.log('POSTID', postId);
+    let tripId = this.props.match.params.postId;
+    // console.log('POSTID', postId);
 
-    let place = this.props.places.filter(function(x) { return x.id == postId})[0]
+    let place = this.props.places.filter(function(x) { return x.id == tripId})[0]
     let placesData = [];
+    let placeId, placeCity = '';
 
     // const id = this.props.places.findIndex((post) => post.id === postId);
     // console.log('THE ID', id);
@@ -40,10 +40,11 @@ class Single extends React.Component {
     console.log('PLACE', place);
     if (place && place.places_data) {
       console.log('PLACE DATA', place.places_data);
+      console.log(typeof place.places_data);
       placesData = place.places_data;
+      placeId = place.id;
+      placeCity = place.city;
     }
-
-    // const postComments = this.props.comments[postId] || [];
 
     return (
       <div>
@@ -58,7 +59,7 @@ class Single extends React.Component {
       </section>
       <section className=''>
         {/* <ul key={`trip-${place.id}`}> */}
-        {/* <h2 className='dash-city-name'>Trip #{placesData.id} to {placesData.city}</h2> */}
+        <h2 className='dash-city-name'>Trip #{placeId} to {placeCity}</h2>
         <GoogleMap places={placesData}/>
         {/* <div className='city-wrapper'> */}
         {/* <h2 className='dash-city-name'>{i.city}</h2> */}
@@ -66,17 +67,20 @@ class Single extends React.Component {
         {/* </div> */}
       {/* </ul> */}
         {/* <Photo id={id} post={post} /> */}
-        {/* <Comments postComments={postComments} /> */}
+        <Comments postComments={this.props.comments} tripId={tripId}/>
       </section>
     </div>
     )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
+  let comments = state.comments[props.match.params.postId] || [];
   return {
     user_id: state.auth.user.id,
-    places: state.trips.places
+    places: state.trips.places,
+    comments: comments
+
   };
 };
 

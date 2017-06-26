@@ -1,16 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
 
-export default class Photo extends React.Component {
+class Photo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    };
+      likes: {
+        1: [
+          {
+            "likes": 10,
+          }
+        ]
+      },
   }
+}
 
   render() {
       console.log('Photo', this.props);
+      console.log('STATE', this.state);
+      // console.log('LIKES', this.state.likes[1])
     return (
       <figure className="grid-figure">
         <div className="grid-photo-wrap">
@@ -30,18 +42,39 @@ export default class Photo extends React.Component {
           <Link to={`view/${this.props.post.id}`}>
           <p>{this.props.post.city} - Trip # {this.props.post.id}</p>
           </Link>
-          {/* <div className="control-buttons">
-            <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {post.likes}</button>
-            <Link className="button" to={`/view/${post.code}`}>
+          <div className="control-buttons">
+            <button className="likes">&hearts;
+              {this.state.likes[1][0].likes}
+            </button>
+            {/* <span>
+            {this.state.likes[1][0].likes}
+          </span> */}
+            {/* <button
+              // onClick={this.props.increment.bind(null, i)}
+              className="likes">&hearts; {this.state.likes[this.props.post.id].likes}</button> */}
+            {/* <Link className="button" to={`/view/${post.code}`}> */}
               <span className="comment-count">
                 <span className="speech-bubble"></span>
-                {comments[post.code] ? comments[post.code].length : 0 }
+                {this.props.comments[this.props.post.id] ? this.props.comments[this.props.post.id].length : 0 }
               </span>
-            </Link>
-          </div> */}
+            {/* </Link> */}
+          </div>
         </figcaption>
 
       </figure>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    posts: state.posts,
+    comments: state.comments
+  }
+}
+
+function mapDispachToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispachToProps)(Photo);
