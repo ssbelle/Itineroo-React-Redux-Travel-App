@@ -1,4 +1,8 @@
-function posts(state = [], action) {
+import likesData from '../data/likes';
+// console.log('commentsdata', commentsData)
+
+
+function likes(state = likesData, action) {
   switch(action.type) {
     case 'INCREMENT_LIKES' :
       console.log("Incrementing Likes!!");
@@ -13,4 +17,4 @@ function posts(state = [], action) {
   }
 }
 
-export default posts;
+export default likes;

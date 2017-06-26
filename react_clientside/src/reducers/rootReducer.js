@@ -6,8 +6,8 @@ import auth from './auth';
 import storeDatesReducer from './reducer_storeDates';
 import tripReducer from './reducer_selectedTrips';
 import {findIndex} from 'lodash';
-import posts from './posts';
-import comments from './comments';
+import likes from './reducer_likes';
+import comments from './reducer_comments';
 
 export default combineReducers({
   searchResults: searchResultsReducer,
@@ -16,7 +16,7 @@ export default combineReducers({
   flashMessages,
   auth,
   trips: tripReducer,
-  posts,
+  likes,
   comments
 });
 

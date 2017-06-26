@@ -36,7 +36,7 @@ class RealDashboard extends React.Component {
         {/* <section>
           <GridListExampleSimple/>
         </section> */}
-{/* 
+{/*
         <section className=''>
           <div className="photo-grid">
             {this.props.places.map(i =>
