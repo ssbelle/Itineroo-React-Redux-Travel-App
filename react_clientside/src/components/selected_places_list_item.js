@@ -1,25 +1,35 @@
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { DragSource, DropTarget } from 'react-dnd';
+// import GoogleReview from './GoogleReview'
 
 const SelectedPlacesListItem = (props) => {
   const { isDragging, connectDragSource, connectDropTarget } = props;
   return connectDragSource(connectDropTarget(
-    <li style={{opacity:isDragging ? 0.5 : 1}}>
-      <div className='dash-item-img place-img-div'>
+    <ul style={{opacity:isDragging ? 0.5 : 1}}>
+      {/* <div className='dash-item-img place-img-div'>
 
-        {//console.log('placesListItem props', props)
-          props.location.photos && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.location.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0`}  />
-         }
 
-      </div>
-      <div className='dash-item-text'>
-        <span>
-          {props.location.name}
-        </span>
-        <span>who is going icons</span>
-      </div>
-    </li>
+
+      </div> */}
+      <figure className='grid-figure'>
+        <div className="grid-photo-wrap">
+          {//console.log('placesListItem props', props)
+            props.location.photos && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.location.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0`}  />
+           }
+        </div>
+        <figcaption>
+          <p>
+            {props.location.name}
+          </p>
+          {/* <span>who is going icons</span> */}
+
+        </figcaption>
+
+        {/* <GoogleReview places_id={props.location.place_id}/> */}
+      {/* </div> */}
+    </figure>
+  </ul>
   ));
 };
 

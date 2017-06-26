@@ -7,11 +7,12 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 import rootReducer from './reducers/rootReducer';
-import { IndexRoute} from 'react-router';
+import { IndexRoute, browserhistory } from 'react-router';
 import setAuthorizationToken from '../utils/setAuthorizationToken';
 import jwtDecode from 'jwt-decode';
 import { setCurrentUser } from './actions/authActions';
 import requireAuth from '../utils/requireAuth';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Import Components
 import Home from './components/Home';
@@ -21,6 +22,7 @@ import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
 import RealDashboard from './components/real_dashboard';
 import FlashMessagesList from './components/flash/FlashMessagesList';
+import Single from './components/Single';
 
 const store = createStore(
   rootReducer,
@@ -42,18 +44,21 @@ export default class App extends React.Component {
     return (
       <AppContainer>
         <Provider store={store} >
-          <Router>
+          <Router history={history}>
+            <MuiThemeProvider>
             <div>
+
             <FlashMessagesList />
             <Nav />
-              <Route exact path='/' component={Home}>
-                {/* <IndexRoute component={Home} /> */}
-              </Route>
+              <Route path='/' component={Home}/>
+              <Route path="/view/:postId" component={Single}/>
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
               <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
               <Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
+
             </div>
+            </MuiThemeProvider>
           </Router>
         </Provider>
       </AppContainer>

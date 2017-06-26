@@ -1,22 +1,15 @@
 import React from 'react';
-// import Layout from './layout';
 import {Link} from 'react-router-dom';
-// import Images from './components/images';
+import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
+import { green400, green600, blue400, blue600, red400, red600 } from 'material-ui/styles/colors'
 
+// ...
 export default class Home extends React.Component {
-  render() {
-    return (
-      <section>
-        <section className='info-bar'>
-          <div className='direction-bar'></div>
-        </section>
-        <section className='home-main'>
+render() {
+  return (
+    <div>
 
-        </section>
-        <footer>
-          <div className='footer teal'/>
-        </footer>
-      </section>
-    );
-  }
+    </div>
+  );
+}
 }

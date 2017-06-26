@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import GoogleMap from './google_map';
 import SelectedPlacesList from './selected_places_list';
+// import GridListExampleSimple from './GridDashboard';
+import PhotoGrid from './PhotoGrid';
 import {getPlacesSelection} from '../actions/databasePlacesActions';
 
 class RealDashboard extends React.Component {
@@ -16,31 +18,42 @@ class RealDashboard extends React.Component {
   }
 
   render() {
-    console.log('RealDashboard', this.state);
+    // console.log('RealDashboard', this.state);
     console.log('COMPONENT MOUNTED', this.props)
+    console.log('PLACES ID', this.props.places[0] )
+    // debugger;
     return (
       <div>
-        <section className='info-bar'>
+        {/* <section className='info-bar'>
           <div className='direction-bar'>
 
-            {/* <span>You are going to love {this.props.cities.join('')}!</span> */}
+            <span>You are going to love {this.props.cities.join('')}!</span>
             <span className='direction-additional-info'>Drag & Drop to perfect your trip!</span>
             <span className='direction-additional-info'>View your plans per day!
             </span>
           </div>
-        </section>
-
-        <section className='dash-section'>
-          <ul className=''>
-            {this.props.places.map(i => <li key={`trip-${i.id}`}>
+        </section> */}
+        {/* <section>
+          <GridListExampleSimple/>
+        </section> */}
+{/* 
+        <section className=''>
+          <div className="photo-grid">
+            {this.props.places.map(i =>
+              <ul key={`trip-${i.id}`}>
               <h2 className='dash-city-name'>Trip #{i.id} to {i.city}</h2>
               <GoogleMap places={i.places_data}/>
-              {/* <div className='city-wrapper'> */}
-              {/* <h2 className='dash-city-name'>{i.city}</h2> */}
+              <div className='city-wrapper'>
+              <h2 className='dash-city-name'>{i.city}</h2>
               <SelectedPlacesList places={i.places_data}/>
-              {/* </div> */}
-            </li>)}
-          </ul>
+              </div>
+            </ul>
+          )}
+          </div>
+        </section> */}
+
+        <section className=''>
+            <PhotoGrid posts={this.props.places}/>
         </section>
       </div>
     )

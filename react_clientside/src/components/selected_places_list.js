@@ -30,7 +30,7 @@ class SelectedPlacesList extends React.Component {
   render() {
     // debugger;
     return (
-    <ul className='selectedPlaces board'>
+    <div className='single-photo'>
       {this.props.places
         .map((location, i) =>
           <SelectedPlacesListItem
@@ -42,7 +42,7 @@ class SelectedPlacesList extends React.Component {
           />
         )
       }
-    </ul>);
+    </div>);
   }
 }
 
