@@ -13,6 +13,7 @@ class ListOfSelections extends React.Component {
             index={i}
             id={location.id}
             onDelete={this.props.onItemDelete}
+            handleCollapseSelected={this.props.handleCollapseSelected}
           />
         )
       }
