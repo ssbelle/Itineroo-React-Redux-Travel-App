@@ -98,7 +98,7 @@ nav.navbar {
 }
 
 .navbar-brand {
-  left:0;
+  left:10px;
   position:absolute;
   height: 80px;
   display: flex;
@@ -209,6 +209,8 @@ label {
 }
 .list-item-container {
   display:flex;
+  flex-direction: column;
+  
   padding:20px;
   border-top: 1px solid;
   width: 400px;
