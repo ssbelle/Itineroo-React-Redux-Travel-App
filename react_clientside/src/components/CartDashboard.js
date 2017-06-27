@@ -1,6 +1,5 @@
 import React from 'react';
-import PlacesList from './places_list';
-import {Link} from 'react-router-dom';
+import {PlacesList} from './places_list';
 import MiniCartDashboard from './cartdashboard/MiniCartDashboard';
 
 export default class CartDashboard extends React.Component {
@@ -21,7 +20,7 @@ export default class CartDashboard extends React.Component {
   }
 
   render() {
-    console.log('dashboard props', this.props);
+    //console.log('dashboard props', this.props);
     return (
       <section>
         <section className='info-bar'>
@@ -30,7 +29,7 @@ export default class CartDashboard extends React.Component {
           </div>
         </section>
         <section className='combine-customize-sections'>
-          <section>
+          <section className='selections'>
             <h3>Select your Places of Interest</h3>
             <PlacesList
               results={this.props.results}
@@ -41,7 +40,7 @@ export default class CartDashboard extends React.Component {
               handleCollapseSelected={this.handleCollapseSelected}
             />
           </section>
-          <section>
+          <section className='picks'>
             <MiniCartDashboard
               city={this.props.searchTerm}
               collapseSelected={this.collapseSelected}

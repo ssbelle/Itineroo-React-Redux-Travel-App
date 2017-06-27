@@ -1,8 +1,10 @@
 import React from 'react';
 
 const ListOfSelectionsItem = (props) => {
+  console.log('listOF', props)
   return (
     <li>
+
       <button
         className="btn-floating waves-effect waves-light red"
         onClick={() => {
@@ -12,7 +14,9 @@ const ListOfSelectionsItem = (props) => {
       >
         <i className="material-icons">clear</i>
       </button>
-      <div className='dash-item-img'></div>
+      {props.id && <div className='dash-item-img' style={{backgroundImage:`url(https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.location.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0)`}} >
+      </div>
+    }
       <div className='dash-item-text'>
         <span>
           {props.location.name}

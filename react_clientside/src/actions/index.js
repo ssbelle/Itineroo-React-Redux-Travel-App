@@ -22,20 +22,29 @@ export function storeDates(datesLength){
   };
 }
 
-export function goFetchLocations(query, dispatch) {
-  let url = '/api/data?query=' + query;
+export function fetchGoogleData(dispatch, query) {
+  console.log('action!', query)
+  const url =
+    query.type === 'placeID' ?
+      `/api/data?placeID=${query.placeID}` :
+    query.type === 'photoRef' ?
+      `/api/data?photoRef=${query.photoRef}` :
+    `/api/data?destination=${query.destination}`;
+
   fetch(url)
-  .then(response => {
-    return response.json();
-  })
-  .then(locationsData => {
-    dispatch({
-      type: 'LOCATIONS_FETCHED',
-      payload: {
-        showResults: true,
-        locationsData: locationsData.results,
-        searchTerm: query
-      }
+    .then(response => response.json())
+    .then(data => {
+      // TODO specific action per fetch type
+      console.log(data)
+      query.type === 'placeID' ?
+        window.open(data.url, '_blank') :
+      dispatch({
+        type: 'LOCATIONS_FETCHED',
+        payload: {
+          showResults: true,
+          locationsData: data,
+          searchTerm: query
+        }
+      });
     });
-  });
 }
