@@ -103,3 +103,19 @@ SignupForm.propTypes = {
 SignupForm.contextTypes = {
   router: React.PropTypes.object.isRequired
 }
+
+{/* <form id='signup-form'  onSubmit={this.onSubmit}>
+  <h1>Welcome!</h1>
+
+  <TextFieldGroup error={errors.username} label="Username" onChange={this.onChange} checkUserExists={this.checkUserExists} value={this.state.username} field="username"/>
+
+  <TextFieldGroup error={errors.email} label="Email" onChange={this.onChange} checkUserExists={this.checkUserExists} value={this.state.email} field="email"/>
+
+  <TextFieldGroup error={errors.password} label="Password" onChange={this.onChange} value={this.state.password} field="password" type="password"/>
+
+  <TextFieldGroup error={errors.passwordConfirmation} label="Password Confirmation" onChange={this.onChange} value={this.state.passwordConfirmation} field="passwordConfirmation" type="password"/>
+
+  <div className="form-group-btn">
+    <button disabled = {this.state.isLoading || this.state.invalid} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">done</i></button>
+  </div>
+</form> */}

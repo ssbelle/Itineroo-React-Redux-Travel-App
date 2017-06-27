@@ -1,0 +1,35 @@
+.home-main {
+  background: url(/static/images/travel-planning.jpg);
+  height: calc(100vh - 150px);
+  background-position: center top;
+  background-size: 112%;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
+
+.material-icons {
+  background-color:#cc2936;
+}
+
+#signup-form {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #2E2C2C;
+  opacity: 0.86;
+  padding:5px 20px 10px 20px;
+  color:#050000;
+  input {
+  border-bottom: 3px solid teal;
+  color:#000000;
+  width:88%;
+  margin: 0 auto;
+  }
+  label {
+    margin-left:25px;
+  }
+  h1 {
+    padding: 11px 11px;
+  }
+}

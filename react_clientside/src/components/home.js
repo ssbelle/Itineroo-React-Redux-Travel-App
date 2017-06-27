@@ -8,9 +8,9 @@ render() {
     <header>
         <div className="header-content">
             <div className="header-content-inner">
-                <h1>Dramatically Engage</h1>
+                <h1>Travel</h1>
                 <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-                <a href="#" className="btn btn-primary btn-lg">Engage Now</a>
+                <Link to='/signup' className="btn btn-primary btn-lg">Signup</Link>
             </div>
         </div>
     </header>

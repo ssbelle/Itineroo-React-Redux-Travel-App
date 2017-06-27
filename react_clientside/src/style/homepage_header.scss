@@ -1,9 +1,11 @@
 header {
     position: relative;
     width: 100%;
+    height: 100vh;
     min-height: auto;
     text-align: center;
     color: #fff;
+    // background-image: url('/static/images/travel.gif');
     background-image: url('/static/images/header.jpg');
     background-position: center;
     -webkit-background-size: cover;
@@ -33,7 +35,8 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
-@media(min-width:768px) {
+// KEEPS DISAPPEARING BELOW 768px
+@media(max-width:768px) {
     header {
         min-height: 100%;
     }

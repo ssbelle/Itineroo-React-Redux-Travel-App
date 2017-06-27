@@ -49,8 +49,9 @@ class Nav extends React.Component {
               <span className="icon-bar"></span>
             </button>
               <a className="navbar-brand" href="#">
-                <span className="glyphicon glyphicon-fire"></span>
-                LOGO
+                <span className="glyphicon glyphicon-plane"></span>
+                <span className="glyphicon glyphicon-globe"></span>
+                TravelRoo
               </a>
               {/* <img src='/static/images/travelroo-logo.jpg' /> */}
           </div>
@@ -58,52 +59,15 @@ class Nav extends React.Component {
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav navbar-right">
               <li className="active">
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
               </li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services
-                  <span className="caret"></span>
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="about-us">
-                  <li>
-                    <a href="#">Engage</a>
-                  </li>
-                  <li>
-                    <a href="#">Pontificate</a>
-                  </li>
-                  <li>
-                    <a href="#">Synergize</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
+              { isAuthenticated ? userLinks : guestLinks }
             </ul>
-
           </div>
           {/* <!-- /.navbar-collapse --> */}
         </div>
         {/* <!-- /.container --> */}
       </nav>
-    //       {/* <div class="navbar-header">
-    //     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-    //         <span class="sr-only">Toggle navigation</span>
-    //         <span class="icon-bar"></span>
-    //         <span class="icon-bar"></span>
-    //         <span class="icon-bar"></span>
-    //     </button>
-    //     <Link to="/" className="navbar-brand">
-    //       <span class="glyphicon glyphicon-fire"></span>
-    //
-    //     </Link>
-    //     <div className="">
-    //       { isAuthenticated ? userLinks : guestLinks }
-    //     </div>
-    // </div> */}
     );
   }
 }

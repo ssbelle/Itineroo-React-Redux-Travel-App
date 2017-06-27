@@ -6,16 +6,16 @@ import { userSignupRequest, isUserExists } from './../actions/signupActions';
 import { addFlashMessage } from './../actions/flashMessages';
 
 class SignupPage extends React.Component {
+
+  componentDidMount() {
+    document.getElementById("signuppage").scrollIntoView();
+      }
+
   render() {
     const {userSignupRequest, addFlashMessage, isUserExists } = this.props;
     return (
-      <div>
-      <div className="row">
-        <div className='direction-bar'></div>
-        <div className ='home-main' >
+      <div id="signuppage">
         <SignupForm isUserExists={isUserExists} userSignupRequest={userSignupRequest} addFlashMessage={addFlashMessage}/>
-      </div>
-    </div>
     </div>
     );
   }
