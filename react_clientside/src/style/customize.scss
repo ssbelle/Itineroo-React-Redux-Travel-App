@@ -1,6 +1,6 @@
 .combine-customize-sections {
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 @media (max-width:620px) {
@@ -20,9 +20,12 @@
      margin:10px;
    }
    .dash-section {
-     width:100vw;
+     width:90vw;
      overflow-x:hidden;
+     min-height:120px;
    }
+
+
    .cartPlaces button {
      margin-top:-19px;
      margin-left:90px;
@@ -36,7 +39,12 @@
    }
 
 }
-
+.selections {
+  margin:20px;
+}
+.picks {
+  margin:20px;
+}
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -48,7 +56,7 @@
     width: 400px;
     background-position: center center;
     background-repeat:no-repeat;
-    background-size: 29vw;
+    background-size: 100%;
 }
 
 
@@ -141,15 +149,58 @@
 
 
 
-@media (max-width:400px ){
-  .place-img-div{
-    background-size: 89vw;
-  }
+
+
+.list-item-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid teal;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow:hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #eee;
 }
 
+.list-item-info-section {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-family: roboto;
+  text-align: left;
+  padding-left: 20px;
+  position: absolute;
+  opacity: 0;
+  transition: .5s ease;
+  width: 320px;
+  height:100px;
+  margin-top: -15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: rgba(74, 74, 74, 0.55);
 
-@media (max-width:1120px) {
-  .place-img-div {
-    background-size: 40vw
-  }
+
+}
+div#GDbtn {
+ margin-top:-70px;
+ margin-left:264px;
+ margin-bottom:10px;
+}
+
+.list-item-container:hover .list-item-info-section{
+  opacity:1;
+}
+
+.img-title {
+  padding: 5px;
+  margin-bottom: 20px;
+  color: #13293D;
+}
+
+.title-btn-select-places-list {
+
 }

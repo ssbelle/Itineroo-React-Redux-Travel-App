@@ -4,7 +4,7 @@ import CartDashboard from './CartDashboard';
 import GooglePlacesSuggest from './GooglePlacesSuggest';
 
 import {connect} from 'react-redux';
-import {selectPlace, storeDates, goFetchLocations} from '../actions/index';
+import {selectPlace, storeDates, fetchGoogleData} from '../actions/';
 
 class CreateTrip extends Component {
   constructor(props) {
@@ -103,7 +103,7 @@ class CreateTrip extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log('layout mapState', state);
+  //console.log('layout mapState', state);
   return ({showResults: state.searchResults.showResults, locationsData: state.searchResults.locationsData, storeDates: state.datesTerm});
 };
 
@@ -113,7 +113,7 @@ const mapDispatchToProps = dispatch => {
     selectPlace: (place, city) => dispatch(selectPlace(place, city)),
     storeDates: (datesLength) => dispatch(storeDates(datesLength)),
     goFetchLocations(query) {
-      goFetchLocations(query, dispatch);
+      fetchGoogleData(dispatch, {type:'place', destination:query});
     }
   };
 };
