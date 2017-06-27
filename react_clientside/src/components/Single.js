@@ -17,15 +17,10 @@ class Single extends React.Component {
 
   componentWillMount() {
     this.props.getPlacesSelection(this.props.user_id);
-    console.log('component will mount', this.props);
-  }
-
-  componentDidMount() {
-    console.log('component did mount', this.props);
   }
 
   render() {
-    console.log('PARAMS', this.props);
+    console.log('Single Page Params', this.props);
     let tripId = this.props.match.params.postId;
     // console.log('POSTID', postId);
 
@@ -47,28 +42,23 @@ class Single extends React.Component {
     }
 
     return (
-      <div>
-      <section className='info-bar'>
-        <div className='direction-bar'>
-
-          {/* <span>You are going to love {this.props.cities.join('')}!</span> */}
-          <span className='direction-additional-info'>Drag & Drop to perfect your trip!</span>
-          <span className='direction-additional-info'>View your plans per day!
-          </span>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div className="trip-sidebar">
+        <div className='heading'>
+          <h1>Trip #{placeId} to {placeCity}</h1>
         </div>
-      </section>
-      <section className=''>
-        {/* <ul key={`trip-${place.id}`}> */}
-        <h2 className='dash-city-name'>Trip #{placeId} to {placeCity}</h2>
-        <GoogleMap places={placesData}/>
-        {/* <div className='city-wrapper'> */}
-        {/* <h2 className='dash-city-name'>{i.city}</h2> */}
         <SelectedPlacesList places={placesData}/>
-        {/* </div> */}
-      {/* </ul> */}
-        {/* <Photo id={id} post={post} /> */}
-        <Comments postComments={this.props.comments} tripId={tripId}/>
-      </section>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', flexGrow: '2', order: 2 }}>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <GoogleMap places={placesData}/>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div style={{ width: '100%', height: '200px' }}>
+            <Comments postComments={this.props.comments} tripId={tripId}/>
+          </div>
+        </div>
+      </div>
     </div>
     )
   }
@@ -86,3 +76,18 @@ const mapStateToProps = (state, props) => {
 
 export default connect(mapStateToProps, {getPlacesSelection}
 )(Single);
+
+{/* <div>
+<section className='info-bar'>
+  <div className='direction-bar'>
+    <span>You are going to love {this.props.cities.join('')}!</span>
+    <span className='direction-additional-info'>Drag & Drop to perfect your trip!</span>
+    <span className='direction-additional-info'>View your plans per day!
+    </span>
+  </div>
+</section>
+<section className=''>
+
+
+</section>
+</div> */}

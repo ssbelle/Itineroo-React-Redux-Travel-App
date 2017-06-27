@@ -30,7 +30,7 @@ class SelectedPlacesList extends React.Component {
   render() {
     // debugger;
     return (
-    <div className='single-photo'>
+    <div className='selected-places-container'>
       {this.props.places
         .map((location, i) =>
           <SelectedPlacesListItem

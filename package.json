@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "antd": "^2.11.2",
     "axios": "^0.13.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

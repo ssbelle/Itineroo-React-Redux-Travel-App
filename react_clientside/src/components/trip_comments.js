@@ -2,6 +2,9 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentClear from 'material-ui/svg-icons/content/clear';
+import ContentCreate from 'material-ui/svg-icons/content/create';
 
 class Comments extends React.Component {
   renderComment = (comment, i) => {
@@ -10,17 +13,14 @@ class Comments extends React.Component {
         <p>
           <strong>{comment.user}</strong>
           {comment.text}
-          <button
-            className="btn-floating waves-effect waves-light red"
-            // onClick={this.props.removeComment.bind(null, this.props., i)}
-            onClick={this.removeComment(i)}
-            // onClick={() => {
-            //   props.handleCollapseSelected(props.location.index, false);
-            //   props.onDelete(props.index);
-            // }}
-          >
-            <i className="material-icons">clear</i>
-          </button>
+            <FloatingActionButton
+              mini={true}
+              style={{
+                'marginRight': 20
+              }}
+              onClick={this.removeComment(i)}>
+              <ContentClear/>
+            </FloatingActionButton>
           {/* <button className="remove-comment" onClick={this.props.removeComment.bind(null, this.props.params.postId, i)}>&times;</button> */}
         </p>
       </div>
@@ -47,11 +47,13 @@ class Comments extends React.Component {
           <input type="text" ref="author" placeholder="Name"/>
           <input type="text" ref="comment" placeholder="Comment"/>
           <input type="submit" hidden/>
-          <div className="form-group-btn">
-            <button className="btn-floating btn-large waves-effect waves-light red">
-              <i className="material-icons">done</i>
-            </button>
-          </div>
+            <FloatingActionButton
+              mini={true}
+              style={{
+                'marginRight': 20
+              }}>
+              <ContentCreate/>
+            </FloatingActionButton>
         </form>
       </div>
     )

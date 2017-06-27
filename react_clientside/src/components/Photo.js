@@ -4,6 +4,10 @@ import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
+import Badge from 'material-ui/Badge';
+import IconButton from 'material-ui/IconButton';
+import CommentIcon from 'material-ui/svg-icons/communication/comment';
+import FavoriteIcon from 'material-ui/svg-icons/action/favorite';
 
 class Photo extends React.Component {
   constructor(props) {
@@ -38,10 +42,21 @@ class Photo extends React.Component {
               onClick={this.props.increment.bind(null, this.props.post.id - 1)}
               className="likes">&hearts;{this.props.likes[this.props.post.id - 1].likes}
             </button>
-              <span className="comment-count">
-                <span className="speech-bubble"></span>
-                {this.props.comments[this.props.post.id - 1] ? this.props.comments[this.props.post.id - 1].length : 0 }
-              </span>
+            <Badge
+              badgeContent={this.props.likes[this.props.post.id - 1].likes}
+              primary={true}
+              badgeStyle={{top: 12, right: 12}}
+              >
+                <IconButton tooltip="Likes" onTouchTap={this.props.increment.bind(null, this.props.post.id - 1)}>
+                <FavoriteIcon />
+                </IconButton>
+            </Badge>
+            <Badge
+              badgeContent={this.props.comments[this.props.post.id] ? this.props.comments[this.props.post.id].length : 0 }
+              primary={true}>
+              <CommentIcon/>
+            </Badge>
+
             {/* </Link> */}
           </div>
         </figcaption>

@@ -51,7 +51,7 @@ class GoogleMap extends React.Component {
 
   render() {
     return (
-      <div className='map-gic'></div>
+      <div className='google-map-container'></div>
     );
   }
 }
