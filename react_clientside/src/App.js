@@ -51,7 +51,7 @@ export default class App extends React.Component {
 
             <FlashMessagesList />
             <Nav />
-              <Route path='/' component={Home}/>
+              <Route exact path='/' component={Home}/>
               <Route path="/view/:postId" component={Single}/>
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
