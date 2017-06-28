@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ReactDom from 'react-dom';
-import Header from './header'
+import Header from './HomePage/Header'
+import Intro from './HomePage/Intro'
+import Content from './HomePage/Content'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -11,7 +13,11 @@ export default class Home extends React.Component {
 
   render() {
     return (
+      <div>
       <Header/>
+      <Intro/>
+      <Content/>
+    </div>
     );
   }
 }

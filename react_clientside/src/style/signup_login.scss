@@ -1,0 +1,52 @@
+.material-icons {
+  background-color:#cc2936;
+}
+
+// #signup-page {
+//   height: 100vh;
+// }
+
+#signup-form {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #2E2C2C;
+  opacity: 0.86;
+  padding:5px 20px 10px 20px;
+  color:#050000;
+  input {
+  border-bottom: 3px solid teal;
+  color:#000000;
+  width:88%;
+  margin: 0 auto;
+  }
+  label {
+    margin-left:25px;
+  }
+  h1 {
+    padding: 11px 11px;
+  }
+}
+
+#login-form {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #2E2C2C;
+  opacity: 0.86;
+  padding:5px 20px 10px 20px;
+  color:#fff;
+  input {
+  border-bottom: 3px solid teal;
+  color:#fff;
+  width:88%;
+  margin: 0 auto;
+  }
+  label {
+    margin-left:25px;
+  }
+  h1 {
+    padding: 11px 11px;
+  }
+}

@@ -17,7 +17,10 @@ class Nav extends React.Component {
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
         <li>
-          <Link to="/create-trip">My Trip</Link>
+          <Link to="/create-trip">Create-a-Trip</Link>
+        </li>
+        <li>
+          <Link to="/real-dashboard">Your Trips </Link>
         </li>
         <li>
           <a id='logout-btn' href="#" onClick={this.logout.bind(this)}>Logout</a>

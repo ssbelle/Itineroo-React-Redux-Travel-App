@@ -23,14 +23,16 @@
   .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 50px;
+    font-size: 75px;
     font-weight: 300;
+    font-family: Roboto, sans-serif;
   }
 
   .header-content .header-content-inner p {
     margin-bottom: 50px;
-    font-size: 16px;
+    font-size: 32px;
     font-weight: 300;
+    font-family: Roboto, sans-serif;
     color: rgba(255,255,255,.7);
   }
   // KEEPS DISAPPEARING BELOW 768px
@@ -210,4 +212,25 @@ img::-moz-selection {
 
 .bg-primary {
   background-color: yellowgreen;
+}
+
+.intro {
+	color: #fff;
+    background-color: yellowgreen;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.content-2 {
+	color: #fff;
+    background-color: #222;
+}
+
+.content-3 {
+	padding: 20px 0 40px;
+	text-align: center;
 }
