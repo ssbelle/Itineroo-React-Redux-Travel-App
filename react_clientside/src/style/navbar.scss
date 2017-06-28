@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 .navbar {
   width: 100%;
 }
@@ -44,7 +49,7 @@
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    color: #1ECD97;
+    color: #029f5b;
     font-family: Roboto, sans-serif;
 }
 
@@ -62,13 +67,13 @@
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #1ECD97;
+    color: #029f5b;
     font-family: Roboto, sans-serif;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #1ECD97!important;
+    color: #029f5b!important;
     background-color: transparent;
     font-family: Roboto, sans-serif;
 }
@@ -87,26 +92,26 @@
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: #1ECD97;
+        color: #029f5b;
         letter-spacing: 0.3em;
         font-family: Roboto, sans-serif;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #017350;
+        color: #1ECD97;
         font-family: Roboto, sans-serif;
     }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: #1ECD97;
+        color: #029f5b;
         font-family: Roboto, sans-serif;
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #017350;
+        color: #1ECD97;
         font-family: Roboto, sans-serif;
     }
 
@@ -119,7 +124,7 @@
 
     .navbar-default.affix .navbar-header .navbar-brand {
         letter-spacing: 0;
-        color: #1ECD97;
+        color: #029f5b;
         font-family: Roboto, sans-serif;
     }
 
@@ -137,7 +142,7 @@
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #1ECD97;
+        color: #029f5b;
         font-family: Roboto, sans-serif;
     }
 }

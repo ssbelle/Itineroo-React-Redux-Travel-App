@@ -4,7 +4,6 @@ import classnames from 'classnames';
 const TextFieldGroup = ({ field, value, label, error, type, onChange, checkUserExists }) => {
   return (
     <div className={classnames('form-group', { 'has-error': error })}>
-      <div className="col-sm-6">
       <label className="control-label">{label}</label>
       <input
         onChange={onChange}
@@ -15,7 +14,6 @@ const TextFieldGroup = ({ field, value, label, error, type, onChange, checkUserE
         className="form-control"
       />
     {error && <span className="help-block">{error}</span>}
-      </div>
     </div>  );
 }
 

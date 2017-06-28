@@ -5,6 +5,8 @@ import validateInput from '../../../server/shared/validations/login.js';
 import TextFieldGroup from './common/TextFieldGroup';
 import { connect } from 'react-redux';
 import { login } from './../actions/authActions';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import DoneIcon from 'material-ui/svg-icons/action/done';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -50,23 +52,28 @@ class LoginForm extends React.Component {
   render() {
     const {errors, identifier, password, isLoading} = this.state;
     return (
-      <form id='login-form' onSubmit={this.onSubmit}>
-        <h1>Login!</h1>
+      <div className="panel-body">
+        <div className="row">
+          <div className="col-lg-12">
+            <form id="login-form" onSubmit={this.onSubmit} style={{
+              'display': 'block'
+            }}>
+            <TextFieldGroup field="identifier" label="Username / Email" value={identifier} error={errors.identifier} onChange={this.onChange}/>
 
-        { errors.form && <div className="alert alert-danger">{errors.form}</div> }
-
-        <TextFieldGroup field="identifier" label="Username / Email" value={identifier} error={errors.identifier} onChange={this.onChange}/>
-
-        <TextFieldGroup field="password" label="Password" value={password} error={errors.password} onChange={this.onChange} type="password"/>
-
-        <div className="form-group-btn">
-          <button disabled={isLoading} className="btn-floating btn-large waves-effect waves-light red">
-            <i className="material-icons">done</i>
-          </button>
+            <TextFieldGroup field="password" label="Password" value={password} error={errors.password} onChange={this.onChange} type="password"/>
+            <div className="form-group text-center">
+                <div className="row">
+                  <div className="col-sm-6 col-sm-offset-3">
+                    <FloatingActionButton mini={false} disabled={isLoading} iconStyle={{'backgroundColor': '#029f5b'}}>
+                      <DoneIcon onClick={this.onSubmit}/>
+                    </FloatingActionButton>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-
-      </form>
-
+      </div>
     );
   }
 }

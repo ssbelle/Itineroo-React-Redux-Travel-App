@@ -17,7 +17,7 @@ export default class Content extends React.Component {
           <div className="container">
               <div className="row">
                   <div className="col-sm-6">
-                      <img className="img-responsive img-circle center-block" src="/static/images/travelroo-logo.jpg" alt=""/>
+                      <p>PUT SOME SHIT HERE</p>
                   </div>
                   <div className="col-sm-6">
                   	<h2 className="section-header">What is TravelRoo?</h2>
