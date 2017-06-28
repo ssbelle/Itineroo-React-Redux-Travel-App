@@ -1,18 +1,16 @@
 import axios from 'axios';
+import {isEqual} from 'lodash';
 
-export const submitPlacesSelection = query => {
-  console.log('sending places', query)
-  axios.post('/api/trips/submit', query.data);
-}
+export const submitPlacesSelection = query =>
+  axios.post('/api/trips/submit', query.data)
+    .then((result) => result);
 
-export const getPlacesSelection = (dispatch, query) =>
+export const getPlacesSelection = (dispatch, prev, query) =>
   axios.get(`/api/trips/${query.type}/${query.trip_id}`)
     .then(results => results.data)
-    .then(trips => {
-      console.log('this is the real blah', trips)
-      trips && dispatch({
+    .then(trips =>
+      !isEqual(trips, prev) && dispatch({
         type: 'TRIP_LOADED',
         data: trips
       })
-    }
     );

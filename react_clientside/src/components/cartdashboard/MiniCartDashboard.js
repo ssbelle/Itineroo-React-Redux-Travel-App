@@ -21,10 +21,7 @@ class MiniCartDashboard extends React.Component {
           trip_id: this.props.trip_id
         }
       })
-      .then(result => {
-        console.log('if any', result);
-        //this.context.router.history.push(`/itinerary/${this.props.trip_id}`);
-      })
+      .then(() => this.context.router.history.push(`/itinerary/${this.props.trip_id}`))
       .catch((reason) => alert('failure to submit because of', reason)) :
     console.log('nope, needs places. gtfo')
   }
@@ -48,12 +45,8 @@ class MiniCartDashboard extends React.Component {
 
 const mapStateToProps = state => ({
   places: selectors.selectedPlacesEnhancer(state),
-  submitPlacesSelection(data) {
-    return new Promise((resolve, reject) => {
-      submitPlacesSelection(data);
-      resolve(setTimeout(()=> console.log('waited so long'), 1000));
-    });
-  }
+  submitPlacesSelection: (data) =>
+    submitPlacesSelection(data)
 });
 
 const mapDispatchToProps = dispatch => {

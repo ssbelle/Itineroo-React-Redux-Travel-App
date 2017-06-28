@@ -8,7 +8,6 @@ export default function(state = initialState, action) {
       return {
         ...state,
         places: [
-          ...state.places,
           ...action.data
         ]
       }

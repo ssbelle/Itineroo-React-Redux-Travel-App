@@ -17,12 +17,11 @@ router.get('/user_id/:user_id', (req, res) => {
 });
 
 router.get('/trip_id/:trip_id', (req, res) => {
-  Trip.forge({
-        trip_id: req.params.trip_id
+  Trip.query({
+        where: {trip_id: req.params.trip_id}
       })
       .fetchAll()
       .then(places => {
-        console.log('\n\ntrips.js query trip_id', places.toJSON());
         res.send(places.toJSON())
       })
       .catch(err => res.status(500).json({error: err}));
