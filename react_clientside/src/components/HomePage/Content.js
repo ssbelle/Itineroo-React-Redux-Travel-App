@@ -20,7 +20,7 @@ export default class Content extends React.Component {
                       <img className="img-responsive img-circle center-block" src="/static/images/travelroo-logo.jpg" alt=""/>
                   </div>
                   <div className="col-sm-6">
-                  	<h2 className="section-header">Best in Class</h2>
+                  	<h2 className="section-header">What is TravelRoo?</h2>
                   	<p className="lead text-muted">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
                     <Link to="/login">
                       <FlatButton style={{

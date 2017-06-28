@@ -215,10 +215,18 @@ img::-moz-selection {
 }
 
 .intro {
+  // position: absolute;
+  // top: 60px;
 	color: #fff;
-    background-color: yellowgreen;
+    // background-color: #c3c3c3;
     padding: 70px 0;
+    margin-left: 50%;
     text-align: center;
+}
+
+#intro-content {
+  background-color: rgba(195, 195, 195, 0.5);
+  padding: 15px;
 }
 
 .content {
