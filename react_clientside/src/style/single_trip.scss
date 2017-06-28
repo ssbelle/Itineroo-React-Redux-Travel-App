@@ -1,25 +1,7 @@
 // @import url("../../styles/base.css");
 // @import url("../../styles/queries.css");
 
-.google-map-container {
-  overflow-y: scroll;
-  display: flex;
-  margin: 0;
 
-  height: calc(100vh - 73px);
-  width: 100%;
-
-  -webkit-box-orient: horizontal;
-  -o-box-orient: horizontal;
-
-  flex-direction: column;
-
-  @media (min-width: 35.5em) {
-    flex-direction: row;
-  }
-  // width: calc(100vw - 300px);
-  // height: calc(100vh - 73px);
-}
 
 .content {
   // position: relative;
@@ -100,16 +82,7 @@
 }
 
 
-#dash-sidemenu-btn {
-  position: absolute;
-  margin-left: 27px;
-  margin-top: 40px;
-}
 
-#extras-btn {
-  right: 50px;
-  bottom: 40px;
-}
 
 // @custom-media --screen-phone (width <= 35.5em);
 // @custom-media --screen-phone-lg (width > 35.5em);
