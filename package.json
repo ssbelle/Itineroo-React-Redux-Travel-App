@@ -66,6 +66,7 @@
     "react-shopping-cart": "^1.6.4",
     "react-simple-parallax": "^0.2.6",
     "react-swipeable-views": "^0.12.3",
+    "react-tap-event-plugin": "^2.0.1",
     "react-transition-group": "^1.2.0",
     "redux": "^3.0.4",
     "redux-logger": "^3.0.6",

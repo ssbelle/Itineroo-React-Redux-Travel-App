@@ -2,15 +2,17 @@ import React, {Component} from 'react';
 import CartDashboard from './CartDashboard';
 // import Calendar from './calendar';
 import GooglePlacesSuggest from './GooglePlacesSuggest';
-
 import {connect} from 'react-redux';
 import {selectPlace, storeDates, fetchGoogleData} from '../actions/';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import UndoIcon from 'material-ui/svg-icons/content/undo';
 
 class CreateTrip extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      clicked: false,
       searchTerm: '',
       processStep: 'step-1',
       processPath: false,
@@ -31,6 +33,10 @@ class CreateTrip extends Component {
 
   render() {
     // console.log('layout props', this.props);
+    let buttonClass = 'go-fetch-btn';
+    if (this.state.clicked) {
+      buttonClass += ' onclic';
+    }
     return (
       <main>
         {this.props.showResults ?
@@ -60,31 +66,32 @@ class CreateTrip extends Component {
               </section>
 
               <section className='create-trip-section'>
-
-                <i className="fa fa-arrow-left backBtn" aria-hidden="true" onClick={() => this.setState({processStep: 'step-1'})}>Back</i>
+                <FloatingActionButton mini={true} disabled={false} iconStyle={{backgroundColor: 'teal'}}>
+                  <UndoIcon onClick={() => this.setState({processStep: 'step-1'})}/>
+                </FloatingActionButton>
                 {this.state.processPath === 'create' ?
                   <section className='path-forms'>
                     <h1>CREATE A TRIP</h1>
                     <div className='input-field'>
                       <GooglePlacesSuggest onChange={this.handleSearchChange.bind(this)} onSelectSuggest={this.handleSelectSuggest.bind(this)} query={this.state.searchTerm}/>
                     </div>
-                    <div className='input-field'>
+                    {/* <div className='input-field'>
                       <input id="dates_input" type="text" className="dates" value={this.state.datesTerm} onChange={event => this.setState({datesTerm: event.target.value})}/>
                       <label>How many days are you travelling?</label>
-                    </div>
+                    </div> */}
 
                       {/* {console.log('dates', this.state.datesTerm)} */}
 
-                      <button className='go-fetch-btn' onClick={() => {
+                      <button className={buttonClass} onClick={() => {
+                        this.setState({clicked: true});
                         this.props.storeDates(this.state.datesTerm || '');
                         this.props.goFetchLocations(this.state.searchTerm);
-                      }}>Create!</button>
+                      }}>CREATE!</button>
                     </section>
                   : <section className='path-forms'>
                     <h1>JOIN A TRIP</h1>
                     <div className='input-field'>
                       <input id="destination_input" type="text" className="validate" value={this.state.searchTerm} onChange={() => {
-                        console.log('capture this term as trip id and check against db');
                       }}/>
                       <label>Enter your Trip ID here!</label>
                     </div>

@@ -15,7 +15,7 @@ render() {
             <div className="header-content-inner">
                 <h1>Travel</h1>
                 <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-                <button onClick={this.onClick} className="btn btn-primary btn-lg">Signup</button>
+                <Link to="/signup" className="btn">Signup</Link>
             </div>
         </div>
     </section>

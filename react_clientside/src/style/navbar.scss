@@ -1,6 +1,14 @@
+.navbar {
+  width: 100%;
+}
+#siteNav {
+  justify-content: space-between;
+  height: 70px;
+}
+
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -20,8 +28,8 @@
   }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -35,7 +43,7 @@
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    color: yellowgreen;
+    color: #1ECD97;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -50,12 +58,12 @@
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: yellowgreen;
+    color: #1ECD97;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: yellowgreen!important;
+    color: #1ECD97!important;
     background-color: transparent;
 }
 
@@ -71,8 +79,8 @@
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
-        letter-spacing: 0.5em;
+        color: #1ECD97;
+        letter-spacing: 0.3em;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -82,7 +90,7 @@
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: #1ECD97;
     }
 
     .navbar-default .nav > li>a:hover,
@@ -98,7 +106,7 @@
 
     .navbar-default.affix .navbar-header .navbar-brand {
         letter-spacing: 0;
-        color: yellowgreen;
+        color: #1ECD97;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -113,6 +121,6 @@
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: yellowgreen;
+        color: #1ECD97;
     }
 }
