@@ -70,49 +70,15 @@
 //     padding: 11px 11px;
 //   }
 // }
-// // nav.navbar {
-// //   border-radius: 0 !important;
-// //   margin-bottom:0;
-// //   height: 80px;
-// //   display:flex;
-// //   justify-content: space-between;
-// // }
-// // @media (min-width: 768px){
-// //   .navbar {
-// //       border-radius: 0 !important;
-// //     }
-// // }
+
 //
-// // .container-fluid {
-// //   display:flex;
-// //   width:100%;
-// //   justify-content: space-between;
-// // }
+// .container-fluid {
+//   display:flex;
+//   width:100%;
+//   justify-content: space-between;
+// }
 // //
-// // .navbar-brand {
-// //   left:10px;
-// //   position:absolute;
-// //   height: 80px;
-// //   display: flex;
-// //   align-items: center;
-// //   padding-left: 20px;
-// // }
-// //
-// // .nav.navbar-nav.navbar-right {
-// //   height:80px;
-// //   margin: 0;
-// //   padding: 0;
-// //   display: flex;
-// //   justify-content: space-around;
-// //   align-items: center;
-// //   right: 0;
-// //   position: absolute;
-// //   li a {
-// //     font-family: 'Roboto', sans-serif;
-// //     font-weight: 700;
-// //     font-size: 17px !important;
-// //   }
-// // }
+
 //
 // #logout-btn {
 //   padding: 15px 30px;
@@ -142,12 +108,7 @@
 //   color: teal;
 // }
 //
-// .path-btn {
-//   height:160px;
-//   width:100%;
-//   background-color:teal;
-//   border-radius:12px;
-// }
+
 //
 // .create-a-trip-btn {
 //
@@ -217,92 +178,92 @@
 //
 //
 //
-// .path-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: #fff;
-//   font-size: 1.7em;
-//   width: 340px;
-//   margin: 0 auto;
-//   margin-top: 50px;
+.path-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.7em;
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  opacity: 0.8;
+  span {
+    width:200px;
+
+  }
+  .btn-floating i {
+    width:auto;
+  }
+}
+// //
+// .trip-section{
+//   width:100vw;
+//   height:100vh;
+//   overflow:hidden;
+// }
 //
-//   opacity: 0.8;
-//   span {
-//     width:200px;
+// .choose-path-container,
+// .create-trip-section {
+//   position:absolute;
+//   transition: 2s ease all;
+//   width: 100vw;
 //
+// }
+// .create-trip-section {
+//   padding-top:50px;
+// }
+//
+// .step-1 {
+//   .choose-path-container {
+//     left: 0;
 //   }
-//   .btn-floating i {
-//     width:auto;
+//
+//   .create-trip-section {
+//     left: 100vw;
+//   }
+//
+// i.fa {
+//   font-size:20px !important;
+// }
+//   .backBtn {
+//     display: none;
+//
 //   }
 // }
-// //
-// // .trip-section{
-// //   width:100vw;
-// //   height:100vh;
-// //   overflow:hidden;
-// // }
-// //
-// // .choose-path-container,
-// // .create-trip-section {
-// //   position:absolute;
-// //   transition: 2s ease all;
-// //   width: 100vw;
-// //
-// // }
-// // .create-trip-section {
-// //   padding-top:50px;
-// // }
-// //
-// // .step-1 {
-// //   .choose-path-container {
-// //     left: 0;
-// //   }
-// //
-// //   .create-trip-section {
-// //     left: 100vw;
-// //   }
-// //
-// // i.fa {
-// //   font-size:20px !important;
-// // }
-// //   .backBtn {
-// //     display: none;
-// //
-// //   }
-// // }
-// //
-// // .step-2 {
-// //   .choose-path-container {
-// //     left: -100vw;
-// //   }
-// //
-// //   .create-trip-section {
-// //     left: 0;
-// //   }
-// // }
-// //
-// // .path-forms {
-// //   justify-content: center;
-// //   display: flex;
-// //   flex-direction: column;
-// //   background-color: teal;
-// //   border-radius:15px;
-// //   opacity: 0.9;
-// //   padding: 20px;
-// //   width: 350px;
-// //   height:375px;
-// //   margin: 0 auto;
-// //   h1 {
-// //     color: #fff;
-// //     font-weight: 200;
-// //     letter-spacing: 3.5px;
-// //     font-size: 32px;
-// //     text-align: center;
-// //     margin: 10px;
-// //   }
-// //
-// // }
+//
+// .step-2 {
+//   .choose-path-container {
+//     left: -100vw;
+//   }
+//
+//   .create-trip-section {
+//     left: 0;
+//   }
+// }
+//
+// .path-forms {
+//   justify-content: center;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: teal;
+//   border-radius:15px;
+//   opacity: 0.9;
+//   padding: 20px;
+//   width: 350px;
+//   height:375px;
+//   margin: 0 auto;
+//   h1 {
+//     color: #fff;
+//     font-weight: 200;
+//     letter-spacing: 3.5px;
+//     font-size: 32px;
+//     text-align: center;
+//     margin: 10px;
+//   }
+//
+// }
 //
 // .map-section {
 //   width:100vw;

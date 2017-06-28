@@ -55,8 +55,6 @@
   }
 }
 
-
-
 .trip-section{
   width:100vw;
   height:100vh;
@@ -69,6 +67,26 @@
   transition: 2s ease all;
   width: 100vw;
 
+}
+
+.path-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.7em;
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  opacity: 0.8;
+  span {
+    width:200px;
+
+  }
+  .btn-floating i {
+    width:auto;
+  }
 }
 .create-trip-section {
   padding-top:50px;
@@ -100,6 +118,13 @@ i.fa {
   .create-trip-section {
     left: 0;
   }
+}
+
+.path-btn {
+  height:160px;
+  width:100%;
+  background-color:teal;
+  border-radius:12px;
 }
 
 .path-forms {
@@ -144,3 +169,11 @@ i.fa {
   font-size:1.3em;
   text-align: center;
 }
+
+
+
+// .container-fluid {
+//   display:flex;
+//   width:100%;
+//   justify-content: space-between;
+// }
