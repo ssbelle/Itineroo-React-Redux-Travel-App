@@ -27,10 +27,9 @@ import ItineraryView from './components/ItineraryView';
 
 const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(thunk),
+  composeWithDevTools(
     applyMiddleware(logger),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+    applyMiddleware(thunk)
   )
 );
 

@@ -15,7 +15,6 @@ import IconButton from 'material-ui/IconButton';
 import CommentIcon from 'material-ui/svg-icons/communication/comment';
 import FavoriteIcon from 'material-ui/svg-icons/action/favorite';
 
-
 class ItineraryView extends React.Component {
   constructor(props) {
     super(props);
@@ -105,7 +104,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mergeProps = (stateProps, dispatchProps) => {
-  stateProps.places.length === 0 && getPlacesSelection(dispatchProps.dispatch, {type: 'trip_id', trip_id: stateProps.trip_id});
+  getPlacesSelection(dispatchProps.dispatch, stateProps.places, {type: 'trip_id', trip_id: stateProps.trip_id});
   return ({places: stateProps.places});
 };
 
