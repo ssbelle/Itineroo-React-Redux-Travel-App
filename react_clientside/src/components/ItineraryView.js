@@ -38,7 +38,9 @@ class ItineraryView extends React.Component {
           >
           { this.props.places.map(leg =>
             <section key={leg.city}>
-              <h2>Places in {leg.city}</h2>
+              <div className='places-title'>
+                <h2>Places in {leg.city}</h2>
+              </div>
               <ul>
                 <SelectedPlacesList places={leg.places_data}/>
               </ul>
@@ -61,19 +63,19 @@ class ItineraryView extends React.Component {
 
       <div id='extras-btn' className="fixed-action-btn horizontal">
         <a className="btn-floating btn-large">
-          <i className="large material-icons">assessment</i>
+          <i className="large material-icons"><img id='share-icon' src='/static/images/share-icon.png' /></i>
         </a>
         <ul>
           <li>
-            <a className="btn-floating">
-              <i className="material-icons">publish</i>
+            <a className="btn-floating red" id='download-icon'>
+             <i className='material-icons'><img id='download-icon' src='/static/images/download-icon.png' /></i>
             </a>
           </li>
           <li>
             <a className="btn-floating" onClick={() => {
               this.setState({showComments: true});
              console.log('pop open comments section');}}>
-             <i className="material-icons">format_quote</i>
+             <i className="material-icons">email</i>
             </a>
           </li>
         </ul>
