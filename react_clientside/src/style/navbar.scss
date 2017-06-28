@@ -55,7 +55,7 @@ html, body {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #1ECD97;
     font-family: Roboto, sans-serif;
 }
 
@@ -69,6 +69,8 @@ html, body {
 .navbar-default .nav>li>a:focus:hover {
     color: #029f5b;
     font-family: Roboto, sans-serif;
+    border-bottom: 2px solid black;
+    text-decoration: none;
 }
 
 .navbar-default .nav > li.active>a,
