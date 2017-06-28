@@ -66,7 +66,7 @@ export default class SignupForm extends React.Component {
       this.props.userSignupRequest(this.state).then(() => {
         this.props.addFlashMessage({type: 'success', text: 'Signup sucessful. Welcome!'});
         // Directs user to create-trip page upon signing up
-        this.context.router.history.push('/create-trip');
+        this.context.router.history.push('/login');
       }, ({response}) => {
         this.setState({errors: response.data, isLoading: false})
       });
