@@ -42,8 +42,9 @@ class Comments extends React.Component {
     console.log('COMMENT PROPS', this.props);
     return (
       <div className="comments">
-        {this.props.postComments.map(this.renderComment)}
-        <form ref="commentForm" id='login-form' onSubmit={this.handleSubmit}>
+        {//this.props.postComments.map(this.renderComment)
+        }
+        <form ref="commentForm" id='comments-form' onSubmit={this.handleSubmit}>
           <input type="text" ref="author" placeholder="Name"/>
           <input type="text" ref="comment" placeholder="Comment"/>
           <input type="submit" hidden/>

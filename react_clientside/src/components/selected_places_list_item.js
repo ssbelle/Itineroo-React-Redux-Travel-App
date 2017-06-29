@@ -1,21 +1,65 @@
 import React from 'react';
 import {findDOMNode} from 'react-dom';
 import {DragSource, DropTarget} from 'react-dnd';
+import Comments from './trip_comments';
 
-const SelectedPlacesListItem = props => {
-  const { isDragging, connectDragSource, connectDropTarget } = props;
-  return connectDragSource(connectDropTarget(
-    <li style={{opacity:isDragging ? 0.5 : 1}}>
-      <div className='dash-item-img'></div>
-      <div className='dash-item-text'>
-        <span>
-          {props.place.name}
-        </span>
-        <span>likes and comments go here</span>
-      </div>
-    </li>
-  ));
-};
+import {connect} from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentClear from 'material-ui/svg-icons/content/clear';
+import ContentCreate from 'material-ui/svg-icons/content/create';
+
+import Badge from 'material-ui/Badge';
+import IconButton from 'material-ui/IconButton';
+import CommentIcon from 'material-ui/svg-icons/communication/comment';
+import FavoriteIcon from 'material-ui/svg-icons/action/favorite';
+
+class SelectedPlacesListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showComments :false
+    };
+  }
+  onClick(e){
+    e.preventDefault();
+    this.setState({showComments: !this.state.showComments});
+  }
+  render() {
+    const { isDragging, connectDragSource, connectDropTarget } = this.props;
+    return connectDragSource(connectDropTarget(
+      <li style={{opacity:isDragging ? 0.5 : 1}}>
+        <div className='dash-item-img'></div>
+          <div className='dash-item-text'>
+            <div className='text-plus-icons'>
+              <h5>
+                {this.props.place.name}
+              </h5>
+            <div className="control-buttons">
+              {//badgeContent={this.props.likes[this.props.post.id - 1].likes}
+            }
+              <IconButton className='control-icon-btn' id='like-btn' tooltip="Like" //onTouchTap={this.props.increment.bind(null, this.props.post.id - 1)}
+                >
+                <FavoriteIcon />
+              </IconButton>
+
+              {  //badgeContent={this.props.comments[this.props.post.id] ? this.props.comments[this.props.post.id].length : 0 }
+            }
+              <IconButton className='control-icon-btn' id='com-btn' onClick={(e) => {
+                e.preventDefault();
+                this.setState({showComments: !this.state.showComments});
+              }}>
+                <CommentIcon />
+              </IconButton>
+            </div>
+          </div>
+        </div>
+        {this.state.showComments && <Comments postComments={this.props.comments} />}
+      </li>
+    ));
+  }
+}
+
 
 const selectedPlaceSource = {
   beginDrag(props) {

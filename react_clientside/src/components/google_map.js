@@ -20,7 +20,7 @@ class GoogleMap extends React.Component {
       map = new google.maps.Map(ReactDOM.findDOMNode(this), mapOptions);
 
     const bounds = new google.maps.LatLngBounds();
-    Object.keys(this.props.places).forEach(
+    this.props.places && Object.keys(this.props.places).forEach(
       placeID => {
         const marker =new google.maps.Marker({
           position: this.mapCenterLatLng(

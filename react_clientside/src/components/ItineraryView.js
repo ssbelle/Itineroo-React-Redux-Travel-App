@@ -4,7 +4,6 @@ import GoogleMap from './google_map';
 import SelectedPlacesList from './selected_places_list';
 import {getPlacesSelection} from '../actions/databasePlacesActions';
 
-import Comments from './trip_comments';
 import {SideNav, Button, SideNavItem} from 'react-materialize';
 
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
@@ -23,72 +22,81 @@ class ItineraryView extends React.Component {
     };
   }
 
+  changeMap(leg) {
+    this.setState({mapData: leg});
+  }
+
   render() {
     //console.log('Dashboard props', this.props)
     return (
-    <section className='dashboard-map-sidebar-container'>
-      <section className='combine-map-and-sidebar'>
+      <section className='dashboard-map-sidebar-container'>
+        <section className='combine-map-and-sidebar'>
+          <SideNav options={{ closeOnClick: true }}
+            trigger={
+              <a id='dash-sidemenu-btn' className='btn-floating btn-large'>
+                <i className='material-icons'>reorder</i>
+              </a>}
+            >
+            { this.props.places.map(leg =>
+              <li key={leg.city+leg.places_data.length+(new Date())}
+              >
+                <div className='places-title'>
+                  <h2 onClick={() =>
+                    this.changeMap(leg.places_data)
+                  }
+                  >
+                    Places in {leg.city}
+                  </h2>
+                </div>
+                <ul>
+                  <SelectedPlacesList places={leg.places_data}/>
+                </ul>
+              </li>
+            )}
+          </SideNav>
+          {//<SideNavItem className='heading'>
+          //</SideNavItem>
+          //<SideNavItem divider />
+          }
 
-        <SideNav options={{ closeOnClick: true }}
-          trigger={
-            <a id='dash-sidemenu-btn' className='btn-floating btn-large'>
-              <i className='material-icons'>reorder</i>
-            </a>}
+          <div className='dash-map'
+            style={{ display: 'flex', flexDirection: 'column', flexGrow: '1', order: 2 }}
           >
-          { this.props.places.map(leg =>
-            <section key={leg.city}>
-              <div className='places-title'>
-                <h2>Places in {leg.city}</h2>
-              </div>
-              <ul>
-                <SelectedPlacesList places={leg.places_data}/>
-              </ul>
-            </section>
-          )}
-        </SideNav>
-        {//<SideNavItem className='heading'>
-        //</SideNavItem>
-        //<SideNavItem divider />
+            {this.props.places.length > 0 && <GoogleMap key={this.state.mapData} places={this.state.mapData || this.props.places[0].places_data}/>
+          }
+          </div>
+        </section>
+
+        <div id='extras-btn' className="fixed-action-btn horizontal">
+          <a className="btn-floating btn-large">
+            <i className="large material-icons"><img id='share-icon' src='/static/images/share-icon.png' /></i>
+          </a>
+          <ul>
+            <li>
+              <a className="btn-floating red" id='download-icon'>
+               <i className='material-icons'><img id='download-icon' src='/static/images/download-icon.png' /></i>
+              </a>
+            </li>
+            <li>
+              <a className="btn-floating" onClick={() => {
+                this.setState({showComments: true});
+               console.log('pop open comments section');}}>
+               <i className="material-icons">email</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {// <div className='comments-section' style={{ display: 'flex', flexDirection: 'row' }}>
+        //   <div className='comments-section' style={{ width: '100%', height: '200px' }}>
+        //     {
+        //       //<Comments postComments={this.props.comments} tripId={tripId}/>
+        //     }
+        //   </div>
+        // </div>
       }
 
-        <div className='dash-map'
-          style={{ display: 'flex', flexDirection: 'column', flexGrow: '1', order: 2 }}
-        >
-          {this.props.places.length > 0 && <GoogleMap places={this.props.places[0].places_data}/>
-        }
-        </div>
-
       </section>
-
-      <div id='extras-btn' className="fixed-action-btn horizontal">
-        <a className="btn-floating btn-large">
-          <i className="large material-icons"><img id='share-icon' src='/static/images/share-icon.png' /></i>
-        </a>
-        <ul>
-          <li>
-            <a className="btn-floating red" id='download-icon'>
-             <i className='material-icons'><img id='download-icon' src='/static/images/download-icon.png' /></i>
-            </a>
-          </li>
-          <li>
-            <a className="btn-floating" onClick={() => {
-              this.setState({showComments: true});
-             console.log('pop open comments section');}}>
-             <i className="material-icons">email</i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div className='comments-section' style={{ display: 'flex', flexDirection: 'row' }}>
-        <div className='comments-section' style={{ width: '100%', height: '200px' }}>
-          {
-            //<Comments postComments={this.props.comments} tripId={tripId}/>
-          }
-        </div>
-      </div>
-
-    </section>
     );
   }
 }
@@ -99,12 +107,12 @@ const mapStateToProps = (state, ownProps) => {
     trip_id: ownProps.match.params.trip_id,
     user_id: state.auth.user.id,
     places: state.trips.places,
-    comments
+    comments: state.comments || []
   };
 };
 
 const mergeProps = (stateProps, dispatchProps) => {
-  getPlacesSelection(dispatchProps.dispatch, stateProps.places, {type: 'trip_id', trip_id: stateProps.trip_id});
+  getPlacesSelection(dispatchProps.dispatch, stateProps.places, {type: 'trip_id', id: stateProps.trip_id});
   return ({places: stateProps.places});
 };
 

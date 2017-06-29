@@ -18,25 +18,13 @@ class Photo extends React.Component {
   render() {
       console.log('Photo', this.props);
     return (
-      <figure className="grid-figure">
-        <div className="grid-photo-wrap">
-          {/* <Link to={`view/${this.props.post.id}`}>
-          TEST
+    <figure>
+    {
+          // <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+          //   <span key={this.props.likes[this.props.post.id -1].likes} className="likes-heart">{this.props.likes[this.props.post.id -1].likes}</span>
+          // </CSSTransitionGroup>
+}
 
-
-          </Link> */}
-          <img src="http://www.essortment.com/images/vacation-travel-destinations.jpg" className="grid-photo" />
-
-          <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-            <span key={this.props.likes[this.props.post.id -1].likes} className="likes-heart">{this.props.likes[this.props.post.id -1].likes}</span>
-          </CSSTransitionGroup>
-
-        </div>
-
-        <figcaption>
-          <Link to={`view/${this.props.post.id}`}>
-          <p>{this.props.post.city} - Trip # {this.props.post.id}</p>
-          </Link>
           <div className="control-buttons">
             <button
               onClick={this.props.increment.bind(null, this.props.post.id - 1)}
@@ -59,7 +47,7 @@ class Photo extends React.Component {
 
             {/* </Link> */}
           </div>
-        </figcaption>
+        
 
       </figure>
     );

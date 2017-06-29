@@ -4,24 +4,28 @@ import Trip from '../models/trip';
 
 const router = express.Router();
 
-router.get('/user_id/:user_id', (req, res) => {
+// TODO consolidate these getters into one with smarter params
+
+router.get('/user_id/:id', (req, res) => {
+  console.log('trips request for user', req.params.id);
   Trip.query({
-      select: [ 'id', 'user_id', 'city', 'places_data' ],
-      where: { user_id: req.params.user_id },
-    })
-    .fetchAll()
-    .then(trips => {
-      console.log('\n\ntrips.js query user_id', trips);
-      res.json({ trips });
-    });
+        where: {user_id: req.params.id}
+      })
+      .fetchAll()
+      .then(trips => {
+        console.log('\n\ntrips.js query user_id', trips.toJSON());
+        res.send(trips.toJSON());
+      });
 });
 
-router.get('/trip_id/:trip_id', (req, res) => {
+router.get('/trip_id/:id', (req, res) => {
+  console.log('trip request for trip_id', req.params.id);
   Trip.query({
-        where: {trip_id: req.params.trip_id}
+        where: {trip_id: req.params.id}
       })
       .fetchAll()
       .then(places => {
+        console.log('\n\ntrips.js query trip_id', req.params.id, places.toJSON());
         res.send(places.toJSON())
       })
       .catch(err => res.status(500).json({error: err}));
