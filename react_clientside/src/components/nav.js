@@ -20,7 +20,7 @@ class Nav extends React.Component {
           <Link to="/create-trip">Create Trip</Link>
         </li>
         <li>
-          <Link to="/real-dashboard">Edit Trip</Link>
+          <Link to="/edit-trip">Edit Trip</Link>
         </li>
         <li>
           <a id='logout-btn' href="#" onClick={this.logout.bind(this)}>Logout</a>
