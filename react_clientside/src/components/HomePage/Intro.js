@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ReactDom from 'react-dom';
+import Avatar from 'material-ui/Avatar';
 
 export default class Intro extends React.Component {
   constructor(props) {
@@ -11,19 +12,48 @@ export default class Intro extends React.Component {
   render() {
     return (
       <section className="intro">
-          <div className="container">
-              <div className="row">
-                  <div className="col-sm-6">
-                    <div id="intro-content">
-                      <h2 className="section-header">What is TravelRoo?</h2>
+        <div className="container">
+          <div className="row justify-content-start">
+            <div className="col-lg-8">
+              <div id="intro-content">
+                <h2 className="section-header">About Us.</h2>
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <Link to='https://www.github.com/chaodonghu'>
+                      <Avatar src="static/images/dong.png" size={200}/>
                       <p className="lead text-muted">
-                        <li>Build a "wishlist" of destinations where you'd like to travel and experiences you'd like to have.</li>
-                        <li> It doesn't have to be as fancy as a once-in-a-lifetime trip, either: the app is great for planning your annual family vacation (if you get to take one, that is), or if you want to just take a few day trips here or there. Of course, you can build your bucket-list of places you want to see before you die, and you can share that list with friends or family and collaborate with them on them.</li>
-                      </p>
+                      Dong
+
+                    </p>
+                    </Link>
+                    </div>
+                    <div className="col-lg-6">
+                      <Link to='https://www.github.com/ssbelle'></Link>
+                      <Avatar src="static/images/shawna.jpg" size={200}/>
+                      <p className="lead text-muted">
+                      Shauna
+                    </p>
+                    </div>
                   </div>
-                </div>
               </div>
+            </div>
           </div>
+          <div className="row justify-content-end">
+            <div className="col-lg-offset-7">
+              <div id="intro-content">
+                <h2 className="section-header">What is TravelRoo?</h2>
+                <ol>
+                <p className="lead text-muted" style={{'textAlign': 'left'}}>
+                  <li>Build a "wishlist" of destinations where you'd like to travel and experience.</li>
+                  <li>Make decisions based on each location's reviews, type and photos.</li>
+                  <li>Share your list with friends and family and collaborate on a desired itinerary</li>
+                  <li>Explore!</li>
+                </p>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     );
   }
