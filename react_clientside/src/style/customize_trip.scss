@@ -156,6 +156,57 @@ i.fa {
   }
 }
 
+@media (max-width:620px){
+  .dash-section {
+    min-height:auto !important;
+  }
+}
+
+@media (max-width:620px) {
+   .combine-customize-sections {
+    display:flex;
+    flex-direction: column-reverse;
+   }
+   .cartPlaces {
+     display:flex;
+     flex-direction:row !important;
+     overflow-x:auto !important;
+     overflow:scroll !important;
+     width:100% !important;
+   }
+   .cartPlaces li {
+     width:115px ;
+     margin:10px;
+   }
+   .dash-section {
+     width:90vw;
+     overflow-x:hidden;
+     min-height:120px;
+   }
+
+
+   .cartPlaces button {
+     margin-top:-19px;
+     margin-left:90px;
+   }
+   .h3 {
+     display:none;
+   }
+   button.submit {
+     margin:10px auto !important;
+     width:250px;
+   }
+
+}
+
+
+
+     ::-webkit-scrollbar {
+         width: 0px;  /* remove scrollbar space */
+         background: transparent;  /* optional: just make scrollbar invisible */
+     }
+
+
 .direction-bar {
   height:70px;
   width:100%;
@@ -169,6 +220,93 @@ i.fa {
   text-align: center;
 }
 
+.dash-section {
+  display:flex;
+  justify-content: center;
+  border: 1px dashed teal;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+
+.cartPlaces {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  margin: 0 auto;
+
+
+  li {
+    cursor:pointer;
+    border-radius: 15px;
+    border: 1px solid teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 4px #eee;
+    min-height:120px;
+    min-width:120px;
+
+  }
+  .dash-item-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left:0;
+  }
+  .dash-item-img {
+    margin-top: -15px;
+  }
+  button {
+    margin-top: -17px;
+    margin-left: 140px;
+  }
+  span {
+    text-align:center;
+  }
+}
+.selections h3 {
+  font-size:28px;
+  text-align: center;
+}
+
+.cart-selections-container{
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+  button.submit {
+    margin: 5px 0 10px 0;
+  }
+}
+
+.dash-item-img {
+  height: 75px;
+  width: 75px;
+  margin-top: -10px;
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.dash-item-text {
+  display:flex;
+  flex-direction:column;
+  margin-left:20px;
+}
+
+.dash-btn {
+  display: flex;
+  justify-content: center;
+}
+
+npm .dash-city-name {
+  text-align:center;
+}
 
 
 // .container-fluid {

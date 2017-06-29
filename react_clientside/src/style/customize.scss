@@ -3,42 +3,7 @@
   justify-content: center;
 }
 
-@media (max-width:620px) {
-   .combine-customize-sections {
-    display:flex;
-    flex-direction: column-reverse;
-   }
-   .cartPlaces {
-     display:flex;
-     flex-direction:row;
-     overflow-x:auto;
-     overflow:scroll;
-     width:90vw;
-   }
-   .cartPlaces li {
-     width:115px;
-     margin:10px;
-   }
-   .dash-section {
-     width:90vw;
-     overflow-x:hidden;
-     min-height:120px;
-   }
 
-
-   .cartPlaces button {
-     margin-top:-19px;
-     margin-left:90px;
-   }
-   .h3 {
-     display:none;
-   }
-   button.submit {
-     margin:10px auto !important;
-     width:250px;
-   }
-
-}
 .selections {
   margin:20px;
 }
