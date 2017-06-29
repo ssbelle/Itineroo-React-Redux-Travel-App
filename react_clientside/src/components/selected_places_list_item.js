@@ -18,13 +18,20 @@ class SelectedPlacesListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showComments :false
+      showComments :false,
+      likeCounter:1,
+      commentCounter:0
     };
+    this.increaseCommentCounter = this.increaseCommentCounter.bind(this);
   }
-  onClick(e){
-    e.preventDefault();
-    this.setState({showComments: !this.state.showComments});
+
+
+
+  increaseCommentCounter() {
+    this.setState({increaseCommentCounter: this.state.commentCounter + 1});
   }
+
+
   render() {
     const { isDragging, connectDragSource, connectDropTarget } = this.props;
     return connectDragSource(connectDropTarget(
@@ -38,23 +45,30 @@ class SelectedPlacesListItem extends React.Component {
             <div className="control-buttons">
               {//badgeContent={this.props.likes[this.props.post.id - 1].likes}
             }
-              <IconButton className='control-icon-btn' id='like-btn' tooltip="Like" //onTouchTap={this.props.increment.bind(null, this.props.post.id - 1)}
+            {this.state.likeCounter}
+              <IconButton className='control-icon-btn' id='like-btn' onClick={() => {
+                //e.preventDefault();
+                this.setState({likeCounter: this.state.likeCounter + 1});
+              }}//onTouchTap={this.props.increment.bind(null, this.props.post.id - 1)}
                 >
                 <FavoriteIcon />
               </IconButton>
 
               {  //badgeContent={this.props.comments[this.props.post.id] ? this.props.comments[this.props.post.id].length : 0 }
-            }
+            }{this.state.increaseCommentCounter}
               <IconButton className='control-icon-btn' id='com-btn' onClick={(e) => {
                 e.preventDefault();
                 this.setState({showComments: !this.state.showComments});
+
+
               }}>
                 <CommentIcon />
               </IconButton>
             </div>
           </div>
         </div>
-        {this.state.showComments && <Comments postComments={this.props.comments} />}
+        {this.state.showComments && <Comments postComments={this.props.comments} comCounter={this.increaseCommentCounter}
+        />}
       </li>
     ));
   }

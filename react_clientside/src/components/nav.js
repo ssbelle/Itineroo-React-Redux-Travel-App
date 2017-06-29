@@ -17,10 +17,10 @@ class Nav extends React.Component {
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
         <li>
-          <Link to="/create-trip">Create-a-Trip</Link>
+          <Link to="/create-trip">Create Trip</Link>
         </li>
         <li>
-          <Link to="/real-dashboard">Your Trips </Link>
+          <Link to="/real-dashboard">Edit Trip</Link>
         </li>
         <li>
           <a id='logout-btn' href="#" onClick={this.logout.bind(this)}>Logout</a>
@@ -54,7 +54,7 @@ class Nav extends React.Component {
               <Link to="/" className="navbar-brand">
                 <span className="glyphicon glyphicon-plane"></span>
                 <span className="glyphicon glyphicon-globe"></span>
-                TravelRoo
+                Itineroo
               </Link>
               {/* <img src='/static/images/travelroo-logo.jpg' /> */}
           </div>
@@ -62,7 +62,7 @@ class Nav extends React.Component {
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/"></Link>
               </li>
               { isAuthenticated ? userLinks : guestLinks }
             </ul>
