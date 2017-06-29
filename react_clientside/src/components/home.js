@@ -114,7 +114,7 @@ export default class Home extends React.Component {
 
     {/* Plane SVG */}
     <Parallax.Layer
-        offset={2.8}
+        offset={2.7}
         speed={-0.89}
         >
         <img src="/static/images/plane.png" style={{display: 'block', width: '10%', 'marginLeft': '88%'}}/>

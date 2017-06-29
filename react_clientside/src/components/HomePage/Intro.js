@@ -41,7 +41,7 @@ export default class Intro extends React.Component {
           <div className="row justify-content-end">
             <div className="col-lg-offset-7">
               <div id="intro-content">
-                <h2 className="section-header">What is TravelRoo?</h2>
+                <h2 className="section-header">What is Itineroo?</h2>
                 <ol>
                 <p className="lead text-muted" style={{'textAlign': 'left'}}>
                   <li>Build a "wishlist" of destinations where you'd like to travel and experience.</li>
