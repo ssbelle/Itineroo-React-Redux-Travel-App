@@ -18,8 +18,8 @@ export default class Header extends React.Component {
           <div className="header-content">
             <div className="header-content-inner">
               <h1>Plan. Discuss. Travel.</h1>
-              <p>Keep it plane and simple.</p>
-              <p>Take the stress out of extensive trip planning and collaborating procedures</p>
+              <h5>Keep it plane and simple.</h5>
+              <h5>Take the stress out of extensive trip planning and collaborating procedures</h5>
               <Link to="/signup">
                 <FlatButton style={{
                   color: '#fff',
