@@ -16,8 +16,8 @@ export default class Header extends React.Component {
       <section className='home-page-header'>
         <div className="header-content">
           <div className="header-content-inner">
-            <h1>Travel</h1>
-            <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+            <h1>Travel Made Easy</h1>
+            <p>Dynamically create parallel itineraries for groups to optimize travel</p>
             <Link to="/signup">
               <FlatButton style={{
                 color: '#fff'

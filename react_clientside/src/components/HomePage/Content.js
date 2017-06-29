@@ -17,11 +17,11 @@ export default class Content extends React.Component {
           <div className="container">
               <div className="row">
                   <div className="col-sm-6">
-                      <p>PUT SOME SHIT HERE</p>
+                      <p>Created by Shawna Lehman and Dong H.</p>
                   </div>
                   <div className="col-sm-6">
-                  	<h2 className="section-header">What is TravelRoo?</h2>
-                  	<p className="lead text-muted">Holisticly predominate extensible testing procedures for reliable supply chains. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                  	<h2 className="section-header">Ready to Itineroo?</h2>
+                  	<p className="lead text-muted">Ready to take the stress out of extensive trip planning and collaborating procedures? Dynamically collaborate resources-to build the ultimate travel experience for the whole group.</p>
                     <Link to="/login">
                       <FlatButton style={{
                         color: '#fff'

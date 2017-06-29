@@ -48,7 +48,7 @@ class Comments extends React.Component {
           <input type="text" ref="author" placeholder="Name"/>
           <input type="text" ref="comment" placeholder="Comment"/>
           <input type="submit" hidden/>
-            <FloatingActionButton
+            <FloatingActionButton onClick= {this.props.comCounter} 
               mini={true}
               style={{
                 'marginRight': 20
