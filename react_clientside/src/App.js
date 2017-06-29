@@ -54,8 +54,7 @@ export default class App extends React.Component {
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
               <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
-              {//<Route path='/real-dashboard' component={requireAuth(RealDashboard)} />
-            }
+              {/* <Route path='/real-dashboard' component={requireAuth(RealDashboard)} /> */}
               <Route path='/itinerary/:trip_id' component={requireAuth(ItineraryView)} />
             </div>
             </MuiThemeProvider>
