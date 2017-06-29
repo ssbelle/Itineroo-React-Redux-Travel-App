@@ -21,18 +21,18 @@ export default class Intro extends React.Component {
                     <div className="col-lg-6">
                       <Link to='https://www.github.com/chaodonghu'>
                       <Avatar src="static/images/dong.png" size={200}/>
-                      <p className="lead text-muted">
+                      <h3 className="lead text-muted">
                       Dong
 
-                    </p>
+                    </h3>
                     </Link>
                     </div>
                     <div className="col-lg-6">
                       <Link to='https://www.github.com/ssbelle'></Link>
                       <Avatar src="static/images/shawna.jpg" size={200}/>
-                      <p className="lead text-muted">
+                      <h3 className="lead text-muted">
                       Shauna
-                    </p>
+                    </h3>
                     </div>
                   </div>
               </div>
@@ -43,12 +43,12 @@ export default class Intro extends React.Component {
               <div id="intro-content">
                 <h2 className="section-header">What is Itineroo?</h2>
                 <ol>
-                <p className="lead text-muted" style={{'textAlign': 'left'}}>
+                <h3 className="lead text-muted" style={{'textAlign': 'left'}}>
                   <li>Build a "wishlist" of destinations where you'd like to travel and experience.</li>
                   <li>Make decisions based on each location's reviews, type and photos.</li>
                   <li>Share your list with friends and family and collaborate on a desired itinerary</li>
                   <li>Explore!</li>
-                </p>
+                </h3>
                 </ol>
               </div>
             </div>
