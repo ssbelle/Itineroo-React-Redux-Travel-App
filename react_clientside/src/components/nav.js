@@ -52,8 +52,7 @@ class Nav extends React.Component {
               <span className="icon-bar"></span>
             </button>
               <Link to="/" className="navbar-brand">
-                <span className="glyphicon glyphicon-plane"></span>
-                <span className="glyphicon glyphicon-globe"></span>
+              <img src="/static/images/itineroo.png" />
                 Itineroo
               </Link>
               {/* <img src='/static/images/travelroo-logo.jpg' /> */}
