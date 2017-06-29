@@ -4,6 +4,7 @@ import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import SelectedPlacesListItem from './selected_places_list_item';
 
+
 class SelectedPlacesList extends React.Component {
   constructor(props) {
     super(props);
