@@ -20,7 +20,7 @@ import Nav from './components/Nav';
 import CreateTrip from './components/CreateTrip';
 import SignupPage from './components/SignupPage';
 import LoginPage from './components/LoginPage';
-import RealDashboard from './components/real_dashboard';
+import CartDashboard from './components/CartDashboard';
 import FlashMessagesList from './components/flash/FlashMessagesList';
 import ItineraryView from './components/ItineraryView';
 
@@ -53,6 +53,7 @@ export default class App extends React.Component {
               <Route exact path='/' component={Home}/>
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
+              <Route path='/edit-trip' component={requireAuth(CartDashboard)}/>
               <Route path='/create-trip' component={requireAuth(CreateTrip)}/>
               {/* <Route path='/real-dashboard' component={requireAuth(RealDashboard)} /> */}
               <Route path='/itinerary/:trip_id' component={requireAuth(ItineraryView)} />
