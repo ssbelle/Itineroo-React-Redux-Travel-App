@@ -46,23 +46,27 @@ html, body {
     -moz-transition: all .35s;
     transition: all .35s;
     font-family: Roboto, sans-serif;
+    font-size: 25px;
 }
 
 .navbar-default .navbar-header .navbar-brand {
     color: #029f5b;
     font-family: Roboto, sans-serif;
+    font-size: 25px;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
     color: #1ECD97;
     font-family: Roboto, sans-serif;
+    font-size: 25px;
 }
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
     color: #222;
     font-family: Roboto, sans-serif;
+    font-size: 20px;
 }
 
 .navbar-default .nav > li>a:hover,
@@ -71,6 +75,7 @@ html, body {
     font-family: Roboto, sans-serif;
     border-bottom: 2px solid black;
     text-decoration: none;
+    font-size: 25px;
 }
 
 .navbar-default .nav > li.active>a,
@@ -78,6 +83,7 @@ html, body {
     color: #029f5b!important;
     background-color: transparent;
     font-family: Roboto, sans-serif;
+    font-size: 25px;
 }
 
 .navbar-default .nav > li.active>a:hover,
@@ -91,6 +97,7 @@ html, body {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
         font-family: Roboto, sans-serif;
+        font-size: 25px;
     }
 
     .navbar-default .navbar-header .navbar-brand {

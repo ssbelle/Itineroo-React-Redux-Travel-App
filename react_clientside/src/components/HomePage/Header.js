@@ -13,24 +13,30 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <section className='home-page-header'>
-        <div className="header-content">
-          <div className="header-content-inner">
-            <h1>Travel</h1>
-            <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-            <Link to="/signup">
-              <FlatButton style={{
-                color: '#fff'
-              }} label="Signup" labelPosition="before" primary={true} icon={< ContentCreate />}/>
-            </Link>
-            <Link to="/login">
-              <FlatButton style={{
-                color: '#fff'
-              }} label="Login" labelPosition="before" primary={true} icon={< MapsFlight />}/>
-            </Link>
+      <div className='home-page-header'>
+        <div className="col-md-10 col-md-offset-1">
+          <div className="header-content">
+            <div className="header-content-inner">
+              <h1>Plan. Discuss. Travel.</h1>
+              <p>Keep it plane and simple.</p>
+              <Link to="/signup">
+                <FlatButton style={{
+                  color: '#fff',
+                  height: '100px',
+                  width: '200px',
+                }} label="Signup" labelStyle={{ fontSize: '25px'}} labelPosition="before" primary={true} icon={< ContentCreate />}/>
+              </Link>
+              <Link to="/login">
+                <FlatButton style={{
+                  color: '#fff',
+                  height: '100px',
+                  width: '200px',
+                }} label="Login" labelStyle={{ fontSize: '25px'}} labelPosition="before" primary={true} icon={< MapsFlight />}/>
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }
