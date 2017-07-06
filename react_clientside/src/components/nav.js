@@ -15,22 +15,28 @@ class Nav extends React.Component {
     const {isAuthenticated} = this.props.auth
 
     const userLinks = (
-      <ul className="nav navbar-nav navbar-right">
+      <div>
+      <ul className="nav">
         <li>
           <Link to="/create-trip">Create Trip</Link>
         </li>
         <li>
-          <Link to="/real-dashboard">Edit Trip</Link>
+          <Link to="/edit-trip">Edit Trip</Link>
         </li>
         <li>
           <a id='logout-btn' href="#" onClick={this.logout.bind(this)}>Logout</a>
         </li>
       </ul>
 
+      <ul className='footer'>
+
+      </ul>
+      </div>
+
     );
 
     const guestLinks = (
-      <ul className="nav navbar-nav navbar-right">
+      <ul className="nav">
         <li>
           <Link to='/signup'>Signup</Link>
         </li>
@@ -42,21 +48,14 @@ class Nav extends React.Component {
 
     return (
       <nav id="siteNav" className="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div className="container">
+
           {/* <!-- Logo and responsive toggle --> */}
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
+
               <Link to="/" className="navbar-brand">
-              <img src="/static/images/itineroo.png" />
-                Itineroo
+                <h1>Itineroo</h1>
               </Link>
               {/* <img src='/static/images/travelroo-logo.jpg' /> */}
-          </div>
+
           {/* <!-- Navbar links --> */}
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav navbar-right">
@@ -67,7 +66,7 @@ class Nav extends React.Component {
             </ul>
           </div>
           {/* <!-- /.navbar-collapse --> */}
-        </div>
+
         {/* <!-- /.container --> */}
       </nav>
     );

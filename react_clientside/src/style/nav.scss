@@ -1,7 +1,25 @@
-// .navbar-brand {
-//   display: flex !important;
-//   align-items: center !important;
-// }
+#siteNav {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width:100%;
+  background-color:#5FC69B;
+}
+
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size:3em;
+    font-family: 'Dancing Script', cursive;
+    color:#fff;
+  }
+}
 //
 // #siteNav {
 //   display: flex;

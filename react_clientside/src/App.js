@@ -15,7 +15,7 @@ import requireAuth from '../utils/requireAuth';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Import Components
-import Home from './components/Home';
+import HomePage from './components/home_page';
 import Nav from './components/Nav';
 import CreateTrip from './components/CreateTrip';
 import SignupPage from './components/SignupPage';
@@ -50,7 +50,7 @@ export default class App extends React.Component {
 
             <FlashMessagesList />
             <Nav />
-              <Route exact path='/' component={Home}/>
+              <Route exact path='/' component={HomePage}/>
               <Route path='/signup' component={SignupPage} />
               <Route path='/login' component={LoginPage} />
               <Route path='/edit-trip' component={requireAuth(CartDashboard)}/>
