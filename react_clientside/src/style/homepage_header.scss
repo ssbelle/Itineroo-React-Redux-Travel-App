@@ -1,128 +1,128 @@
-.home-page-header {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  text-align: center;
-  color: #fff;
-  background-image: url('/static/images/travel2.gif');
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-page-header .header-content {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  padding: 100px 15px 70px;
-  text-align: center;
-}
-
-.home-page-header .header-content .header-content-inner h1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 50px;
-  font-weight: 300;
-  background-color: rgba(195, 195, 195, 0.5);
-  //  text-align: left;
-}
-
-.home-page-header .header-content .header-content-inner p {
-  // margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  // color: rgba(255,255,255,.7);
-}
-@media(min-width:768px) {
-  .home-page-header {
-    min-height: 100%;
-  }
-
-  // .home-page-header .header-content {
-  //   position: absolute;
-  //   top: 50%;
-  //   padding: 0 -50px;
-  //   -webkit-transform: translateY(-50%);
-  //   -ms-transform: translateY(-100%);
-  //   transform: translateY(-50%);
-  // }
-
-  // .home-page-header .header-content .header-content-inner {
-  //   margin-right: auto;
-  //   margin-left: auto;
-  //   max-width: 1000px;
-  // }
-
-  .home-page-header  .header-content .header-content-inner h1 {
-    font-size: 100px;
-  }
-
-  // .home-page-header  .header-content .header-content-inner p {
-  //   margin-right: auto;
-  //   margin-left: auto;
-  //   max-width: 80%;
-  //   font-size: 18px;
-  // }
-}
-
-::-moz-selection {
-  text-shadow: none;
-  color: #fff;
-  background: #222;
-}
-
-::selection {
-  text-shadow: none;
-  color: #fff;
-  background: #222;
-}
-
-img::selection {
-  color: #fff;
-  background: 0 0;
-}
-
-img::-moz-selection {
-  color: #fff;
-  background: 0 0;
-}
-
-.intro {
-  // position: absolute;
-  // top: 60px;
-  color: #fff;
-  // background-color: #c3c3c3;
-  padding: 70px 0;
-  // margin-left: 50%;
-  text-align: center;
-}
-
-#intro-content {
-  background-color: rgba(195, 195, 195, 0.5);
-  padding: 15px;
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 300;
-  }
-}
-
-.content {
-  padding: 100px 0;
-}
-
-.content-2 {
-  color: #fff;
-  background-color: #222;
-}
-
-.content-3 {
-  padding: 20px 0 40px;
-  text-align: center;
-}
+// .home-page-header {
+//   position: relative;
+//   width: 100%;
+//   min-height: 100%;
+//   text-align: center;
+//   color: #fff;
+//   background-image: url('/static/images/travel2.gif');
+//   background-position: center;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   background-size: cover;
+//   -o-background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+//
+// .home-page-header .header-content {
+//   position: relative;
+//   margin: 0 auto;
+//   width: 100%;
+//   padding: 100px 15px 70px;
+//   text-align: center;
+// }
+//
+// .home-page-header .header-content .header-content-inner h1 {
+//   margin-top: 0;
+//   margin-bottom: 20px;
+//   font-size: 50px;
+//   font-weight: 300;
+//   background-color: rgba(195, 195, 195, 0.5);
+//   //  text-align: left;
+// }
+//
+// .home-page-header .header-content .header-content-inner p {
+//   // margin-bottom: 10px;
+//   font-size: 16px;
+//   line-height: 1.5;
+//   font-weight: 300;
+//   // color: rgba(255,255,255,.7);
+// }
+// @media(min-width:768px) {
+//   .home-page-header {
+//     min-height: 100%;
+//   }
+//
+//   // .home-page-header .header-content {
+//   //   position: absolute;
+//   //   top: 50%;
+//   //   padding: 0 -50px;
+//   //   -webkit-transform: translateY(-50%);
+//   //   -ms-transform: translateY(-100%);
+//   //   transform: translateY(-50%);
+//   // }
+//
+//   // .home-page-header .header-content .header-content-inner {
+//   //   margin-right: auto;
+//   //   margin-left: auto;
+//   //   max-width: 1000px;
+//   // }
+//
+//   .home-page-header  .header-content .header-content-inner h1 {
+//     font-size: 100px;
+//   }
+//
+//   // .home-page-header  .header-content .header-content-inner p {
+//   //   margin-right: auto;
+//   //   margin-left: auto;
+//   //   max-width: 80%;
+//   //   font-size: 18px;
+//   // }
+// }
+//
+// ::-moz-selection {
+//   text-shadow: none;
+//   color: #fff;
+//   background: #222;
+// }
+//
+// ::selection {
+//   text-shadow: none;
+//   color: #fff;
+//   background: #222;
+// }
+//
+// img::selection {
+//   color: #fff;
+//   background: 0 0;
+// }
+//
+// img::-moz-selection {
+//   color: #fff;
+//   background: 0 0;
+// }
+//
+// .intro {
+//   // position: absolute;
+//   // top: 60px;
+//   color: #fff;
+//   // background-color: #c3c3c3;
+//   padding: 70px 0;
+//   // margin-left: 50%;
+//   text-align: center;
+// }
+//
+// #intro-content {
+//   background-color: rgba(195, 195, 195, 0.5);
+//   padding: 15px;
+//   p {
+//     font-size: 16px;
+//     line-height: 1.5;
+//     font-weight: 300;
+//   }
+// }
+//
+// .content {
+//   padding: 100px 0;
+// }
+//
+// .content-2 {
+//   color: #fff;
+//   background-color: #222;
+// }
+//
+// .content-3 {
+//   padding: 20px 0 40px;
+//   text-align: center;
+// }

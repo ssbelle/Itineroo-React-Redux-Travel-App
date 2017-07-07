@@ -17,7 +17,7 @@ const ListOfSelectionsItem = (props) => {
       {props.id && <div className='dash-item-img' style={{backgroundImage:`url(https://maps.googleapis.com/maps/api/place/photo?maxheight=100&maxwidth=100&photoreference=${props.location.photos[0].photo_reference}&key=AIzaSyANfEEYlXnOIAq0qn3l48YABVrxQL6DXj0)`}} >
       </div>
     }
-      <div className='dash-item-text'>
+      <div className='cart-item-text'>
         <span>
           {props.location.name}
         </span>

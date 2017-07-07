@@ -45,14 +45,9 @@ class Single extends React.Component {
     let placesData = [];
     let placeId, placeCity = '';
 
-    // const id = this.props.places.findIndex((post) => post.id === postId);
-    // console.log('THE ID', id);
-
-    // let place = this.props.places[postId - 1];
-    console.log('PLACE', place);
     if (place && place.places_data) {
-      console.log('PLACE DATA', place.places_data);
-      console.log(typeof place.places_data);
+      // console.log('PLACE DATA', place.places_data);
+      // console.log(typeof place.places_data);
       placesData = place.places_data;
       placeId = place.id;
       placeCity = place.city;
@@ -63,8 +58,8 @@ class Single extends React.Component {
 
   <section className='combine-map-and-sidebar'>
     <SideNav trigger={<a id='dash-sidemenu-btn' className='btn-floating btn-large'><i className='material-icons'>reorder</i></a>} options={{ closeOnClick: true }}>
-      <SideNavItem className='heading'>Trip #{placeId} to {placeCity}
-      
+      <SideNavItem className='dash-city-heading'>Trip #{placeId} to {placeCity}
+
       </SideNavItem>
       <SideNavItem divider />
       <ul><SelectedPlacesList places={placesData}/></ul>
@@ -87,7 +82,7 @@ class Single extends React.Component {
         <li>
           <a className="btn-floating" onClick={() => {
             this.setState({showComments: true});
-           console.log('pop open comments section');}}>
+          }}>
            <i className="material-icons">format_quote</i>
           </a>
         </li>
@@ -101,7 +96,7 @@ class Single extends React.Component {
     </div>
 
 </section>
-    )
+    );
   }
 }
 

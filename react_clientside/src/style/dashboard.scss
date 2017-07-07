@@ -17,22 +17,16 @@
   overflow-y: scroll;
   display: flex;
   margin: 0;
-  
-
   height: calc(100vh);
   width: 100%;
-
   -webkit-box-orient: horizontal;
   -o-box-orient: horizontal;
-
   flex-direction: column;
-
   @media (min-width: 35.5em) {
     flex-direction: row;
   }
-  // width: calc(100vw - 300px);
-  // height: calc(100vh - 73px);
 }
+
 .side-nav {
   margin-top: 70px;
   height: calc(100vh - 70px);
@@ -47,7 +41,6 @@
     flex-direction: column;
     border-bottom: 1px solid;
     height: 65px !important;
-
   }
   .places-title {
     background-color:#5FC69B;
@@ -56,8 +49,8 @@
     align-items: center;
     justify-content: center;
   }
-
 }
+
 img#share-icon {
   margin-top: -25px;
   margin-left: -5px;
@@ -68,6 +61,38 @@ img#download-icon {
 ul.selected-places-container {
   cursor:move;
 }
+
+.selected-places-container {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+  margin: 0;
+}
+
+.selected-places-item-li-contents {
+  display: flex;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px;
+  text-decoration: none;
+  cursor: move;
+
+  h1 {
+    flex: 2;
+    font-size: 1.0em;
+    &:hover {
+      color: #48b5e9;
+    }
+  }
+  .rating {
+    text-align: right;
+    flex: 1;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
 #dash-sidemenu-btn {
   position: absolute;
   margin-left: 27px;
@@ -79,40 +104,38 @@ ul.selected-places-container {
   bottom: 40px;
 }
 
-
-
 #comments-form {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    background-color: #2E2C2C;
-    opacity: 0.86;
-    padding:5px 20px 10px 20px;
-    color:#fff;
-    margin-bottom:30px;
-    input {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #2E2C2C;
+  opacity: 0.86;
+  padding:5px 20px 10px 20px;
+  color:#fff;
+  margin-bottom:30px;
+  input {
     border-bottom: 3px solid teal;
     color:#fff;
     width:88%;
     margin: 0 auto;
-    }
-    label {
-      margin-left:25px;
-    }
-    h1 {
-      padding: 11px 11px;
-    }
+  }
+  label {
+    margin-left:25px;
+  }
+  h1 {
+    padding: 11px 11px;
+  }
 }
+
 .control-buttons {
   line-height:0;
   width: 60px;
   display: flex;
   margin-right: 20px;
-
 }
 
 button#like-btn.control-icon-btn {
@@ -135,12 +158,14 @@ button#com-btn.control-icon-btn {
   margin-left: 89px;
   margin-top: -10px;
 }
+
 #comment-icon-div{
   height: 60px;
   width:61px;
   margin-left: -30px;
   padding:13px !important;
 }
+
 .text-plus-icons {
   display: flex;
   justify-content: space-between;
@@ -152,7 +177,15 @@ button#com-btn.control-icon-btn {
 .text-plus-icons h5 {
   font-size: 17px;
   margin-right: 20px;
-margin-left: 20px;
-text-align: left;
-    width: 75%;
+  margin-left: 20px;
+  text-align: left;
+  width: 75%;
 }
+
+
+  .heading {
+    flex: 1;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0 10px;
+  }

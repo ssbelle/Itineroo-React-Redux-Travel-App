@@ -36,7 +36,7 @@ class SelectedPlacesListItem extends React.Component {
     const { isDragging, connectDragSource, connectDropTarget } = this.props;
     return connectDragSource(connectDropTarget(
       <li style={{opacity:isDragging ? 0.5 : 1}}>
-        <div className='dash-item-img'></div>
+
           <div className='dash-item-text'>
             <div className='text-plus-icons'>
               <h5>

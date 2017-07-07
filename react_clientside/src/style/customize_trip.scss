@@ -87,6 +87,7 @@
     width:auto;
   }
 }
+
 .create-trip-section {
   padding-top:50px;
 }
@@ -95,17 +96,14 @@
   .choose-path-container {
     left: 0;
   }
-
   .create-trip-section {
     left: 100vw;
   }
-
-i.fa {
+  i.fa {
   font-size:20px !important;
-}
+  }
   .backBtn {
     display: none;
-
   }
 }
 
@@ -113,7 +111,6 @@ i.fa {
   .choose-path-container {
     left: -100vw;
   }
-
   .create-trip-section {
     left: 0;
   }
@@ -183,8 +180,6 @@ i.fa {
      overflow-x:hidden;
      min-height:120px;
    }
-
-
    .cartPlaces button {
      margin-top:-19px;
      margin-left:90px;
@@ -196,16 +191,12 @@ i.fa {
      margin:10px auto !important;
      width:250px;
    }
-
 }
 
-
-
-     ::-webkit-scrollbar {
-         width: 0px;  /* remove scrollbar space */
-         background: transparent;  /* optional: just make scrollbar invisible */
-     }
-
+  ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
 
 .direction-bar {
   height:70px;
@@ -229,13 +220,11 @@ i.fa {
   min-height: 300px;
 }
 
-
 .cartPlaces {
   display: flex;
   flex-direction: column;
   width: 130px;
   margin: 0 auto;
-
 
   li {
     cursor:pointer;
@@ -252,7 +241,7 @@ i.fa {
     min-width:120px;
 
   }
-  .dash-item-text {
+  .cart-item-text {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -269,6 +258,7 @@ i.fa {
     text-align:center;
   }
 }
+
 .selections h3 {
   font-size:28px;
   text-align: center;
@@ -292,13 +282,6 @@ i.fa {
   background-position: center center;
 }
 
-
-.dash-item-text {
-  display:flex;
-  flex-direction:column;
-  margin-left:20px;
-}
-
 .dash-btn {
   display: flex;
   justify-content: center;
@@ -308,9 +291,157 @@ npm .dash-city-name {
   text-align:center;
 }
 
+.combine-customize-sections {
+  display:flex;
+  justify-content: center;
+}
 
-// .container-fluid {
-//   display:flex;
-//   width:100%;
-//   justify-content: space-between;
-// }
+.selections {
+  margin:20px;
+}
+.picks {
+  margin:20px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.place-img-div  {
+  display: block;
+  height: 100px;
+  width: 400px;
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-size: 100%;
+}
+
+.photo-grid {
+  display: flex;
+    height: 100px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+    background-size: 29vw;
+}
+
+.grid-figure {
+  flex-basis: calc(33.333% - 4rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem;
+  border: 1px solid lightgray;
+  background: white;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+  position: relative;
+
+}
+
+.single-photo {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+}
+
+// TODO broken CSS?
+//  Stylelint //
+
+.grid-figure
+    box-shadow none
+    margin 0 2rem 0 0
+    border 0
+    padding 0
+    flex 1 0 60%
+    max-width 60%
+  .comments
+    flex 1 0 40%
+    max-width 40%
+  .grid-photo
+    width 100%
+    margin 0
+
+
+
+.grid-photo {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-top: -2rem;
+  max-width: none;
+}
+
+.grid-photo-wrap {
+    position: relative
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-item-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid teal;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow:hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #eee;
+}
+
+.list-item-info-section {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-family: roboto;
+  text-align: left;
+  padding-left: 20px;
+  position: absolute;
+  opacity: 0;
+  transition: .5s ease;
+  width: 320px;
+  height:100px;
+  margin-top: -15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: rgba(74, 74, 74, 0.55);
+
+
+}
+div#GDbtn {
+ margin-top:-70px;
+ margin-left:264px;
+ margin-bottom:10px;
+}
+
+.list-item-container:hover .list-item-info-section{
+  opacity:1;
+}
+
+.img-title {
+  padding: 5px;
+  margin-bottom: 20px;
+  color: #13293D;
+}
+
+.title-btn-select-places-list {
+
+}

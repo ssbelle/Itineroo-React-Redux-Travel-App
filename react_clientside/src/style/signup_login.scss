@@ -2,18 +2,8 @@
   background-color:#cc2936;
 }
 
-// #root {
-//   position: absolute;
-// width: 300px;
-// height: 200px;
-// z-index: 15;
-// top: 50%;
-// left: 50%;
-// margin: -100px 0 0 -150px;
-// background: red;
-// }
 .panel-login {
-    border-color: #ccc;
+  border-color: #ccc;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -63,4 +53,14 @@
 	-moz-box-shadow: none;
 	box-shadow: none;
 	border-color: #ccc;
+}
+
+#floating_alert {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
 }
